@@ -1,0 +1,3 @@
+<design:component>
+	<design:attribute name="theme" description="The theme of the badge" dataSource="default,shade,inverse"/>
+</design:component>

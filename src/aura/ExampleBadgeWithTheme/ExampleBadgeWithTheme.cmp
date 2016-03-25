@@ -1,0 +1,5 @@
+<aura:component >
+	<c:LightningDesignApplication >
+        <c:badge theme="inverse">Inverse Theme</c:badge>
+    </c:LightningDesignApplication>
+</aura:component>

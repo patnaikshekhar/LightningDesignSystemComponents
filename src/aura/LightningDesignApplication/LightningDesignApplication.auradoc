@@ -1,0 +1,3 @@
+<aura:documentation>
+	<aura:description>Lightning Design System Application root component. Includes the lightning design system css and root div.</aura:description>
+</aura:documentation>

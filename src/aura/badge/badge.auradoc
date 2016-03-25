@@ -1,0 +1,19 @@
+<aura:documentation>
+	<aura:description>Badge Component in LDS</aura:description>
+	<aura:example name="BadgeWithoutTheme" ref="ldsc:ExampleBadgeWithoutTheme" label="Badge without Theme">
+        <p>This example shows a simple setup of the <code>ldsc:badge</code> component without a theme being applied</p>
+        <pre>
+&lt;ldsc:LightningDesignApplication&gt;
+	&lt;ldsc:badge&gt;Basic&lt;/ldsc:badge&gt;
+&lt;/ldsc:LightningDesignApplication&gt;
+        </pre>
+	</aura:example>
+    <aura:example name="BadgeWithTheme" ref="ldsc:ExampleBadgeWithTheme" label="Badge with Theme">
+        <p>This example shows a simple setup of the <code>ldsc:badge</code> component with a theme. The theme can be either default, shade or inverse</p>
+        <pre>
+&lt;ldsc:LightningDesignApplication&gt;
+	&lt;ldsc:badge theme="inverse"&gt;Inverse Theme&lt;/ldsc:badge&gt;
+&lt;/ldsc:LightningDesignApplication&gt;
+        </pre>
+	</aura:example>
+</aura:documentation>

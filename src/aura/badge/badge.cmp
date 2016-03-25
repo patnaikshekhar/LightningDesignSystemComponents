@@ -1,0 +1,11 @@
+<aura:component access="GLOBAL">
+	<aura:attribute name="theme" type="String" access="GLOBAL" description="The theme of the badge. Can be either default,shade or inverse."/>
+    
+    <aura:if isTrue="{! v.theme == null }">
+        <span class="slds-badge">{! v.body }</span>
+    </aura:if>
+    <aura:if isTrue="{! v.theme != null }">
+        <span class="{! 'slds-badge slds-theme--' + v.theme }">{! v.body }</span>
+    </aura:if>
+    
+</aura:component>

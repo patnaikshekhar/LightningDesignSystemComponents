@@ -1,0 +1,5 @@
+<aura:component >
+	<c:LightningDesignApplication >
+        <c:badge >Basic</c:badge>
+    </c:LightningDesignApplication>
+</aura:component>
