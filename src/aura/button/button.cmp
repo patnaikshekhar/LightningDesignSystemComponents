@@ -3,8 +3,11 @@
     <aura:attribute name="theme" type="String" access="GLOBAL" description="Theme of button can be either neutral, brand, inverse or destructive" />
     <aura:attribute name="disabled" type="Boolean" access="GLOBAL" description="Is the button disabled" default="false" />
     <aura:attribute name="iconPosition" type="String" access="GLOBAL" description="Can be either left or right" default="left" />
+    <aura:attribute name="onClick" type="Aura.Action" access="GLOBAL" description="Action to be executed when button is clicked" />
     
 	<button 
+            id="{! v.id }"
+            onclick="{! v.onClick }"
             class="{! 'slds-button ' + (v.theme != null ? 'slds-button--' + v.theme : '') + (v.body.length > 0 ? '' : ' slds-button--icon') + (v.class ? ' ' + v.class : '') }" 
             disabled="{! v.disabled }">
         		<aura:if isTrue="{! v.iconName != '' &amp;&amp; v.iconPosition == 'left' }">
