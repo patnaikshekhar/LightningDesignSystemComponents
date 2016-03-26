@@ -1,7 +1,5 @@
-<aura:application >
+<aura:component >
 	<c:LightningDesignApplication >
-        <c:badge >Test</c:badge>
-    	<c:badge theme="inverse">Test</c:badge>
         <c:button >Basic Button</c:button>
         <c:button theme="neutral">Neutral Button</c:button>
         <c:button theme="brand">Brand Button</c:button>
@@ -11,6 +9,5 @@
         <c:button theme="neutral" iconPosition="left" iconType="utility" iconName="download">Icon Button</c:button>
         <c:button theme="neutral" iconPosition="right" iconType="utility" iconName="download">Icon Button</c:button>
         <c:button iconSize="large" iconType="utility" iconName="settings"></c:button>
-        <c:icon iconName="announcement" iconType="action" />
     </c:LightningDesignApplication>
-</aura:application>
+</aura:component>

@@ -1,0 +1,5 @@
+<aura:interface description="Interface for components with icons">
+	<aura:attribute name="iconType" type="String" access="GLOBAL" description="Can be either action, custom, doctype, standard or utility" default="" />
+    <aura:attribute name="iconName" type="String" access="GLOBAL" description="Must be a name of an icon. E.g add" default="" />
+    <aura:attribute name="iconSize" type="String" access="GLOBAL" description="Size of the icon. Can be small, large, x-small or blank for default" default="" />
+</aura:interface>

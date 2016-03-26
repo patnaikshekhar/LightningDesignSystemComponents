@@ -1,0 +1,2 @@
+<aura:component implements="HTMLAttributes,IconAttributes">
+</aura:component>

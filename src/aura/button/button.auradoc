@@ -1,0 +1,19 @@
+<aura:documentation>
+	<aura:description>Button Component in LDS</aura:description>
+	<aura:example name="Buttons" ref="ldsc:ExampleButton" label="Button">
+        <p>These are various examples of the <code>ldsc:button</code> component</p>
+        <pre>
+&lt;ldsc:LightningDesignApplication&gt;
+  &lt;ldsc:button&gt;Basic Button&lt;/ldsc:button&gt;
+  &lt;ldsc:button theme="neutral"&gt;Neutral Button&lt;/ldsc:button&gt;
+  &lt;ldsc:button theme="brand"&gt;Brand Button&lt;/ldsc:button&gt;
+  &lt;ldsc:button theme="destructive"&gt;Destructive Button&lt;/ldsc:button&gt;
+  &lt;ldsc:button theme="inverse"&gt;Inverse Button&lt;/ldsc:button&gt;
+  &lt;ldsc:button theme="neutral" disabled="true"&gt;Disabled Button&lt;/ldsc:button&gt;
+  &lt;ldsc:button theme="neutral" iconPosition="left" iconType="utility" iconName="download"&gt;Icon Button&lt;/ldsc:button&gt;
+  &lt;ldsc:button theme="neutral" iconPosition="right" iconType="utility" iconName="download"&gt;Icon Button&lt;/ldsc:button&gt;
+  &lt;ldsc:button iconSize="large" iconType="utility" iconName="settings"&gt;&lt;/ldsc:button&gt;
+&lt;/ldsc:LightningDesignApplication&gt;
+        </pre>
+	</aura:example>
+</aura:documentation>
