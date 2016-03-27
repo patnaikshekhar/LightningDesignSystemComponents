@@ -7,7 +7,7 @@
     
 	<button 
             id="{! v.id }"
-            onclick="{! v.onClick }"
+            onclick="{! v.onClick != null ? v.onClick : c.dummyAction }"
             class="{! 'slds-button ' + (v.theme != null ? 'slds-button--' + v.theme : '') + (v.body.length > 0 ? '' : ' slds-button--icon') + (v.class ? ' ' + v.class : '') }" 
             disabled="{! v.disabled }">
         		<aura:if isTrue="{! v.iconName != '' &amp;&amp; v.iconPosition == 'left' }">

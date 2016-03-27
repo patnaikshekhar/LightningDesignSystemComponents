@@ -1,6 +1,6 @@
 <aura:application >
 	<c:LightningDesignApplication >
-        <c:badge >Test</c:badge>
+        <c:badge onClick="{! c.buttonClick }">Test</c:badge>
     	<c:badge theme="inverse">Test</c:badge>
         <c:button onClick="{! c.buttonClick }">Basic Button</c:button>
         <c:button theme="neutral">Neutral Button</c:button>

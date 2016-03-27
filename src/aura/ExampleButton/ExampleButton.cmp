@@ -1,6 +1,6 @@
 <aura:component >
 	<c:LightningDesignApplication >
-        <c:button >Basic Button</c:button>
+        <c:button onClick="{! c.buttonClick }">Basic Button</c:button>
         <c:button theme="neutral">Neutral Button</c:button>
         <c:button theme="brand">Brand Button</c:button>
         <c:button theme="destructive">Destructive Button</c:button>
