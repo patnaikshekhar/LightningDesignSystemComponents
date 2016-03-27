@@ -1,0 +1,20 @@
+<aura:component >
+    <c:LightningDesignApplication >
+    	<c:tabs >
+            <c:tab label="Tab 1" active="true">
+                <p>These are the contents of tab 1</p>
+            </c:tab>
+            <c:tab label="Tab 2">
+                <p>These are the contents of tab 2</p>
+            </c:tab>
+        </c:tabs>
+        <c:tabs type="scoped">
+            <c:tab label="Scoped Tab 1" active="true">
+                <p>These are the contents of tab 1</p>
+            </c:tab>
+            <c:tab label="Scoped Tab 2">
+                <p>These are the contents of tab 2</p>
+            </c:tab>
+        </c:tabs>
+    </c:LightningDesignApplication>
+</aura:component>

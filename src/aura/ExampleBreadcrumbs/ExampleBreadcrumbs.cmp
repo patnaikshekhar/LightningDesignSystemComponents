@@ -1,0 +1,5 @@
+<aura:component >
+    <c:LightningDesignApplication >
+    	<c:breadcrumbs crumbs="Account,Contact" onClick="{! c.crumbClicked }" />
+    </c:LightningDesignApplication>
+</aura:component>

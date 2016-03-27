@@ -1,0 +1,17 @@
+<aura:component access="GLOBAL" implements="c:HTMLAttributes">
+    <aura:handler name="init" value="{! this }" action="{! c.init }" />
+    <aura:handler name="change" value="{!v.type}" action="{!c.init}"/>
+    
+    <aura:attribute name="type" type="String" access="GLOBAL" description="The type of the tab. Can be either default or scoped" default="default" />
+    
+	<div class="{! 'slds-tabs--' + v.type + ' ' + v.class }" id="{! id }">
+    	<ul class="{! 'slds-tabs--' + v.type + '__nav'}" role="tablist">
+            <aura:iteration items="{! v.tabs }" var="tab" indexVar="num">
+                <li class="{! 'slds-tabs--' + v.type + '__item slds-text-heading--label ' + (tab.active ? 'slds-active' : '')}" title="{! label }" role="presentation">
+                    <a class="{! 'slds-tabs--' + v.type + '__link' }" href="#" role="tab" tabindex="0" aria-selected="true" aria-controls="{! tab.label }" onclick="{! c.changeTab }" data-id="{! num }">{! tab.label }</a>
+                </li>
+            </aura:iteration>
+        </ul>
+        {! v.body }
+    </div>
+</aura:component>

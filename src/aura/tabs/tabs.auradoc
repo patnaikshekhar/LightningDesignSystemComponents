@@ -1,0 +1,6 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="Tabs" ref="ldsc:exampleTabs" label="Tabs">
+		<p>This is an example of the <code>ldsc:tabs</code> component. Which consists of multiple <code>ldsc:tab</code></p>
+	</aura:example>
+</aura:documentation>

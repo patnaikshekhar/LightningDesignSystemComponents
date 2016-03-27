@@ -1,0 +1,14 @@
+<aura:component access="GLOBAL" implements="c:HTMLAttributes">
+	
+    <aura:attribute name="label" type="String" description="Label of the tab" default="" required="true" access="GLOBAL" /> 
+    <aura:attribute name="active" type="Boolean" description="should this tab be shown" default="false" access="GLOBAL" /> 
+    <aura:attribute name="type" type="String" access="GLOBAL" description="The type of the tab. Can be either default or scoped" default="default" />
+    
+    <div 
+         id="{! v.id }"
+         class="{! 'slds-tabs--' + v.type + '__content' + ' ' + v.class + ' ' + (v.active ? 'slds-show' : 'slds-hide') }" 
+         role="tabpanel" 
+         aria-labelledby="{! v.label }">
+        {! v.body }
+    </div>
+</aura:component>
