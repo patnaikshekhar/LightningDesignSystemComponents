@@ -1,0 +1,6 @@
+<aura:documentation>
+	<aura:description>Button Group Component</aura:description>
+	<aura:example name="ButtonGroup" ref="ldsc:ExampleButtonGroup" label="Button Group">
+		<p>Here is an example of the <code>ldsc:buttonGroup</code> component. A button group will contain one or more buttons.</p>
+	</aura:example>
+</aura:documentation>

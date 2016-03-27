@@ -1,0 +1,9 @@
+<aura:component >
+    <c:LightningDesignApplication >
+		<c:buttonGroup >
+            <c:button theme="neutral">Action 1</c:button>
+            <c:button theme="neutral">Action 2</c:button>
+            <c:button theme="neutral">Action 3</c:button>
+        </c:buttonGroup>
+    </c:LightningDesignApplication>
+</aura:component>

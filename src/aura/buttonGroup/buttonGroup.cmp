@@ -1,0 +1,5 @@
+<aura:component access="GLOBAL" implements="HTMLAttributes,IconAttributes">
+	<div class="{! 'slds-button-group ' + v.class }" role="group" id="{! v.id }">
+        {! v.body }
+    </div>
+</aura:component>
