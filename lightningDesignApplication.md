@@ -5,5 +5,8 @@ This component can be replaced incase you have your own customized css.
 
 ## Example
 
+```html
 <ldsc:lightningDesignApplication>
+  <!-- Rest of the markup goes here -->
 </ldsc:lightningDesignApplication>
+```
