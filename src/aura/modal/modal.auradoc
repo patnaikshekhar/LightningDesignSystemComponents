@@ -1,0 +1,6 @@
+<aura:documentation>
+	<aura:description>This component shows a modal on the screen. The show attribute is used to decide whether the modal should be shown or now.</aura:description>
+	<aura:example name="Modal" ref="ldsc:exampleModal" label="Modal">
+		<p>These are various examples of the <code>ldsc:modal</code> component.</p>
+	</aura:example>
+</aura:documentation>

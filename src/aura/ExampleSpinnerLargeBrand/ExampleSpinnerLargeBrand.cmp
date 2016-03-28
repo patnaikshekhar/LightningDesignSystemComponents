@@ -1,0 +1,5 @@
+<aura:component >
+    <c:LightningDesignApplication >
+		<c:spinner size="large" theme="brand"/>
+    </c:LightningDesignApplication>
+</aura:component>

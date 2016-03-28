@@ -1,0 +1,5 @@
+<aura:component >
+    <c:LightningDesignApplication >
+    	<c:spinner />
+    </c:LightningDesignApplication>
+</aura:component>

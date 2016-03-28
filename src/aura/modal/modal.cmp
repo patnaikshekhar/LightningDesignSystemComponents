@@ -1,0 +1,35 @@
+<aura:component access="GLOBAL" implements="c:HTMLAttributes">
+    
+    <aura:attribute name="show" type="Boolean" default="false" description="Should the modal be shown?" access="GLOBAL" />
+    <aura:attribute name="header" type="String" default="" description="The text of the modal header" access="GLOBAL" />
+    <aura:attribute name="footer" type="Aura.Component[]" description="The components of the footer" access="GLOBAL" />
+	<aura:attribute name="tagline" type="Aura.Component[]" description="A tagline to show just below the header." access="GLOBAL" />
+    <aura:attribute name="size" type="String" default="default" description="Size of the modal. Can be either default or large." access="GLOBAL" />
+    
+    <aura:attribute name="directionalFooter" type="Boolean" default="false" description="Should the footer be directional. I.e the buttons will be split, one on the left and the other on the right." access="GLOBAL" />
+    
+    <aura:if isTrue="{! v.show }">
+        <div 
+             id="{! v.id }"
+             class="{! 'slds-modal slds-fade-in-open ' + (v.size == 'large' ? ' slds-modal--large' : '') + ' ' + v.class }"
+             aria-hidden="false" 
+             role="dialog">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <c:button iconType="action" iconName="close" iconSize="large" class="slds-modal__close slds-button--icon-inverse" onClick="{! c.closeModal }"/>
+                    <h2 class="slds-text-heading--medium">{! v.header }</h2>
+                    <p class="slds-m-top--x-small">{! v.tagline }</p>
+                </div>
+                <div class="slds-modal__content slds-p-around--medium">
+                    <div>
+                        {! v.body }
+                    </div>
+                </div>
+                <div class="{! 'slds-modal__footer ' + (v.directionalFooter ? ' slds-modal__footer--directional' : '') }">
+                    {! v.footer }
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </aura:if>
+</aura:component>

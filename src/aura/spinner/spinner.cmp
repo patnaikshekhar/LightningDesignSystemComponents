@@ -1,0 +1,15 @@
+<aura:component access="GLOBAL" implements="c:HTMLAttributes">
+    
+    <aura:attribute name="show" type="Boolean" default="true" description="Should the spinner be shown? Use this to show/hide the spinner" access="GLOBAL" />
+    <aura:attribute name="size" type="String" default="medium" description="The size of the spinner. Can be either small, medium or large. Default is medium." access="GLOBAL" />
+    <aura:attribute name="theme" type="String" default="default" description="The theme of the spinner. Can be either default, brand or inverse. Default is default." access="GLOBAL" />
+    
+    <aura:if isTrue="{! v.show }">
+        <div class="{! 'slds-spinner_container ' + v.class }" id="{! v.id }">
+            <div class="{! (v.theme == 'inverse' ? 'slds-spinner--inverse' : (v.theme == 'brand' ? 'slds-spinner--brand' : '')) + ' slds-spinner slds-spinner--' + v.size }" aria-hidden="false" role="alert">
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+</aura:component>
