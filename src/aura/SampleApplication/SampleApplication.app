@@ -6,5 +6,6 @@
         <c:ExampleButtonGroup />
         <c:ExampleBreadcrumbs />
         <c:ExampleTabs />
+        <c:ExampleSpinner />
     </c:LightningDesignApplication>
 </aura:application>
