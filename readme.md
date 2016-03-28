@@ -4,8 +4,8 @@
 
 ## Components
 - [Lightning Design Application](documentation/lightningDesignApplication.md)
-- [Badge](documentation/breadcrumbs.md)
-- Breadcrumbs
+- Badge
+- [Breadcrumbs](documentation/breadcrumbs.md)
 - Button
 - Button Group
 - Icon
