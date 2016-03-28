@@ -3,7 +3,7 @@
 ## Installation
 
 ## Components
-- [Lightning Design Application](lightningDesignApplication.md)
+- [Lightning Design Application](documentation/lightningDesignApplication.md)
 - Badge
 - Breadcrumbs
 - Button
