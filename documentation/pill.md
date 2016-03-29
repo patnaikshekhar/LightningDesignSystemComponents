@@ -1,6 +1,6 @@
 # Pill Component
 
-Within a form control, a pill represents an existing item in a database, as opposed to user-generated freeform text.
+Within a form control, a pill represents an existing item in a database, as opposed to user-generated freeform text. A pill triggers a onRemove event when the close button is clicked. A pill can have an icon or a avatar.
 
 ## Attributes
 - label (String) - Label of pill
