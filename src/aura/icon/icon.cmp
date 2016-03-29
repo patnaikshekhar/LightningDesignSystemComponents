@@ -1,2 +1,2 @@
-<aura:component implements="HTMLAttributes,IconAttributes">
+<aura:component implements="c:HTMLAttributes,c:IconAttributes">
 </aura:component>

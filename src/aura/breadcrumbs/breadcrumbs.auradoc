@@ -1,5 +1,5 @@
 <aura:documentation>
-	<aura:description>Documentation</aura:description>
+	<aura:description>Breadcrumbs are used for navigation. The crumbs attribute is an array of the crumbs.</aura:description>
 	<aura:example name="BreadCrumbs" ref="ldsc:ExampleBreadcrumbs" label="BreadCrumbs">
         <p>Breadcrumbs are used for navigation. The crumbs attribute is an array of the crumbs. </p>
         <p>The onClick action is called when a crumb is clicked. There are two data attributes data-id and data-name which are set on the crumb so that one can identify which crumb was clicked</p>

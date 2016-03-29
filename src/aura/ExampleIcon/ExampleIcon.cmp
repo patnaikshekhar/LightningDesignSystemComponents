@@ -1,0 +1,25 @@
+<aura:component >
+    
+    <c:LightningDesignApplication >
+        <div>
+            <p>Action Icon</p>
+            <c:icon iconType="action" iconName="log_a_call" iconContainer="true" iconSize="small"/>
+        </div>
+        <div>
+            <p>DocType Icon</p>
+            <c:icon iconType="doctype" iconName="xml" iconContainer="true" />
+        </div>
+        <div>
+            <p>Standard Icon</p>
+            <c:icon iconType="standard" iconName="account" iconContainer="true" />
+        </div>
+        <div>
+            <p>Utility Icon</p>
+            <c:icon iconType="utility" iconName="announcement" iconContainer="true" iconSize="small" />
+        </div>
+        <div>
+            <p>Custom Icon</p>
+            <c:icon iconType="custom" iconName="custom1" iconContainer="true" class="slds-icon slds-icon--large slds-icon-custom-1"/>
+        </div>
+    </c:LightningDesignApplication>
+</aura:component>

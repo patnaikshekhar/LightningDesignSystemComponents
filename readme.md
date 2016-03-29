@@ -15,7 +15,7 @@ Managed package link goes here (TBD)
 - [Breadcrumbs](documentation/breadcrumbs.md)
 - Button
 - Button Group
-- Icon
+- [Icon](documentation/icon.md)
 - Tabs
 - Spinner
 

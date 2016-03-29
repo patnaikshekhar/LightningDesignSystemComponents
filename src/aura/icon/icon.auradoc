@@ -1,0 +1,6 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="Icons" ref="ldsc:exampleIcon" label="Icons">
+		
+	</aura:example>
+</aura:documentation>
