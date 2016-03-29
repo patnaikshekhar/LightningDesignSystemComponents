@@ -18,6 +18,7 @@ Managed package link goes here (TBD)
 - [Icon](documentation/icon.md)
 - Tabs
 - Spinner
+- [Pill](documentation/pill.md)
 
 ## Interfaces
 

@@ -1,0 +1,7 @@
+<aura:component >
+	<c:LightningDesignApplication >
+        <c:pill label="Basic Pill" onRemove="{! c.removePill }" />
+        <c:pill label="Pill with icon" iconType="standard" iconName="account" />
+        <c:pill label="Pill with avatar" avatarURL="/resource/ldsc__SLDS100/assets/images/avatar2.jpg" />
+    </c:LightningDesignApplication>
+</aura:component>

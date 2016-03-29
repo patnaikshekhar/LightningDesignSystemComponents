@@ -5,5 +5,4 @@
     
     <aura:attribute name="iconContainer" type="Boolean" access="GLOBAL" description="Should this icon have a container" default="false" />
     <aura:attribute name="iconContainerClass" type="String" access="GLOBAL" description="Override the class of the container" default="" />
-    
 </aura:interface>

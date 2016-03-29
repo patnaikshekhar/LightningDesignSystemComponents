@@ -1,0 +1,5 @@
+<aura:documentation>
+	<aura:description>Within a form control, a pill represents an existing item in a database, as opposed to user-generated freeform text.</aura:description>
+	<aura:example name="Pill" ref="ldsc:examplePill" label="Pill">
+	</aura:example>
+</aura:documentation>
