@@ -5,6 +5,8 @@ Within a form control, a pill represents an existing item in a database, as oppo
 ## Attributes
 - label (String) - Label of pill
 - avatarURL (String) - URL of the Avatar
+
+## Event
 - onRemove (Aura.Action) - Event called when the pill is removed
 
 ## Example
