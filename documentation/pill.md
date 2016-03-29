@@ -16,8 +16,8 @@ Within a form control, a pill represents an existing item in a database, as oppo
 ```html
 <ldsc:lightningDesignApplication>
     <ldsc:pill label="Basic Pill" onRemove="{! c.removePill }" />
-    <ldsc:pill label="Pill with icon" iconType="standard" iconName="account" />
-    <ldsc:pill label="Pill with avatar" avatarURL="/resource/ldsc__SLDS100/assets/images/avatar2.jpg" />
+    <ldsc:pill label="Pill with icon" iconType="standard" iconName="account" onRemove="{! c.removePill }" />
+    <ldsc:pill label="Pill with avatar" avatarURL="/resource/ldsc__SLDS100/assets/images/avatar2.jpg" onRemove="{! c.removePill }" />
 </ldsc:lightningDesignApplication>
 ```
 
@@ -25,7 +25,7 @@ Within a form control, a pill represents an existing item in a database, as oppo
 ```js
 ({
 	removePill : function(component, event, helper) {
-		console.log('Pill was removed', event.target);
+		console.log(event.getSource().get('v.label'), 'was removed');
 	}
 })
 ```

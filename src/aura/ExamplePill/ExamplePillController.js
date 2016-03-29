@@ -1,5 +1,5 @@
 ({
 	removePill : function(component, event, helper) {
-		console.log('Pill was removed', event.target);
+		console.log(event.getSource().get('v.label'), 'was removed');
 	}
 })

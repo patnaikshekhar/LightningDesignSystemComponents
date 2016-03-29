@@ -2,7 +2,8 @@
     
     <aura:attribute name="label" type="String" default="" description="Label of pill" access="GLOBAL" required="true" /> 
     <aura:attribute name="avatarURL" type="String" default="" description="URL of the Avatar" access="GLOBAL" /> 
-    <aura:attribute name="onRemove" type="Aura.Action" description="Event called when the pill is removed" access="GLOBAL" />
+	
+	<aura:registerEvent name="onRemove" type="c:basicEvent" description="Event called when the pill is removed" access="GLOBAL"/>    
     
 	<a href="#void" class="{! 'slds-pill ' + v.class }" id="{! v.id }">
         <aura:if isTrue="{! v.avatarURL != '' }">
@@ -14,7 +15,7 @@
         	<c:icon class="{! 'slds-icon slds-pill__icon ' + (v.iconType == 'standard' ? ' slds-icon-' + v.iconType + '-' + v.iconName : '')}" iconType="{! v.iconType }" iconName="{! v.iconName }" iconSize="{! v.iconSize }" iconContainer="{! v.iconContainer }" iconContainerClass="{! v.iconContainerClass }"/>
         </aura:if>
         <span class="slds-pill__label">{! v.label }</span>
-        <c:button class="slds-button--icon-bare slds-pill__remove" onClick="{! v.onRemove }">
+        <c:button class="slds-button--icon-bare slds-pill__remove" onClick="{! c.onRemove }">
             <c:icon class="slds-button__icon" iconType="utility" iconName="close" />
           	<span class="slds-assistive-text">Remove</span>
         </c:button>
