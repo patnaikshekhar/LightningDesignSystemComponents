@@ -1,6 +1,6 @@
 # Lightning Components for Lightning Design System
 
-<Under Development>
+## Under Development
 An open source library of [lightning components](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/) for the [Lightning Design System](http://www.lightningdesignsystem.com/). The purpose of this project is to create easy to use generic components that can be used in a Lightning Application. Since the Lightning Design System is still in-flux this is going to be a changing set of components.
 
 ## Installation
