@@ -17,7 +17,7 @@ An alert can have a close button which can fire the onClose event and hide the a
 
 ## Examples
 
-- Example 1
+### Example 1
 
 **Output**
 ![Alert 1 image](images/alert1.png)
@@ -44,7 +44,7 @@ An alert can have a close button which can fire the onClose event and hide the a
 })
 ```
 
-- Example 2
+### Example 2
 
 **Output**
 ![Alert  2 image](images/alert2.png)
@@ -60,7 +60,7 @@ An alert can have a close button which can fire the onClose event and hide the a
 </ldsc:LightningDesignApplication>
 ```
 
-- Example 3
+### Example 3
 
 **Output**
 ![Alert 3 image](images/alert3.png)
