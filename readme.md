@@ -11,7 +11,7 @@ Managed package link goes here (TBD)
 ## Components
 
 - [Lightning Design Application](documentation/lightningDesignApplication.md)
-- Badge
+- [Badge](documentation/badge.md)
 - [Breadcrumbs](documentation/breadcrumbs.md)
 - Button
 - Button Group

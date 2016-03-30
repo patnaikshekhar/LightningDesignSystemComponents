@@ -3,10 +3,10 @@
 A basic badge component.
 
 ## Attributes
-- theme (String) - The theme of the badge. Can be either default,shade or inverse.
+- theme (String) - The theme of the badge. Can be either default, shade or inverse.
 
 ## Events
-- onClick (ldsc:basicEvent) - The action to be called when the badge is clicked
+- onClick (ldsc:basicEvent) - The action to be called when the badge is clicked.
 
 ## Example
 

@@ -16,9 +16,9 @@ Breadcrumbs are used for navigation. The crumbs attribute is an array of the cru
 
 **Component**
 ```html
-<ldsc:LightningDesignApplication >
+<ldsc:lightningDesignApplication >
 	<ldsc:breadcrumbs crumbs="Account,Contact" onClick="{! c.crumbClicked }" />
-</ldsc:LightningDesignApplication>
+</ldsc:lightningDesignApplication>
 ```
 
 **Controller**
