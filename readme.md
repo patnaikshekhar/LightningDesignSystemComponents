@@ -1,7 +1,8 @@
 # Lightning Components for Lightning Design System
 
-## Under Development
-An open source library of [lightning components](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/) for the [Lightning Design System](http://www.lightningdesignsystem.com/). The purpose of this project is to create easy to use generic components that can be used in a Lightning Application. Since the Lightning Design System is still in-flux this is going to be a changing set of components.
+## Under Development - Alpha to be released April 30th 2016
+
+An open source library of [lightning components](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/) for the [Lightning Design System](http://www.lightningdesignsystem.com/). The purpose of this project is to create easy to use generic components that can be used in a lightning application. Since the Lightning Design System is still in-flux this is going to be a changing set of components. Pull request, feature requests and issues are most welcome.
 
 ## Installation
 
@@ -19,6 +20,7 @@ Managed package link goes here (TBD)
 - [Tabs](documentation/tabs.md)
 - [Tab](documentation/tab.md)
 - Spinner
+- Modal
 - [Pill](documentation/pill.md)
 - [Alert](documentation/alert.md)
 
