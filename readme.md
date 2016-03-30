@@ -16,7 +16,8 @@ Managed package link goes here (TBD)
 - Button
 - Button Group
 - [Icon](documentation/icon.md)
-- Tabs
+- [Tabs](documentation/tabs.md)
+- [Tab](documentation/tab.md)
 - Spinner
 - [Pill](documentation/pill.md)
 - [Alert](documentation/alert.md)
