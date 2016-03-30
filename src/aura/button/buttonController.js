@@ -1,5 +1,5 @@
 ({
-	dummyAction : function(component, event, helper) {
-		// Action to nultify a button click and stop an error message
+	onClick : function(component, event, helper) {
+		component.getEvent('onClick').fire({domEvent: event});
 	}
 })

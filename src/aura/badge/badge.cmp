@@ -1,10 +1,11 @@
 <aura:component access="GLOBAL" implements="c:HTMLAttributes">
 	<aura:attribute name="theme" type="String" access="GLOBAL" description="The theme of the badge. Can be either default,shade or inverse." default='' />
-    <aura:attribute name="onClick" type="Aura.Action" access="GLOBAL" description="The action to be called when the badge is clicked" />
-           
+    
+    <aura:registerEvent name="onClick" type="c:basicEvent" description="The action to be called when the badge is clicked" access="GLOBAL"/>    
+    
 	<span 
           class="{! 'slds-badge ' + (v.theme != '' ? 'slds-theme--' + v.theme : '') + ' ' + v.class }"
-          onclick="{! v.onClick != null ? v.onClick : c.dummyEvent }"
+          onclick="{! c.onClick }"
           id="{! v.id }">{! v.body }</span>
     
 </aura:component>

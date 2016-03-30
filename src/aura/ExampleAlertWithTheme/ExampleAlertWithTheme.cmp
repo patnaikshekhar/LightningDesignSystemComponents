@@ -1,0 +1,9 @@
+<aura:component >
+    <c:LightningDesignApplication >
+        <c:alert theme="offline">
+            <c:icon class="slds-icon icon-text-email slds-icon--small slds-m-right--x-small" iconType="utility" iconName="offline">
+            </c:icon>You are in offline mode.
+            <a href="#void">More Information</a>
+        </c:alert>
+    </c:LightningDesignApplication>
+</aura:component>

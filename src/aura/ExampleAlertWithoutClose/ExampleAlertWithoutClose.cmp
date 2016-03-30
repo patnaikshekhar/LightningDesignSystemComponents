@@ -1,0 +1,8 @@
+<aura:component >    
+    <c:LightningDesignApplication >
+        <c:alert hasCloseButton="false" theme="error" assistiveText="Unsupported Browser" texture="false">
+            <c:icon iconType="utility" iconName="ban" class="slds-icon icon-text-email slds-icon--small slds-m-right--x-small"></c:icon>Your browser is currently not supported. Your Salesforce may be degraded.
+        <a href="#">More Information</a>
+        </c:alert>
+    </c:LightningDesignApplication>
+</aura:component>

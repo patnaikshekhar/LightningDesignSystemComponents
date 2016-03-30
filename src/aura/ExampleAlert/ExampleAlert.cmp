@@ -1,0 +1,7 @@
+<aura:component >
+	<c:LightningDesignApplication >
+        <c:alert onClose="{! c.alertClosed }" onClick="{! c.alertClicked }">
+            Basic Alert
+        </c:alert>
+    </c:LightningDesignApplication>
+</aura:component>

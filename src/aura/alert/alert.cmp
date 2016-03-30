@@ -1,0 +1,27 @@
+<aura:component access="GLOBAL" implements="c:HTMLAttributes">
+    
+    <aura:attribute name="show" type="Boolean" default="true" description="Should this component be shown?" access="GLOBAL"/>
+    <aura:attribute name="theme" type="String" default="" description="Theme of the alert. Can be ether blank, success, error or offline" access="GLOBAL" />
+    <aura:attribute name="texture" type="Boolean" default="true" description="Should the alert have a texture" access="GLOBAL" />
+    <aura:attribute name="hasCloseButton" type="Boolean" default="true" description="Can this component be closed" access="GLOBAL" />
+    <aura:attribute name="assistiveText" type="String" default="" description="Assistive text for this component" access="GLOBAL" />
+    
+    <aura:registerEvent name="onClose" type="c:basicEvent" description="Called when the alert is closed" access="GLOBAL" />
+    <aura:registerEvent name="onClick" type="c:basicEvent" description="Called when the alert is clicked" access="GLOBAL" />
+    
+    <aura:if isTrue="{! v.show }">
+        <div class="{! 'slds-notify_container ' + v.class }" id="{! v.id }" onclick="{! c.onClick }">
+            <div class="{! 'slds-notify slds-notify--alert ' + (theme != '' ? 'slds-theme--' + v.theme : '') + (v.texture ? ' slds-theme--alert-texture': '') }" role="alert">
+                
+                <aura:if isTrue="{! v.hasCloseButton }">
+                    <c:button class="slds-button--icon-inverse slds-notify__close" iconType="utility" iconName="close" onClick="{! c.onClose }"/>
+                </aura:if>
+                
+                <span class="slds-assistive-text">{! v.assistiveText }</span>
+                <h2>
+                    {! v.body }
+                </h2>
+            </div>
+        </div>
+    </aura:if>
+</aura:component>

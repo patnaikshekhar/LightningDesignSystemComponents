@@ -1,0 +1,9 @@
+<aura:documentation>
+	<aura:description>Alerts are used to notify the users of an important event. An alert can have a close button which can fire the onClose event.</aura:description>
+	<aura:example name="Alert" ref="ldsc:exampleAlert" label="Alert">
+	</aura:example>
+    <aura:example name="AlertWithTheme" ref="ldsc:exampleAlertWithTheme" label="Alert with theme">
+	</aura:example>
+    <aura:example name="AlertWithoutCloseButton" ref="ldsc:exampleAlertWithoutClose" label="Alert without close button">
+	</aura:example>
+</aura:documentation>
