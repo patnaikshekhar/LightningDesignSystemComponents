@@ -2,14 +2,15 @@
     
     <aura:attribute name="assistiveText" type="String" description="Assistive Text" default='You are here:' access="GLOBAL" />
     <aura:attribute name="crumbs" type="String[]" description="List of links names" access="GLOBAL" />
-    <aura:attribute name="onClick" type="Aura.Action" description="Action to be called when clicked" access="GLOBAL" />
+    
+    <aura:registerEvent name="onClick" type="c:basicEvent" description="Action to be called when clicked" access="GLOBAL" />
     
 	<nav role="navigation" class="{! v.class }" id="{! v.id }">
       <p class="slds-assistive-text">{! v.assistiveText }</p>
       <ol class="slds-breadcrumb slds-list--horizontal" aria-labelledby="bread-crumb-label">
         <aura:iteration items="{! v.crumbs }" var="crumb" indexVar="num">
         	<li class="slds-list__item slds-text-heading--label">
-              <a href="#" onclick="{! v.onClick != null ? v.onClick : dummyAction }" data-id="{! num }" data-name="{! crumb }">{! crumb }</a>
+              <a href="#" onclick="{! c.onClick }" data-id="{! num }" data-name="{! crumb }">{! crumb }</a>
             </li> 
         </aura:iteration>
       </ol>

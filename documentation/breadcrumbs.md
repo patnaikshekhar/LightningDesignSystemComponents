@@ -5,6 +5,8 @@ Breadcrumbs are used for navigation. The crumbs attribute is an array of the cru
 ## Attributes
 - assistiveText (String) - Assistive Text to  be displayed
 - crumbs (String[]) - List of links names
+
+## Events
 - onClick (Aura.Action) - Action to be called when clicked
 
 ## Example
@@ -23,8 +25,8 @@ Breadcrumbs are used for navigation. The crumbs attribute is an array of the cru
 ```js
 ({
 	crumbClicked : function(component, event, helper) {
-		console.log('The index ' + event.target.dataset.id +
-                    ' was clicked. Which has the name ' + event.target.dataset.name + '.');
+		console.log('The index ' + event.getParam('domEvent').target.dataset.id +
+                    ' was clicked. Which has the name ' + event.getParam('domEvent').target.dataset.name + '.');
 	}
 })
 ```

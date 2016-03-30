@@ -1,3 +1,5 @@
 ({
-	dummyAction : function(component, event, helper) {}
+	onClick : function(component, event, helper) {
+        component.getEvent('onClick').fire({ domEvent: event });
+    }
 })
