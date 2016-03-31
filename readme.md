@@ -19,7 +19,7 @@ Managed package link goes here (TBD)
 - [Icon](documentation/icon.md)
 - [Tabs](documentation/tabs.md)
 - [Tab](documentation/tab.md)
-- Spinner
+- [Spinner](documentation/spinner.md)
 - Modal
 - [Pill](documentation/pill.md)
 - [Alert](documentation/alert.md)
