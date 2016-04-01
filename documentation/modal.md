@@ -1,4 +1,4 @@
-# Spinner Component
+# Modal Component
 
 This component shows a modal on the screen. The show attribute is used to decide whether the modal should be shown or not.
 
