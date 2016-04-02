@@ -1,0 +1,14 @@
+<aura:component access="GLOBAL" implements="c:HTMLAttributes">
+    
+    <aura:attribute name="wrap" type="Boolean" default="true" description="Should the grid wrap. Default is true." access="GLOBAL" />
+    <aura:attribute name="horizontal" type="String" default="" description="The horizontal alignment. Can be blank, center, space, spread, end" access="GLOBAL" />
+    <aura:attribute name="vertical" type="String" default="" description="The vertical alignment. Can be blank, center, end or stretch" access="GLOBAL" />
+    
+	<div class="{! 'slds-grid slds-grid--pull-padded ' 
+                + ' ' + (v.wrap ? 'slds-wrap' : '')
+                + ' ' + (v.horizontal != '' ? 'slds-grid--align-' + v.horizontal : '')
+                + ' ' + (v.vertical != '' ? 'slds-grid--vertical-align-' + v.vertical : '')
+                + ' ' + v.class }" id="{! v.id }">
+        {! v.body }
+    </div>
+</aura:component>

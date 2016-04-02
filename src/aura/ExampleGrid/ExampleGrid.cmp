@@ -1,0 +1,46 @@
+<aura:component >
+	<c:LightningDesignApplication >
+        <h1 class="slds-text-heading--large">Automatic Sizing</h1>
+        
+        <h2 class="slds-text-heading--medium">Normal</h2>
+        <c:grid >
+            <c:col class="blue">Column 1</c:col>
+        	<c:col class="blue">Column 2</c:col>
+            <c:col class="blue">Column 3</c:col>
+        </c:grid>
+        
+        <h2 class="slds-text-heading--medium">Padded</h2>
+        <c:grid >
+            <c:col class="blue" padding="large">Column 1</c:col>
+        	<c:col class="blue" padding="large">Column 2</c:col>
+            <c:col class="blue" padding="large">Column 3</c:col>
+        </c:grid>
+        
+        <h1 class="slds-text-heading--large">Manual Sizing</h1>
+        
+        <h2 class="slds-text-heading--medium">Default Columns is 12</h2>
+        <c:grid >
+            <c:col class="blue" size="2">Column 2 of 12</c:col>
+        	<c:col class="blue" size="6">Column 6 of 12</c:col>
+            <c:col class="blue" size="4">Column 4 of 12</c:col>
+        </c:grid>
+        
+        <h2 class="slds-text-heading--medium">Default Columns can be changed</h2>
+        <c:grid >
+            <c:col class="blue" size="1" columns="5">Column 1 of 5</c:col>
+        	<c:col class="blue" size="1" columns="5">Column 1 of 5</c:col>
+            <c:col class="blue" size="3" columns="5">Column 3 of 5</c:col>
+        </c:grid>
+        
+        <h2 class="slds-text-heading--medium">The grid is wrapped by default.</h2>
+        <c:grid >
+            <c:col class="blue" size="1" columns="5">Column 1 of 5</c:col>
+        	<c:col class="blue" size="1" columns="5">Column 1 of 5</c:col>
+            <c:col class="blue" size="3" columns="5">Column 3 of 5</c:col>
+            <c:col class="blue" size="4" columns="12">Column 4 of 12</c:col>
+        	<c:col class="blue" size="6" columns="12">Column 6 of 12</c:col>
+            <c:col class="blue" size="2" columns="12">Column 2 of 12</c:col>
+        </c:grid>
+        
+    </c:LightningDesignApplication>
+</aura:component>

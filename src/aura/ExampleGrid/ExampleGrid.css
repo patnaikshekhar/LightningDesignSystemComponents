@@ -1,0 +1,17 @@
+.THIS .blue {
+    text-align: center;
+    color: #EEF1F6;
+    background-color: #00396B;
+    border: 1px solid #0C8EFF;
+    border-radius: 5%;
+}
+
+.THIS .slds-text-heading--large {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.THIS .slds-text-heading--medium {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
