@@ -7,7 +7,7 @@
 	<div class="{! 'slds-grid slds-grid--pull-padded ' 
                 + ' ' + (v.wrap ? 'slds-wrap' : '')
                 + ' ' + (v.horizontal != '' ? 'slds-grid--align-' + v.horizontal : '')
-                + ' ' + (v.vertical != '' ? 'slds-grid--vertical-align-' + v.vertical : '')
+                + ' ' + (v.vertical == 'stretch' ? 'slds-grid--vertical-stretch' : (v.vertical != '' ? 'slds-grid--vertical-align-' + v.vertical : ''))
                 + ' ' + v.class }" id="{! v.id }">
         {! v.body }
     </div>

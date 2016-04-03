@@ -10,10 +10,20 @@
     <aura:attribute name="columnsMD" type="Integer" default="12" description="Total no of columns that this will consume on medium devices." access="GLOBAL" />
     <aura:attribute name="columnsLG" type="Integer" default="12" description="Total no of columns that this will consume on large devices." access="GLOBAL" />
     
+    <aura:attribute name="vertical" type="String" default="" description="Vertical alignment. Can be top, middle or bottom" access="GLOBAL" />
+    
+    <aura:attribute name="order" type="Integer" default="" description="Order of this column" access="GLOBAL" />
+    <aura:attribute name="orderMD" type="Integer" default="" description="Order of this column in medium devices" access="GLOBAL" />
+    <aura:attribute name="orderLG" type="Integer" default="" description="Order of this column in large devices" access="GLOBAL" />
+    
 	<div class="{! (v.padding == '' ? 'slds-col' : (v.padding == 'small' ? 'slds-col--padded' : 'slds-col--padded-' + v.padding)) +
                 	' ' + (v.size != '' ? 'slds-size--' + v.size + '-of-' + v.columns : '') +
                 	' ' + (v.sizeMD != '' ? 'slds-medium-size--' + v.sizeMD + '-of-' + v.columnsMD : '') +
                 	' ' + (v.sizeLG != '' ? 'slds-large-size--' + v.sizeLG + '-of-' + v.columnsLG : '') +
+                	' ' + (v.vertical != '' ? 'slds-align-' + v.vertical : '') +
+                	' ' + (v.order != '' ? 'slds-small-order--' + v.order : '') +
+                	' ' + (v.orderMD != '' ? 'slds-medium-order--' + v.orderMD : '') +
+                	' ' + (v.orderLG != '' ? 'slds-large-order--' + v.orderLG : '') +
                 	' ' + v.class }" id="{! v.id }">
         {! v.body }
     </div>

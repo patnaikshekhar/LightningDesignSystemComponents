@@ -42,5 +42,47 @@
             <c:col class="blue" size="2" columns="12">Column 2 of 12</c:col>
         </c:grid>
         
+        <h1 class="slds-text-heading--large">Alignment can also be specified</h1>
+        
+        <h2 class="slds-text-heading--medium">Horizonal Alignment</h2>
+        <c:grid horizontal="center">
+            <c:col class="blue">Center</c:col>
+        </c:grid>
+        <c:grid horizontal="space">
+            <c:col class="blue">Space</c:col>
+        </c:grid>
+        <c:grid horizontal="end">
+            <c:col class="blue">End</c:col>
+        </c:grid>
+        <c:grid horizontal="spread">
+            <c:col class="blue">Spread</c:col>
+            <c:col class="blue">Spread</c:col>
+            <c:col class="blue">Spread</c:col>
+        </c:grid>
+        
+        <h2 class="slds-text-heading--medium">Vertical Alignment</h2>
+        <c:grid vertical="center" class="border height-300">
+            <c:col class="blue">Center</c:col>
+        </c:grid>
+        <c:grid vertical="stretch" class="border height-300">
+            <c:col class="blue">stretch</c:col>
+        </c:grid>
+        <c:grid vertical="end" class="border height-300">
+            <c:col class="blue">End</c:col>
+        </c:grid>
+        
+        <h2 class="slds-text-heading--medium">Cells could also have vertical alignment.</h2>
+        <c:grid class="border height-300">
+            <c:col class="blue" vertical="top">Top</c:col>
+            <c:col class="blue" vertical="middle">Middle</c:col>
+            <c:col class="blue" vertical="bottom">Bottom</c:col>
+        </c:grid>
+        
+        <h1 class="slds-text-heading--large">Cell Ordering</h1>
+        <c:grid class="border height-300">
+            <c:col class="blue" order="3">Cell 1</c:col>
+            <c:col class="blue" order="2">Cell 2</c:col>
+            <c:col class="blue" order="1">Cell 3</c:col>
+        </c:grid>
     </c:LightningDesignApplication>
 </aura:component>

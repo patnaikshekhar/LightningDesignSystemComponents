@@ -1,5 +1,5 @@
 <aura:documentation>
-	<aura:description>LDS Grid System</aura:description>
+	<aura:description>LDS Grid System. Uses the ldsc:grid and ldsc:col components.</aura:description>
 	<aura:example name="Grid" ref="ldsc:exampleGrid" label="Grid">
 	</aura:example>
 </aura:documentation>
