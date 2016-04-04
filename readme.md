@@ -35,6 +35,8 @@ Managed package link goes here (TBD)
 ## Components
 
 - [Lightning Design Application](documentation/lightningDesignApplication.md)
+- [Grid](documentation/grid.md)
+- [Column](documentation/col.md)
 - [Badge](documentation/badge.md)
 - [Breadcrumbs](documentation/breadcrumbs.md)
 - Button
