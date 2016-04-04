@@ -109,6 +109,7 @@ This is the basic LDS Grid component. It is used in conjunction with a [ldsc:col
 </ldsc:lightningDesignApplication>
 ```
 
+**CSS**
 ```css
 .THIS .blue {
     text-align: center;
