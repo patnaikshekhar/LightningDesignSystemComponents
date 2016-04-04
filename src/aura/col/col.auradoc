@@ -1,0 +1,5 @@
+<aura:documentation>
+	<aura:description>Column component</aura:description>
+	<aura:example name="Grid" ref="ldsc:exampleGrid" label="Grid">
+	</aura:example>
+</aura:documentation>
