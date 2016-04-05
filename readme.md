@@ -48,6 +48,8 @@ Managed package link goes here (TBD)
 - [Modal](documentation/modal.md)
 - [Pill](documentation/pill.md)
 - [Alert](documentation/alert.md)
+- Form Elements
+  - [Input](documentation/input.md)
 
 ## Interfaces
 

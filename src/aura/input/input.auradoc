@@ -1,0 +1,5 @@
+<aura:documentation>
+	<aura:description>Basic Input control in LDS.</aura:description>
+	<aura:example name="Input" ref="ldsc:exampleInput" label="Input">
+	</aura:example>
+</aura:documentation>

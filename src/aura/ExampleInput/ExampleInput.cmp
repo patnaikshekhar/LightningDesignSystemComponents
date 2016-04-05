@@ -1,0 +1,12 @@
+<aura:component >
+    
+    <aura:handler name="init" value="{! this }" action="{! c.init }" />
+    
+	<c:LightningDesignApplication >    
+        <c:input label="Name" value="{! v.value }" onChange="{! c.onChange }" />
+        <c:input label="Address" placeholder="Enter Address Here" />
+        <c:input label="Email" type="email" value="{! v.email }" onFocus="{! c.gotFocus }" onLostFocus="{! c.lostFocus }"/>
+        
+        <h1>Name : {! v.value }</h1>
+    </c:LightningDesignApplication>
+</aura:component>
