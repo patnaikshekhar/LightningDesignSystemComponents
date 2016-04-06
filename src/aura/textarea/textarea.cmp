@@ -1,0 +1,17 @@
+<aura:component implements="c:HTMLAttributes" access="GLOBAL">
+    
+    <aura:attribute name="label" type="String" default="" description="Label of the textarea" access="GLOBAL" />
+    <aura:attribute name="placeholder" type="String" default="" description="Placeholder text of the textarea" access="GLOBAL" />
+    <aura:attribute name="value" type="String" default="" description="Value of the textarea" access="GLOBAL" />
+    
+    <aura:registerEvent name="onChange" type="c:basicEvent" description="Event fired when the text in the textarea is changed" access="GLOBAL" />
+    <aura:registerEvent name="onFocus" type="c:basicEvent" description="Event fired when the textarea is selected" access="GLOBAL" />
+    <aura:registerEvent name="onLostFocus" type="c:basicEvent" description="Event fired when focus is removed from the textarea" access="GLOBAL" />
+    
+    <div class="{! 'slds-form-element' + ' ' + v.class }">
+        <label class="slds-form-element__label" for="{! v.label }">{! v.label }</label>
+        <div class="slds-form-element__control">
+            <textarea id="{! v.id }" class="slds-textarea" type="text" onkeyup="{! c.onChange }" onfocus="{! c.onFocus }" onblur="{! c.onLostFocus }" placeholder="{! v.placeholder }" >{! v.value }</textarea>
+        </div>
+    </div>	
+</aura:component>

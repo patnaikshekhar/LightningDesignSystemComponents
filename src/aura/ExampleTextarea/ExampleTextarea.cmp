@@ -1,0 +1,7 @@
+<aura:component >
+    <c:LightningDesignApplication >
+    	<c:textarea label="Notes" placeholder="Enter notes here..." onChange="{! c.onChange }" onFocus="{! c.gotFocus }" onLostFocus="{! c.lostFocus }" />
+        
+        <h1>{! v.notes }</h1>
+    </c:LightningDesignApplication>
+</aura:component>

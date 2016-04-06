@@ -50,6 +50,7 @@ Managed package link goes here (TBD)
 - [Alert](documentation/alert.md)
 - Form Elements
   - [Input](documentation/input.md)
+  - [Text Area](documentation/textarea.md)
 
 ## Interfaces
 

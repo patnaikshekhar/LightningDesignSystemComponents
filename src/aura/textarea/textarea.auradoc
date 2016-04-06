@@ -1,0 +1,5 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="TextArea" ref="ldsc:exampleTextarea" label="TextArea">
+	</aura:example>
+</aura:documentation>
