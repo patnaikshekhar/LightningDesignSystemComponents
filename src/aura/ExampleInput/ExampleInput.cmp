@@ -3,10 +3,24 @@
     <aura:handler name="init" value="{! this }" action="{! c.init }" />
     
 	<c:LightningDesignApplication >    
+        
+        <h1 class="slds-text-heading--large">Basic Input and Events</h1>
         <c:input label="Name" value="{! v.value }" onChange="{! c.onChange }" />
         <c:input label="Address" placeholder="Enter Address Here" />
         <c:input label="Email" type="email" value="{! v.email }" onFocus="{! c.gotFocus }" onLostFocus="{! c.lostFocus }"/>
         
         <h1>Name : {! v.value }</h1>
+        
+        <h1 class="slds-text-heading--large">Input with icons</h1>
+        <c:input placeholder="Search" iconName="search" iconType="utility" class="margin-b-20" />
+        <c:input placeholder="Search" iconName="search" iconType="utility" iconPosition="right" />
+        
+        <h1 class="slds-text-heading--large">Input with properties</h1>
+        <c:input label="Name" required="true" />
+        <c:input label="Address" disabled="true" />
+        <c:input label="Email" readOnly="true" value="test@test.com"/>
+        
+        <h1 class="slds-text-heading--large">Input with Error</h1>
+        <c:input label="Name" required="true" error="This field is required." />
     </c:LightningDesignApplication>
 </aura:component>
