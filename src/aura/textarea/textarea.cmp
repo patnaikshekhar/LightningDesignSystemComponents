@@ -4,14 +4,37 @@
     <aura:attribute name="placeholder" type="String" default="" description="Placeholder text of the textarea" access="GLOBAL" />
     <aura:attribute name="value" type="String" default="" description="Value of the textarea" access="GLOBAL" />
     
+    <aura:attribute name="required" type="Boolean" default="false" description="Is this field required? Displays a star next to the label. Does not actually perform the validation" access="GLOBAL" />
+    <aura:attribute name="readOnly" type="Boolean" default="false" description="Is this field read only?" access="GLOBAL" />
+    <aura:attribute name="disabled" type="Boolean" default="false" description="Is this field disabled?" access="GLOBAL" />
+    
+    <aura:attribute name="error" type="String" default="" description="The error message." access="GLOBAL" />
+    
     <aura:registerEvent name="onChange" type="c:basicEvent" description="Event fired when the text in the textarea is changed" access="GLOBAL" />
     <aura:registerEvent name="onFocus" type="c:basicEvent" description="Event fired when the textarea is selected" access="GLOBAL" />
     <aura:registerEvent name="onLostFocus" type="c:basicEvent" description="Event fired when focus is removed from the textarea" access="GLOBAL" />
     
-    <div class="{! 'slds-form-element' + ' ' + v.class }">
-        <label class="slds-form-element__label" for="{! v.label }">{! v.label }</label>
-        <div class="slds-form-element__control">
-            <textarea id="{! v.id }" class="slds-textarea" type="text" onkeyup="{! c.onChange }" onfocus="{! c.onFocus }" onblur="{! c.onLostFocus }" placeholder="{! v.placeholder }" >{! v.value }</textarea>
+    <div class="{! 'slds-form-element' +
+                	' ' + (v.error != '' ? 'slds-has-error' : '') +
+                	' ' + v.class }">
+        <aura:if isTrue="{! v.label != '' }">
+        	<label class="slds-form-element__label" for="{! v.label }">
+                <aura:if isTrue="{! v.required }">
+                    <abbr class="slds-required" title="required">*</abbr>
+                </aura:if>
+                {! v.label }</label>
+        </aura:if>
+        <div class="{! 'slds-form-element__control' 
+                    + ' ' + (v.readOnly ? 'slds-has-divider--bottom' : '') }">
+            <aura:if isTrue="{! v.readOnly != true }">
+            	<textarea id="{! v.id }" class="slds-textarea" type="text" onkeyup="{! c.onChange }" onfocus="{! c.onFocus }" onblur="{! c.onLostFocus }" placeholder="{! v.placeholder }" >{! v.value }</textarea>
+            </aura:if>
+            <aura:if isTrue="{! v.readOnly }">
+            	<span class="slds-form-element__static slds-text-longform">{! v.value }</span>
+            </aura:if>
         </div>
+        <aura:if isTrue="{! v.error != '' }">
+        	<div class="slds-form-element__help">{! v.error }</div>
+        </aura:if>
     </div>	
 </aura:component>

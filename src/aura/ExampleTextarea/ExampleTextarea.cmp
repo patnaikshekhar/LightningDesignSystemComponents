@@ -1,7 +1,17 @@
 <aura:component >
     <c:LightningDesignApplication >
+        
+        <h1 class="slds-text-heading--large">Basic Text Area</h1>
     	<c:textarea label="Notes" placeholder="Enter notes here..." onChange="{! c.onChange }" onFocus="{! c.gotFocus }" onLostFocus="{! c.lostFocus }" />
         
         <h1>{! v.notes }</h1>
+        
+        <h1 class="slds-text-heading--large">Text Area with properties</h1>
+        <c:textarea label="Notes" required="true" />
+        <c:textarea label="Notes" disabled="true" />
+        <c:textarea label="Notes" readOnly="true" />
+        
+        <h1 class="slds-text-heading--large">Text Area with Error</h1>
+        <c:textarea label="Notes" required="true" error="This field is required." />
     </c:LightningDesignApplication>
 </aura:component>
