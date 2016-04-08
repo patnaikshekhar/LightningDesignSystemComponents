@@ -1,0 +1,27 @@
+<aura:component access="GLOBAL" implements="c:HTMLAttributes">
+    
+    <aura:handler name="init" value="{! this }" action="{! c.init }" />
+    
+    <aura:attribute name="name" type="String" required="true" description="Name of the radiobutton set. Must be unique for a group of radio buttons." access="GLOBAL" />
+    <aura:attribute name="label" type="String" default="" description="Label for radio buttons" access="GLOBAL" />
+    <aura:attribute name="options" type="String[]" description="List of options to be shown" access="GLOBAL" />
+    <aura:attribute name="value" type="String" default="" description="Selected Option" access="GLOBAL" />
+
+	<aura:attribute name="required" type="Boolean" default="false" description="Is this field required? Displays a star next to the label. Does not actually perform the validation" access="GLOBAL" />
+    <aura:attribute name="readOnly" type="Boolean" default="false" description="Is this field read only?" access="GLOBAL" />
+    <aura:attribute name="disabled" type="Boolean" default="false" description="Is this field disabled?" access="GLOBAL" />
+    
+    <aura:attribute name="error" type="String" default="" description="The error message." access="GLOBAL" />    
+    
+    <aura:registerEvent name="onChange" type="c:basicEvent" description="DOM event which is executed when the radio button is changed." access="GLOBAL" />
+    
+    <fieldset class="{! 'slds-form-element ' + v.class }" id="{! v.id }">
+        <legend class="form-element__legend slds-form-element__label">{! v.label }</legend>
+        <div class="slds-form-element__control">
+            <aura:iteration items="{! v.options }" var="opt">
+                <c:radioButton name="{! v.name }" label="{! opt }" selected="{! v.value == opt ? true : false }" onChange="{! c.onChange }" />
+            </aura:iteration>
+        </div>
+        {! v.body }
+    </fieldset>
+</aura:component>

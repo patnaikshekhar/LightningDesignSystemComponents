@@ -1,0 +1,5 @@
+<aura:documentation>
+	<aura:description>Radio Buttons in LDS.</aura:description>
+	<aura:example name="RadioButtons" ref="ldsc:ExampleRadioButtons" label="RadioButtons">
+	</aura:example>
+</aura:documentation>

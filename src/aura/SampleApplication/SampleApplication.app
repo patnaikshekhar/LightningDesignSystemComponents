@@ -7,6 +7,8 @@
         <c:ExampleBreadcrumbs />
         <c:ExampleTabs />
         <!--<ldsc:ExampleSpinner />-->
-        <c:ExampleModal />
+        <!--<ldsc:ExampleModal />-->
+        
+        <c:ExampleRadioButtons />
     </c:LightningDesignApplication>
 </aura:application>

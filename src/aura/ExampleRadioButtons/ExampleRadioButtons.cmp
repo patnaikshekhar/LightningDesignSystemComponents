@@ -1,0 +1,22 @@
+<aura:component >
+    <aura:handler name="init" value="{! this }" action="{! c.init }" />
+    
+	<c:LightningDesignApplication >
+        
+        <h1 class="slds-text-heading--large">Basic Radio Buttons Component</h1>
+        
+        <c:radioButtons name="color" label="Select a color" options="red,blue,green,orange" value="{! v.selectedColor }" onChange="{! c.onSelectColor }"/>
+        <h1>{! v.selectedColor }</h1>
+        
+        <h1 class="slds-text-heading--large">Manually Added Radio Buttons</h1>
+        
+        <c:radioButtons name="options" label="Select an option">
+            <c:radioButton label="Option 1" />
+            <c:radioButton label="Option 2" />
+            <c:radioButton label="Option 3" />
+            <c:radioButton label="Option 4" />
+        </c:radioButtons>
+        
+        <h1>{! v.selectedColor }</h1>
+    </c:LightningDesignApplication>
+</aura:component>
