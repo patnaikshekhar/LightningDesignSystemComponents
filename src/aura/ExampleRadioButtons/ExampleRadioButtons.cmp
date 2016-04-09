@@ -17,6 +17,17 @@
             <c:radioButton label="Option 4" />
         </c:radioButtons>
         
-        <h1>{! v.selectedColor }</h1>
+        <h1 class="slds-text-heading--large">Radio Buttons with Properties</h1>
+        
+        <h2 class="slds-text-heading--medium">Required Property</h2>
+        <c:radioButtons name="color" label="Select a color" options="red,blue,green,orange" required="true"/>
+        
+        <h2 class="slds-text-heading--medium">Disabled Property</h2>
+        <c:radioButtons name="color" label="Select a color" options="red,blue,green,orange" disabled="true"/>
+        
+        <h2 class="slds-text-heading--medium">Error Property</h2>
+        <c:radioButtons name="color" label="Select a color" options="red,blue,green,orange" error="This field is required."/>
+        
+        
     </c:LightningDesignApplication>
 </aura:component>

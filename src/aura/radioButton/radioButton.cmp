@@ -3,11 +3,15 @@
     <aura:attribute name="name" type="String" description="Name of the radiobutton set. Must be unique for a group of radio buttons." access="GLOBAL" />
     <aura:attribute name="label" type="String" description="The label of the option" access="GLOBAL" />
     <aura:attribute name="selected" type="Boolean" default="false" description="Should this option be checked" access="GLOBAL" />
+	
+	<aura:attribute name="disabled" type="Boolean" default="false" description="Is this field disabled?" access="GLOBAL" />
     
     <aura:registerEvent name="onChange" type="c:basicEvent" description="DOM event which is executed when the radio button is changed." access="GLOBAL" />
     
 	<label class="{! 'slds-radio ' + v.class }" id="{! v.id }">
-        <input type="radio" name="{! v.name }" value="{! v.label }" checked="{! v.selected ? 'checked' : ''}" onchange="{! c.onChange }" />
+        <input type="radio" name="{! v.name }" value="{! v.label }" 
+               checked="{! v.selected ? 'checked' : ''}" onchange="{! c.onChange }" 
+               disabled="{! v.disabled }"/>
         <span class="slds-radio--faux"></span>
         <span class="slds-form-element__label">{! v.label }</span>
     </label>

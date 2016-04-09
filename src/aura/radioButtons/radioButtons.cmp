@@ -15,13 +15,24 @@
     
     <aura:registerEvent name="onChange" type="c:basicEvent" description="DOM event which is executed when the radio button is changed." access="GLOBAL" />
     
-    <fieldset class="{! 'slds-form-element ' + v.class }" id="{! v.id }">
-        <legend class="form-element__legend slds-form-element__label">{! v.label }</legend>
+    <fieldset class="{! 'slds-form-element'
+                     	+ ' ' + (v.required ? 'is-required' : '')
+                     	+ ' ' + (v.error != '' ? 'slds-has-error' : '')
+                     	+ ' ' + v.class }" id="{! v.id }">
+        <legend class="form-element__legend slds-form-element__label">
+            <aura:if isTrue="{! v.required }"><abbr class="slds-required" title="required">*</abbr></aura:if>
+            {! v.label }</legend>
         <div class="slds-form-element__control">
             <aura:iteration items="{! v.options }" var="opt">
-                <c:radioButton name="{! v.name }" label="{! opt }" selected="{! v.value == opt ? true : false }" onChange="{! c.onChange }" />
+                <c:radioButton name="{! v.name }" label="{! opt }" 
+                                  selected="{! v.value == opt ? true : false }" 
+                                  onChange="{! c.onChange }" 
+                                  disabled="{! v.disabled }"/>
             </aura:iteration>
         </div>
         {! v.body }
+        <aura:if isTrue="{! v.error != ''}">
+        	<div class="slds-form-element__help">{! v.error }</div>
+        </aura:if>
     </fieldset>
 </aura:component>
