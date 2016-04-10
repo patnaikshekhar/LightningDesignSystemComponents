@@ -1,0 +1,5 @@
+<aura:documentation>
+	<aura:description>Basic single checkbox in LDS. Fires the onChange event which the checkbox is checked or unchecked.</aura:description>
+	<aura:example name="Checkbox" ref="ldsc:exampleCheckbox" label="Checkbox">
+	</aura:example>
+</aura:documentation>

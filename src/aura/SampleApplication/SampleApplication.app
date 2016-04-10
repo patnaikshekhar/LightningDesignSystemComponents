@@ -10,5 +10,6 @@
         <!--<ldsc:ExampleModal />-->
         
         <c:ExampleRadioButtons />
+        <c:ExampleCheckbox />
     </c:LightningDesignApplication>
 </aura:application>

@@ -1,0 +1,19 @@
+<aura:component >
+    
+    <aura:attribute access="PRIVATE" name="currentValueOfEvent" type="Boolean" default="false" description="Used to track current value of the checked event" />
+    
+	<c:LightningDesignApplication >
+        <h1 class="slds-text-heading--large">Basic Checkboxes</h1>
+        <div class="slds-form-element">
+            <c:checkbox label="Very Basic" checked="true" />
+            <c:checkbox label="Checkbox with event" checked="{! v.currentValueOfEvent }" onChange="{! c.changeCurrentValue }"/>
+            <h1>{! v.currentValueOfEvent }</h1>
+        </div>
+        
+        <h1 class="slds-text-heading--large">Checkboxes with properties</h1>
+        <div class="slds-form-element">
+            <c:checkbox label="Required Checkbox" required="true" />
+            <c:checkbox label="Disabled Checkbox" disabled="true" />
+        </div>
+    </c:LightningDesignApplication>
+</aura:component>

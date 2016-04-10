@@ -48,10 +48,11 @@ Managed package link goes here (TBD)
 - [Modal](documentation/modal.md)
 - [Pill](documentation/pill.md)
 - [Alert](documentation/alert.md)
-- Form Elements
+- **Form Elements**
   - [Input](documentation/input.md)
   - [Text Area](documentation/textarea.md)
   - [Radio Buttons](documentation/radioButtons.md)
+  - [Checkbox](documentation/checkbox.md)
 
 ## Interfaces
 

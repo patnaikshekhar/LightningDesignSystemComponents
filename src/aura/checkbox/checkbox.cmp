@@ -1,0 +1,25 @@
+<aura:component implements="c:HTMLAttributes" access="GLOBAL">
+    
+    <aura:attribute name="name" type="String" description="Name of the checkbox set." access="GLOBAL" />
+    <aura:attribute name="label" type="String" default="" description="The label of the checkbox" access="GLOBAL" />
+    <aura:attribute name="checked" type="Boolean" default="false" description="Checked? True or False" access="GLOBAL" />
+
+	<aura:attribute name="required" type="Boolean" default="false" description="Is this field required? Displays a star next to the label. Does not actually perform the validation" access="GLOBAL" />
+    <aura:attribute name="disabled" type="Boolean" default="false" description="Is this field disabled?" access="GLOBAL" />
+    
+    <aura:registerEvent name="onChange" type="c:basicEvent" description="DOM event which is executed when the checkbox is changed." access="GLOBAL" />
+    
+    <div class="{! 'slds-form-element__control' 
+                	+ ' ' + v.class }">
+        <label class="slds-checkbox">
+            <aura:if isTrue="{! v.required }">
+            	<abbr class="slds-required" title="required">*</abbr>
+            </aura:if>
+            <input type="checkbox" name="{! v.name }" id="{! v.id }" 
+                   disabled="{! v.disabled }" onclick="{! c.onChange }" checked="{! v.checked }"/>
+            <span class="slds-checkbox--faux"></span>
+            <span class="slds-form-element__label">{! v.label }</span>
+        </label>
+    </div>
+    
+</aura:component>

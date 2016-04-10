@@ -9,7 +9,6 @@
     <aura:attribute name="value" type="String" default="" description="Selected Option" access="GLOBAL" />
 
 	<aura:attribute name="required" type="Boolean" default="false" description="Is this field required? Displays a star next to the label. Does not actually perform the validation" access="GLOBAL" />
-    <aura:attribute name="readOnly" type="Boolean" default="false" description="Is this field read only?" access="GLOBAL" />
     <aura:attribute name="disabled" type="Boolean" default="false" description="Is this field disabled?" access="GLOBAL" />
     
     <aura:attribute name="error" type="String" default="" description="The error message." access="GLOBAL" />    
