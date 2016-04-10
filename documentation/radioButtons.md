@@ -12,16 +12,17 @@ Radio Buttons component in LDS. This includes ldsc:radioButton and ldsc:radioBut
 - disabled (Boolean) - Is this field disabled?
 - error (String) - The error message.
 
+## Events of ldsc:radioButtons
+- onChange (ldsc:basicEvent) - Event fired when radio button is changed. The event contains a value param with the label of the radio button which is selected.
+
 ## Attributes of ldsc:radioButton
 - name (String) - Name of the radiobutton set. Must be unique for a group of radio buttons.
 - label (String) - The label of the option
 - selected (Boolean) - Should this option be checked
 - disabled (Boolean) - Is this field disabled?
 
-## Events
-- onChange (ldsc:basicEvent) - Event fired when input element is changed. The event contains a value param with the current value of the input.
-- onLostFocus	(ldsc:basicEvent) - Event fired when focus is removed from the input element
-- onFocus	(ldsc:basicEvent) - Event fired when input element is selected
+## Events of ldsc:radioButton
+- onChange (ldsc:basicEvent) - Event fired when radio button is changed.
 
 ## Example
 
