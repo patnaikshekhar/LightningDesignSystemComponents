@@ -1,15 +1,37 @@
 <aura:application >
 	<c:LightningDesignApplication >
-        <c:badge onClick="{! c.buttonClick }">Test</c:badge>
-    	<c:badge theme="inverse">Test</c:badge>
-        <c:ExampleButton />
-        <c:ExampleButtonGroup />
-        <c:ExampleBreadcrumbs />
-        <c:ExampleTabs />
+        
         <!--<ldsc:ExampleSpinner />-->
         <!--<ldsc:ExampleModal />-->
         
-        <c:ExampleRadioButtons />
-        <c:ExampleCheckbox />
+        <c:tabs >
+            <c:tab label="Badges" active="true">
+                <c:badge onClick="{! c.buttonClick }">Test</c:badge>
+    			<c:badge theme="inverse">Test</c:badge>
+            </c:tab>
+            <c:tab label="Button">
+                <c:ExampleButton />
+            </c:tab>
+            <c:tab label="Button Group">
+                <c:ExampleButtonGroup />
+            </c:tab>
+            <c:tab label="Breadcrumbs">
+                <c:ExampleBreadcrumbs />
+            </c:tab>
+            <c:tab label="Tabs">
+                <c:ExampleTabs />
+            </c:tab>
+        </c:tabs>
+        <c:tabs >
+            <c:tab label="Radio Buttons">
+                <c:ExampleRadioButtons />
+            </c:tab>
+            <c:tab label="Checkbox">
+                <c:ExampleCheckbox />
+            </c:tab>
+            <c:tab label="Checkboxes" active="true">
+                <c:ExampleCheckboxes />
+            </c:tab>
+        </c:tabs>
     </c:LightningDesignApplication>
 </aura:application>

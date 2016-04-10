@@ -1,3 +1,41 @@
-<aura:component >
-	
+<aura:component implements="c:HTMLAttributes" access="GLOBAL">
+    
+    <aura:handler name="change" value="{! v.values }" action="{! c.updateState }" />
+    <aura:handler name="change" value="{! v.labels }" action="{! c.updateState }" />
+    
+	<aura:attribute name="name" type="String" default="options" description="Name of the checkboxes set. Must be unique for a group of checkboxes." access="GLOBAL" />
+    <aura:attribute name="groupLabel" type="String" default="" description="Label for the group of checkboxes" access="GLOBAL" />
+    <aura:attribute name="labels" required="true" type="String[]" description="List of labels to be shown" access="GLOBAL" />
+    <aura:attribute name="values" required="true" type="Boolean[]" description="Values of the checkboxes" access="GLOBAL" />
+
+	<aura:attribute name="required" type="Boolean" default="false" description="Is this field required? Displays a star next to the label. Does not actually perform the validation" access="GLOBAL" />
+    <aura:attribute name="disabled" type="Boolean" default="false" description="Is this field disabled?" access="GLOBAL" />
+    
+    <aura:attribute name="error" type="String" default="" description="The error message." access="GLOBAL" /> 
+    
+    <aura:registerEvent name="onChange" type="c:basicEvent" description="DOM event which is executed when any of the checkboxes are changed." access="GLOBAL" />
+    
+    <aura:attribute name="items" type="Object[]" description="Private - List of items" access="PRIVATE" /> 
+    
+    <fieldset class="{! 'slds-form-element' 
+                     	+ ' ' + (v.error != '' ? 'slds-has-error' : '')
+                     	+ ' ' + v.class }"
+              id="{! v.id }">
+        <aura:if isTrue="{! v.groupLabel != ''}">
+        	<legend class="form-element__legend slds-form-element__label">
+                <aura:if isTrue="{! v.required }">
+                    <abbr class="slds-required" title="required">*</abbr>
+                </aura:if>{! v.groupLabel }</legend>
+        </aura:if>
+        <div class="slds-form-element__control">
+            <aura:iteration items="{! v.items }" var="item" indexVar="index">
+        		<c:checkbox label="{! item.label }" name="{! v.name }" 
+                               checked="{! item.value }" disabled="{! v.disabled }"
+                               onChange="{! c.onChange }"/>  
+            </aura:iteration>
+        </div>
+        <aura:if isTrue="{! v.error != '' }">
+        	<div class="slds-form-element__help">{! v.error }</div>
+        </aura:if>
+    </fieldset>
 </aura:component>

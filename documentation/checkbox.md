@@ -9,7 +9,7 @@ Basic single checkbox in LDS. Fires the onChange event which the checkbox is che
 - required (Boolean) - Is this field required? Displays a star next to the label. Does not actually perform the validation
 - disabled (Boolean) - Is this field disabled?
 
-## Events of ldsc:radioButtons
+## Events
 - onChange (ldsc:basicEvent) - DOM event which is executed when the checkbox is changed.
 
 ## Example

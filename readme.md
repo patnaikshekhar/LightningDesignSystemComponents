@@ -53,6 +53,7 @@ Managed package link goes here (TBD)
   - [Text Area](documentation/textarea.md)
   - [Radio Buttons](documentation/radioButtons.md)
   - [Checkbox](documentation/checkbox.md)
+  - [Checkboxes](documentation/checkboxes.md)
 
 ## Interfaces
 

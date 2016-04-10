@@ -1,0 +1,31 @@
+<aura:component >
+    
+    <aura:handler name="init" value="{! this }" action="{! c.init }" />
+    
+    <aura:attribute name="colors" type="Boolean[]" description="Array of Colors" access="PRIVATE" />
+    <aura:attribute name="options" type="Boolean[]" description="Array of Options" access="PRIVATE" />
+    
+	<c:LightningDesignApplication >
+        <h1 class="slds-text-heading--large">Basic Checkboxes</h1>
+        
+        <c:checkboxes labels="Red,Green,Blue" values="{! v.colors }" groupLabel="Colors" onChange="{! c.colorChanged }"/>
+        
+        <div class="box" style="{! 'background-color: #' 
+                                + (v.colors[0] ? 'FF' : '00')
+                                + (v.colors[1] ? 'FF' : '00')
+                                + (v.colors[2] ? 'FF' : '00')}"></div>
+        
+        <h1 class="slds-text-heading--large">With Required Property</h1>
+        <c:checkboxes labels="Option 1,Option 2,Option 3" values="{! v.options }" 
+                         groupLabel="Options" required="true" />
+        
+        <h1 class="slds-text-heading--large">With Disabled Property</h1>
+        <c:checkboxes labels="Option 1,Option 2,Option 3" values="{! v.options }" 
+                         groupLabel="Options" disabled="true" />
+        
+        <h1 class="slds-text-heading--large">With Error Property</h1>
+        <c:checkboxes labels="Option 1,Option 2,Option 3" values="{! v.options }" 
+                         groupLabel="Options"
+                         error="One option should be selected."/>
+    </c:LightningDesignApplication>
+</aura:component>
