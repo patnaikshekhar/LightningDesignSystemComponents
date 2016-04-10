@@ -1,7 +1,8 @@
 <aura:component access="GLOBAL" implements="c:HTMLAttributes">
     
     <aura:handler name="init" value="{! this }" action="{! c.init }" />
-    
+    <aura:handler name="change" value="{! v.value }" action="{! c.init }"/>
+
     <aura:attribute name="name" type="String" required="true" description="Name of the radiobutton set. Must be unique for a group of radio buttons." access="GLOBAL" />
     <aura:attribute name="label" type="String" default="" description="Label for radio buttons" access="GLOBAL" />
     <aura:attribute name="options" type="String[]" description="List of options to be shown" access="GLOBAL" />
@@ -12,6 +13,8 @@
     <aura:attribute name="disabled" type="Boolean" default="false" description="Is this field disabled?" access="GLOBAL" />
     
     <aura:attribute name="error" type="String" default="" description="The error message." access="GLOBAL" />    
+    
+    <aura:attribute name="mappedBody" type="Aura.Component[]" description="Private - Used for manual components" access="PRIVATE" />
     
     <aura:registerEvent name="onChange" type="c:basicEvent" description="DOM event which is executed when the radio button is changed." access="GLOBAL" />
     
@@ -29,8 +32,8 @@
                                   onChange="{! c.onChange }" 
                                   disabled="{! v.disabled }"/>
             </aura:iteration>
+            {! v.mappedBody }
         </div>
-        {! v.body }
         <aura:if isTrue="{! v.error != ''}">
         	<div class="slds-form-element__help">{! v.error }</div>
         </aura:if>
