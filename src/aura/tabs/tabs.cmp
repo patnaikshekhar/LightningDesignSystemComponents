@@ -2,7 +2,9 @@
     <aura:handler name="init" value="{! this }" action="{! c.init }" />
     <aura:handler name="change" value="{!v.type}" action="{!c.init}"/>
     
-    <aura:attribute name="type" type="String" access="GLOBAL" description="The type of the tab. Can be either default or scoped" default="default" />
+    <aura:attribute name="type" type="String" description="The type of the tab. Can be either default or scoped" default="default" access="GLOBAL" />
+    
+    <aura:attribute name="tabs" type="String[]" description="Private - The list of tabs." access="PRIVATE" />
     
 	<div class="{! 'slds-tabs--' + v.type + ' ' + v.class }" id="{! id }">
     	<ul class="{! 'slds-tabs--' + v.type + '__nav'}" role="tablist">
