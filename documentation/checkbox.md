@@ -3,11 +3,11 @@
 Basic single checkbox in LDS. Fires the onChange event which the checkbox is checked or unchecked.
 
 ## Attributes
-name (String) - Name of the checkbox set.
-label	(String) - The label of the checkbox
-checked (Boolean) - Checked? True or False
-required (Boolean) - Is this field required? Displays a star next to the label. Does not actually perform the validation
-disabled (Boolean) - Is this field disabled?
+- name (String) - Name of the checkbox set.
+- label	(String) - The label of the checkbox
+- checked (Boolean) - Checked? True or False
+- required (Boolean) - Is this field required? Displays a star next to the label. Does not actually perform the validation
+- disabled (Boolean) - Is this field disabled?
 
 ## Events of ldsc:radioButtons
 - onChange (ldsc:basicEvent) - DOM event which is executed when the checkbox is changed.
