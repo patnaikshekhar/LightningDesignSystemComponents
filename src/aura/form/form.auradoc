@@ -1,0 +1,5 @@
+<aura:documentation>
+	<aura:description>A form element, which is used for form alignment. The type property can be used to set the alignment. The horizontal type has the labels on the side of the input. The stacked type has the labels above the input. The inline type is used to make the inputs be side by side.</aura:description>
+	<aura:example name="Form" ref="ldsc:exampleForm" label="Form">
+	</aura:example>
+</aura:documentation>

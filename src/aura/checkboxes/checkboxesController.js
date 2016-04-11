@@ -5,7 +5,7 @@
         component.set('v.items', labels.map(function(label, i) {
             return {
                 label: label,
-                value: values[i]
+                value: (values ? (values[i] ? values[i] : false) : false)
             }
         }));
 	},

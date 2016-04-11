@@ -1,12 +1,13 @@
 <aura:component implements="c:HTMLAttributes" access="GLOBAL">
     
+    <aura:handler name="init" value="{! this }" action="{! c.updateState }" />
     <aura:handler name="change" value="{! v.values }" action="{! c.updateState }" />
     <aura:handler name="change" value="{! v.labels }" action="{! c.updateState }" />
     
 	<aura:attribute name="name" type="String" default="options" description="Name of the checkboxes set. Must be unique for a group of checkboxes." access="GLOBAL" />
     <aura:attribute name="groupLabel" type="String" default="" description="Label for the group of checkboxes" access="GLOBAL" />
-    <aura:attribute name="labels" required="true" type="String[]" description="List of labels to be shown" access="GLOBAL" />
-    <aura:attribute name="values" required="true" type="Boolean[]" description="Values of the checkboxes" access="GLOBAL" />
+    <aura:attribute name="labels" type="String[]" description="List of labels to be shown" access="GLOBAL" />
+    <aura:attribute name="values" type="Boolean[]" description="Values of the checkboxes" access="GLOBAL" />
 
 	<aura:attribute name="required" type="Boolean" default="false" description="Is this field required? Displays a star next to the label. Does not actually perform the validation" access="GLOBAL" />
     <aura:attribute name="disabled" type="Boolean" default="false" description="Is this field disabled?" access="GLOBAL" />

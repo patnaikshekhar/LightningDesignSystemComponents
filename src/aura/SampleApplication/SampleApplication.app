@@ -35,8 +35,11 @@
             <c:tab label="Select">
                 <c:ExampleSelect />
             </c:tab>
-            <c:tab label="Multi Select" active="true">
+            <c:tab label="Multi Select">
                 <c:ExampleMultiSelect />
+            </c:tab>
+            <c:tab label="Form" active="true">
+                <c:ExampleForm />
             </c:tab>
         </c:tabs>
     </c:LightningDesignApplication>

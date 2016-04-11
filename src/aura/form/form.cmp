@@ -1,0 +1,8 @@
+<aura:component implements="c:HTMLAttributes" access="GLOBAL">
+    
+    <aura:attribute name="type" type="String" default="horizontal" description="The type of form. Can be either horizontal, stacked or inline" access="GLOBAL" />
+    
+	<div id="{! v.id }" class="{! 'slds-form--' + v.type + ' ' + v.class }">
+        {! v.body }
+    </div>
+</aura:component>
