@@ -1,0 +1,5 @@
+<aura:documentation>
+	<aura:description>Basic select component in LDS. Contains an options attribute which is a list of options to be shown.</aura:description>
+	<aura:example name="Select" ref="ldsc:exampleSelect" label="Select">
+	</aura:example>
+</aura:documentation>

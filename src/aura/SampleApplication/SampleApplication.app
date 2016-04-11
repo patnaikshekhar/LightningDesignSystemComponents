@@ -29,8 +29,11 @@
             <c:tab label="Checkbox">
                 <c:ExampleCheckbox />
             </c:tab>
-            <c:tab label="Checkboxes" active="true">
+            <c:tab label="Checkboxes">
                 <c:ExampleCheckboxes />
+            </c:tab>
+            <c:tab label="Select" active="true">
+                <c:ExampleSelect />
             </c:tab>
         </c:tabs>
     </c:LightningDesignApplication>

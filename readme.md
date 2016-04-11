@@ -54,6 +54,7 @@ Managed package link goes here (TBD)
   - [Radio Buttons](documentation/radioButtons.md)
   - [Checkbox](documentation/checkbox.md)
   - [Checkboxes](documentation/checkboxes.md)
+  - [Select](documentation/select.md)
 
 ## Interfaces
 

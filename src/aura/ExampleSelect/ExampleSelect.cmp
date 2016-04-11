@@ -1,0 +1,22 @@
+<aura:component >
+    
+    <aura:attribute name="selectedOption" type="String" default="Option 2" description="The Selected option." access="GLOBAL"/>
+    
+    <c:LightningDesignApplication >
+        <h1 class="slds-text-heading--large">Basic Select Option</h1>
+        <c:select label="Options" options="Option 1,Option 2,Option 3" />
+        
+        <h1 class="slds-text-heading--large">Required Select Option</h1>
+        <c:select label="Options" options="Option 1,Option 2,Option 3" required="true" />
+        
+        <h1 class="slds-text-heading--large">Disabled Select Option</h1>
+        <c:select label="Options" options="Option 1,Option 2,Option 3" disabled="true" />
+        
+        <h1 class="slds-text-heading--large">Select Option with Error</h1>
+        <c:select label="Options" options="Option 1,Option 2,Option 3" error="Please select an option." />
+        
+        <h1 class="slds-text-heading--large">Event Handling in Select</h1>
+        <c:select label="Options" options="Option 1,Option 2,Option 3" value="{! v.selectedOption }" onChange="{! c.optionChanged }" />
+        <h2>{! v.selectedOption }</h2>
+    </c:LightningDesignApplication>
+</aura:component>
