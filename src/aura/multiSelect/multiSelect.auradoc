@@ -1,0 +1,5 @@
+<aura:documentation>
+	<aura:description>Multi-Select component in LDS. Consists of two side by side components which contain the list of options and the list of selections. The two sections can have a label (category).</aura:description>
+	<aura:example name="MultiSelect" ref="ldsc:exampleMultiSelect" label="MultiSelect">
+	</aura:example>
+</aura:documentation>

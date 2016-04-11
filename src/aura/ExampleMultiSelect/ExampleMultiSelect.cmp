@@ -1,0 +1,9 @@
+<aura:component >
+	<aura:attribute name="options" type="String[]" default="Option 1,Option 2,Option 3,Option 4,Option 5,Option 6,Option 7" access="GLOBAL" />
+    <aura:attribute name="selectedValues" type="String[]" access="GLOBAL" />
+    
+    <c:LightningDesignApplication >
+        <c:multiSelect sourceCategory="Source" destCategory="Destination" options="{! v.options }" selected="{! v.selectedValues }" onChange="{! c.selectionChanged }" />
+    </c:LightningDesignApplication>
+    
+</aura:component>

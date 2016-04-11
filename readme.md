@@ -55,6 +55,7 @@ Managed package link goes here (TBD)
   - [Checkbox](documentation/checkbox.md)
   - [Checkboxes](documentation/checkboxes.md)
   - [Select](documentation/select.md)
+  - [Multi-Select](documentation/multiselect.md)
 
 ## Interfaces
 

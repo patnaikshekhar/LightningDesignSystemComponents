@@ -32,8 +32,11 @@
             <c:tab label="Checkboxes">
                 <c:ExampleCheckboxes />
             </c:tab>
-            <c:tab label="Select" active="true">
+            <c:tab label="Select">
                 <c:ExampleSelect />
+            </c:tab>
+            <c:tab label="Multi Select" active="true">
+                <c:ExampleMultiSelect />
             </c:tab>
         </c:tabs>
     </c:LightningDesignApplication>

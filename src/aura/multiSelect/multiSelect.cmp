@@ -1,0 +1,58 @@
+<aura:component implements="c:HTMLAttributes" access="GLOBAL">
+    
+    <aura:attribute name="sourceCategory" type="String" default="" description="The first category header." access="GLOBAL" />
+	<aura:attribute name="destCategory" type="String" default="" description="The second category header." access="GLOBAL" />
+    
+    <aura:attribute name="options" type="String[]" description="The list of options" access="GLOBAL" />
+	<aura:attribute name="selected" type="String[]" description="The list of selected options" access="GLOBAL" />
+    
+    <aura:registerEvent name="onChange" type="c:basicEvent" description="Called when the selection is changed" access="GLOBAL" />
+    
+    <!-- Private Attributes -->
+    <aura:handler name="change" value="{! v.selectedOptionsIndex }" action="{! c.selectedOptionsIndexChanged }" />
+    <aura:handler name="change" value="{! v.selectedSelectionIndex }" action="{! c.selectedSelectionIndexChanged }" />
+    <aura:handler name="change" value="{! v.options }" action="{! c.selectedOptionsIndexChanged }" />
+    <aura:handler name="change" value="{! v.selected }" action="{! c.selectedSelectionIndexChanged }" />
+    <aura:attribute name="selectedOptionsIndex" type="Integer" description="Private - The selected options index" access="PRIVATE" />
+    <aura:attribute name="selectedSelectionIndex" type="Integer" description="Private - The selected selections index" access="PRIVATE" />
+    
+    <div class="{! 'slds-picklist--draggable slds-grid' +
+                	' ' + v.class }" id="{! v.id }">
+        <div class="slds-form-element">
+            <span class="slds-form-element__label" aria-label="select-1">{! v.sourceCategory }</span>
+            <div class="slds-picklist slds-picklist--multi">
+                <ul class="slds-picklist__options slds-picklist__options--multi shown">
+                    <aura:iteration items="{! v.options }" var="option" indexVar="index">
+                        <li draggable="true" class="slds-picklist__item source" aria-selected="false" tabindex="{! index }" role="option" data-index="{! index }" onclick="{! c.selectOption }">
+                            <span class="slds-truncate" data-index="{! index }">
+                                <span data-index="{! index }">{! option }</span>
+                            </span>
+                        </li>
+                    </aura:iteration>
+                </ul>
+            </div>
+        </div>
+        <div class="slds-grid slds-grid--vertical">
+            <c:button iconType="utility" iconName="left" class="slds-button--icon-container" onClick="{! c.removeSelection }" />
+            <c:button iconType="utility" iconName="right" class="slds-button--icon-container" onClick="{! c.addOption }" />
+        </div>
+        <div class="slds-form-element">
+            <span class="slds-form-element__label" aria-label="select-2">{! v.destCategory }</span>
+            <div class="slds-picklist slds-picklist--multi">
+                <ul class="slds-picklist__options slds-picklist__options--multi shown">
+                    <aura:iteration items="{! v.selected }" var="selected" indexVar="index">
+                        <li draggable="true" class="slds-picklist__item dest" aria-selected="false" tabindex="{! index }" role="option" data-index="{! index }" onclick="{! c.selectSelection }">
+                            <span class="slds-truncate" data-index="{! index }">
+                                <span data-index="{! index }">{! selected }</span>
+                            </span>
+                        </li>
+                    </aura:iteration>
+                </ul>
+            </div>
+        </div>
+        <div class="slds-grid slds-grid--vertical">
+            <c:button iconType="utility" iconName="up" class="slds-button--icon-container" onClick="{! c.moveOrderUp }"/>
+            <c:button iconType="utility" iconName="down" class="slds-button--icon-container" onClick="{! c.moveOrderDown}"/>
+        </div>
+    </div>
+</aura:component>
