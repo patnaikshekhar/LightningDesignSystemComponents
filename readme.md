@@ -2,7 +2,7 @@
 
 ## Under Development - Alpha to be released April 30th 2016
 
-An open source library of [lightning components](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/) for the [Lightning Design System](http://www.lightningdesignsystem.com/). The purpose of this project is to create easy to use generic components that can be used in a lightning application. Since the Lightning Design System is still in-flux this is going to be a changing set of components. Pull request, feature requests and issues are most welcome.
+An open source library of [lightning components](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/) for the [Lightning Design System](http://www.lightningdesignsystem.com/). The purpose of this project is to create easy to use generic components that can be used in a lightning application. Since the Lightning Design System is still in-flux this is going to be a changing set of components. Pull requests, features and issues are most welcome.
 
 This helps make your lightning application a little more concise and semantic. So instead of writing
 
@@ -65,6 +65,6 @@ Managed package link goes here (TBD)
 
 Documentation for each of the components can be accessed at the following link (after you install the managed package)
 
-https://<BASE_URL>/auradocs/reference.app
+https://BASE_URL/auradocs/reference.app
 
 Where BASE_URL is the url of your instance. Once you reach the standard aura documentation page you can navigate to the ldsc namespace to check the documentation for each of the components.
