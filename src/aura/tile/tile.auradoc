@@ -1,0 +1,5 @@
+<aura:documentation>
+	<aura:description>A tile is a grouping of related information associated with a record.</aura:description>
+	<aura:example name="Tile" ref="ldsc:exampleTile" label="Tile">
+	</aura:example>
+</aura:documentation>

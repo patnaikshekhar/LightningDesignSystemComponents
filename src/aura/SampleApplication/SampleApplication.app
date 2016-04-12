@@ -21,15 +21,18 @@
             <c:tab label="Tabs">
                 <c:ExampleTabs />
             </c:tab>
-            <c:tab label="Images" active="true">
+            <c:tab label="Images">
                 <c:ExampleImage />
+            </c:tab>
+            <c:tab label="Tiles" active="true">
+                <c:ExampleTile />
             </c:tab>
         </c:tabs>
         <c:tabs >
             <c:tab label="Radio Buttons">
                 <c:ExampleRadioButtons />
             </c:tab>
-            <c:tab label="Checkbox">
+            <c:tab label="Checkbox" active="true">
                 <c:ExampleCheckbox />
             </c:tab>
             <c:tab label="Checkboxes">
@@ -41,7 +44,7 @@
             <c:tab label="Multi Select">
                 <c:ExampleMultiSelect />
             </c:tab>
-            <c:tab label="Form" active="true">
+            <c:tab label="Form">
                 <c:ExampleForm />
             </c:tab>
         </c:tabs>

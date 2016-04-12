@@ -1,0 +1,28 @@
+<aura:component implements="c:HTMLAttributes" access="GLOBAL">
+    
+    <aura:attribute name="title" type="String" default="" description="Title of tile" access="GLOBAL" />
+    <aura:attribute name="media" type="Aura.Component[]" default="" description="Media facet" access="GLOBAL" />
+    <aura:attribute name="header" type="Aura.Component[]" default="" description="Header facet" access="GLOBAL" />
+    
+    <aura:registerEvent name="onClick" type="c:basicEvent" description="Called when the tile is clicked on" access="GLOBAL" />
+    
+    <div class="{! 'slds-tile' + 
+                	' ' + (v.media.length > 0 ? 'slds-media' : '') +
+                	' ' + v.class
+                }" id="{! v.id }" onclick="{! c.onClick }">
+        <aura:if isTrue="{! v.media.length > 0 }">
+            <div class="slds-media__figure">
+                {! v.media }
+            </div>
+        </aura:if>
+        <div class="slds-media__body">
+            <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+            	<p class="slds-tile__title slds-truncate"><a href="#void">{! v.title }</a></p>
+                {! v.header }
+            </div>
+            <div class="slds-tile__detail slds-text-body--small">
+                {! v.body }
+            </div>
+        </div>
+    </div>
+</aura:component>
