@@ -10,6 +10,7 @@ A tile is a grouping of related information associated with a record. More infor
 ## Example
 
 **Output**
+
 ![Tile image](images/tile.png)
 
 **Component**
