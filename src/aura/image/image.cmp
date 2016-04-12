@@ -1,0 +1,14 @@
+<aura:component implements="c:HTMLAttributes" access="GLOBAL">
+    
+    <aura:attribute name="src" required="true" type="String" description="The src attribute of the image (The URL of the image)." access="GLOBAL" />
+    <aura:attribute name="alt" required="true" type="String" description="The alt text attribute of the image." access="GLOBAL" />
+    <aura:attribute name="size" type="String" default="medium" description="The size of the image. Can be x-small, small, medium or large. Default is medium." access="GLOBAL" />
+    <aura:attribute name="circle" type="Boolean" description="Should the image be in a circle" access="GLOBAL" />
+    
+    <span class="{! 'slds-avatar' +
+                 	' slds-avatar--' + v.size + 
+                 	' ' + (v.circle ? 'slds-avatar--circle' : '') +
+                 	' ' + v.class }" id="{! v.id }">
+        <img src="{! v.src }" alt="{! v.alt }" />
+    </span>
+</aura:component>

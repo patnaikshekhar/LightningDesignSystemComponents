@@ -1,0 +1,48 @@
+<aura:component access="GLOBAL">
+	<c:LightningDesignApplication >
+        <c:grid class="margin-left">
+            
+            <c:col />
+            
+            <c:col >
+                Medium (Default)
+            	<c:image src="/resource/ldsc__SLDS100/assets/images/avatar2.jpg" alt="Avatar" />
+            </c:col>
+            
+            <c:col >
+                X-Small
+            	<c:image src="/resource/ldsc__SLDS100/assets/images/avatar2.jpg" alt="Avatar" size="x-small" />
+            </c:col>
+            
+            <c:col >
+                Small
+            	<c:image src="/resource/ldsc__SLDS100/assets/images/avatar2.jpg" alt="Avatar" size="small" />
+            </c:col>
+            
+            <c:col >
+                Large
+            	<c:image src="/resource/ldsc__SLDS100/assets/images/avatar2.jpg" alt="Avatar" size="large" />
+            </c:col>
+            
+            <c:col >
+                Medium (Default)
+            	<c:image circle="true" src="/resource/ldsc__SLDS100/assets/images/avatar2.jpg" alt="Avatar" />
+            </c:col>
+            
+            <c:col >
+                X-Small
+            	<c:image circle="true" src="/resource/ldsc__SLDS100/assets/images/avatar2.jpg" alt="Avatar" size="x-small" />
+            </c:col>
+            
+            <c:col >
+                Small
+            	<c:image circle="true" src="/resource/ldsc__SLDS100/assets/images/avatar2.jpg" alt="Avatar" size="small" />
+            </c:col>
+            
+            <c:col >
+                Large
+            	<c:image circle="true" src="/resource/ldsc__SLDS100/assets/images/avatar2.jpg" alt="Avatar" size="large" />
+            </c:col>
+        </c:grid>
+    </c:LightningDesignApplication>
+</aura:component>
