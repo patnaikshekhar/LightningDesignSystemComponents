@@ -24,8 +24,11 @@
             <c:tab label="Images">
                 <c:ExampleImage />
             </c:tab>
-            <c:tab label="Tiles" active="true">
+            <c:tab label="Tiles">
                 <c:ExampleTile />
+            </c:tab>
+            <c:tab label="Tree" active="true">
+                <c:ExampleTree />
             </c:tab>
         </c:tabs>
         <c:tabs >

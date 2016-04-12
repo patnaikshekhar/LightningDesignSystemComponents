@@ -1,0 +1,14 @@
+<aura:component implements="c:HTMLAttributes" access="GLOBAL">
+    
+    <aura:attribute name="label" type="String" default="" description="The tree group header." access="GLOBAL" />
+    <aura:attribute name="ariaLevel" type="Integer" default="1" description="The aria level" access="GLOBAL" />
+    
+    <li role="treeitem" aria-level="{! v.ariaLevel }">
+      <div class="slds-tree__item">
+        <c:button iconType="utility" iconName="chevronright" iconSize="x-small" class="slds-m-right--x-small" />
+        <a href="#" tabindex="-1" role="presentation" class="slds-truncate">{! v.label }</a></div>
+        <ul class="slds-is-expanded" role="group">
+            {! v.body }
+        </ul>
+    </li>
+</aura:component>

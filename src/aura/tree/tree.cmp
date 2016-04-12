@@ -1,0 +1,13 @@
+<aura:component implements="c:HTMLAttributes" access="GLOBAL">
+	
+    <aura:attribute name="label" type="String" default="" description="The tree group header." access="GLOBAL" />
+    
+	<div class="slds-tree_container" role="application">
+        <aura:if isTrue="{! v.label != '' }">
+        	<h4 class="slds-text-heading--label" id="treeheading">{! v.label }</h4>
+        </aura:if>
+        <ul class="slds-tree" role="tree" aria-labelledby="treeheading">
+            {! v.body }
+        </ul>
+    </div>
+</aura:component>

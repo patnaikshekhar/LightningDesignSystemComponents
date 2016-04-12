@@ -1,0 +1,14 @@
+<aura:component access="GLOBAL">
+	<h1 class="slds-text-heading--medium">Manual Tree</h1>
+    <c:tree label="Tree Group Label">
+        <c:treeNode label="Node 1" ariaLevel="1">
+            <c:treeNode label="Node 2" ariaLevel="2" />
+            <c:treeNode label="Node 3" ariaLevel="2" />
+            <c:treeNode label="Node 4" ariaLevel="2">
+                <c:treeNode label="Node 5" ariaLevel="3" />
+                <c:treeNode label="Node 6" ariaLevel="3" />
+            </c:treeNode>
+        </c:treeNode>
+        <c:treeNode label="Node 7" ariaLevel="1"/>
+    </c:tree>
+</aura:component>
