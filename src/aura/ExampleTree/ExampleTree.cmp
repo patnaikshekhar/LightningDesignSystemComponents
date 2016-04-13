@@ -4,20 +4,22 @@
     
     <aura:attribute name="nodes" type="Object[]" description="Hierarchy of nodes" access="GLOBAL" />
     
-	<h1 class="slds-text-heading--medium">Manual Tree</h1>
-    <c:tree label="Tree Group Label" onClick="{! c.handleTreeClick }">
-        <c:treeNode label="Node 1">
-            <c:treeNode label="Node 2" />
-            <c:treeNode label="Node 3" />
-            <c:treeNode label="Node 4">
-                <c:treeNode label="Node 5" />
-                <c:treeNode label="Node 6" />
+    <c:LightningDesignApplication >
+        <h1 class="slds-text-heading--medium">Manual Tree</h1>
+        <c:tree label="Tree Group Label" onClick="{! c.handleTreeClick }">
+            <c:treeNode label="Node 1">
+                <c:treeNode label="Node 2" />
+                <c:treeNode label="Node 3" />
+                <c:treeNode label="Node 4">
+                    <c:treeNode label="Node 5" />
+                    <c:treeNode label="Node 6" />
+                </c:treeNode>
             </c:treeNode>
-        </c:treeNode>
-        <c:treeNode label="Node 7" />
-    </c:tree>
-    
-    <h1 class="slds-text-heading--medium">Auto-Generated Tree</h1>
-    <c:tree label="My Folders" nodes="{! v.nodes }" onClick="{! c.handleTreeClick }" />
-    
+            <c:treeNode label="Node 7" />
+        </c:tree>
+        
+        <h1 class="slds-text-heading--medium">Auto-Generated Tree</h1>
+        <c:tree label="My Folders" nodes="{! v.nodes }" onClick="{! c.handleTreeClick }" expandAll="false" />
+        
+    </c:LightningDesignApplication>
 </aura:component>

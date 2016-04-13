@@ -1,10 +1,24 @@
 # Tree and Tree Node Components
 
-A tree component in [LDS](http://www.lightningdesignsystem.com/components/trees/). A ldsc:tree component is used along with an ldsc:treeNode component. Each treeNode represents a single node in a tree. A tree can be created manually by providing an hierarchy of tree nodes in the body or can also be created using the nodes attribute on the tree which represents an Object which is a node hierarchy.  A node can be opened (expanded) or closed.
+A tree component in [LDS](http://www.lightningdesignsystem.com/components/trees/). A ldsc:tree component is used along with an ldsc:treeNode component. Each treeNode represents a single node in a tree. A tree can be created manually by providing an hierarchy of tree nodes in the body or can also be created using the nodes attribute on the tree which represents an Object which is a node hierarchy. A node can be opened (expanded) or closed.
 
-## Attributes
+## Attributes of ldsc:tree
+label (String) - The tree group header.
+expandAll (Boolean) - The tree group header.
+nodes (Object[]) - The nodes in object form. Used to auto-generate the nodes.
 
-## Examples
+## Events of ldsc:tree
+onClick (ldsc:basicEvent) - Called when a single node is clicked. The value param of the event contains the full path of the clicked node.
+
+## Attributes of ldsc:treeNode
+label (string) - The tree group header.
+open (boolean) - Is this node open?
+nodes (object[]) - The nodes in object form. Used to auto-generate the nodes.
+
+## Events of ldsc:treeNode
+onClick (ldsc:basicEvent) - Called when a single node is clicked. The value param of the event contains the full path of the clicked node.
+
+## Example
 
 **Output**
 
@@ -12,119 +26,135 @@ A tree component in [LDS](http://www.lightningdesignsystem.com/components/trees/
 
 **Component**
 ```html
-<ldsc:lightningDesignApplication >
-  <h1 class="slds-text-heading--large">Automatic Sizing</h1>
+<aura:component access="GLOBAL">
 
-  <h2 class="slds-text-heading--medium">Normal</h2>
-  <ldsc:grid >
-      <ldsc:col class="blue">Column 1</ldsc:col>
-  	<ldsc:col class="blue">Column 2</ldsc:col>
-      <ldsc:col class="blue">Column 3</ldsc:col>
-  </ldsc:grid>
+    <aura:handler name="init" value="{! this }" action="{! c.init }" />
 
-  <h2 class="slds-text-heading--medium">Padded</h2>
-  <ldsc:grid >
-      <ldsc:col class="blue" padding="large">Column 1</ldsc:col>
-  	<ldsc:col class="blue" padding="large">Column 2</ldsc:col>
-      <ldsc:col class="blue" padding="large">Column 3</ldsc:col>
-  </ldsc:grid>
+    <aura:attribute name="nodes" type="Object[]" description="Hierarchy of nodes" access="GLOBAL" />
 
-  <h1 class="slds-text-heading--large">Manual Sizing</h1>
+    <ldsc:lightningDesignApplication>
+        <h1 class="slds-text-heading--medium">Manual Tree</h1>
+        <ldsc:tree label="Tree Group Label" onClick="{! c.handleTreeClick }">
+            <ldsc:treeNode label="Node 1">
+                <ldsc:treeNode label="Node 2" />
+                <ldsc:treeNode label="Node 3" />
+                <ldsc:treeNode label="Node 4">
+                    <ldsc:treeNode label="Node 5" />
+                    <ldsc:treeNode label="Node 6" />
+                </ldsc:treeNode>
+            </ldsc:treeNode>
+            <ldsc:treeNode label="Node 7" />
+        </ldsc:tree>
 
-  <h2 class="slds-text-heading--medium">Default Columns is 12</h2>
-  <ldsc:grid >
-      <ldsc:col class="blue" size="2">Column 2 of 12</ldsc:col>
-  	<ldsc:col class="blue" size="6">Column 6 of 12</ldsc:col>
-      <ldsc:col class="blue" size="4">Column 4 of 12</ldsc:col>
-  </ldsc:grid>
+        <h1 class="slds-text-heading--medium">Auto-Generated Tree</h1>
+        <ldsc:tree label="My Folders" nodes="{! v.nodes }" onClick="{! c.handleTreeClick }" expandAll="false" />
 
-  <h2 class="slds-text-heading--medium">Default Columns can be changed</h2>
-  <ldsc:grid >
-      <ldsc:col class="blue" size="1" columns="5">Column 1 of 5</ldsc:col>
-  	<ldsc:col class="blue" size="1" columns="5">Column 1 of 5</ldsc:col>
-      <ldsc:col class="blue" size="3" columns="5">Column 3 of 5</ldsc:col>
-  </ldsc:grid>
-
-  <h2 class="slds-text-heading--medium">The grid is wrapped by default.</h2>
-  <ldsc:grid >
-      <ldsc:col class="blue" size="1" columns="5">Column 1 of 5</ldsc:col>
-  	<ldsc:col class="blue" size="1" columns="5">Column 1 of 5</ldsc:col>
-      <ldsc:col class="blue" size="3" columns="5">Column 3 of 5</ldsc:col>
-      <ldsc:col class="blue" size="4" columns="12">Column 4 of 12</ldsc:col>
-  	<ldsc:col class="blue" size="6" columns="12">Column 6 of 12</ldsc:col>
-      <ldsc:col class="blue" size="2" columns="12">Column 2 of 12</ldsc:col>
-  </ldsc:grid>
-
-  <h1 class="slds-text-heading--large">Alignment can also be specified</h1>
-
-  <h2 class="slds-text-heading--medium">Horizonal Alignment</h2>
-  <ldsc:grid horizontal="center">
-      <ldsc:col class="blue">Center</ldsc:col>
-  </ldsc:grid>
-  <ldsc:grid horizontal="space">
-      <ldsc:col class="blue">Space</ldsc:col>
-  </ldsc:grid>
-  <ldsc:grid horizontal="end">
-      <ldsc:col class="blue">End</ldsc:col>
-  </ldsc:grid>
-  <ldsc:grid horizontal="spread">
-      <ldsc:col class="blue">Spread</ldsc:col>
-      <ldsc:col class="blue">Spread</ldsc:col>
-      <ldsc:col class="blue">Spread</ldsc:col>
-  </ldsc:grid>
-
-  <h2 class="slds-text-heading--medium">Vertical Alignment</h2>
-  <ldsc:grid vertical="center" class="border height-300">
-      <ldsc:col class="blue">Center</ldsc:col>
-  </ldsc:grid>
-  <ldsc:grid vertical="stretch" class="border height-300">
-      <ldsc:col class="blue">stretch</ldsc:col>
-  </ldsc:grid>
-  <ldsc:grid vertical="end" class="border height-300">
-      <ldsc:col class="blue">End</ldsc:col>
-  </ldsc:grid>
-
-  <h2 class="slds-text-heading--medium">Cells could also have vertical alignment.</h2>
-  <ldsc:grid class="border height-300">
-      <ldsc:col class="blue" vertical="top">Top</ldsc:col>
-      <ldsc:col class="blue" vertical="middle">Middle</ldsc:col>
-      <ldsc:col class="blue" vertical="bottom">Bottom</ldsc:col>
-  </ldsc:grid>
-
-  <h1 class="slds-text-heading--large">Cell Ordering</h1>
-  <ldsc:grid class="border height-300">
-      <ldsc:col class="blue" order="3">Cell 1</ldsc:col>
-      <ldsc:col class="blue" order="2">Cell 2</ldsc:col>
-      <ldsc:col class="blue" order="1">Cell 3</ldsc:col>
-  </ldsc:grid>
-</ldsc:lightningDesignApplication>
+    </ldsc:lightningDesignApplication>
+</aura:component>
 ```
 
+**Controller**
+```js
+({
+	init : function(component, event, helper) {
+		component.set('v.nodes', helper.getSampleNodes());
+	},
+
+    handleTreeClick: function(component, event, helper) {
+    	console.log(event.getParam('value'));
+	}
+})
+```
+
+**Helper**
+```js
+({
+	getSampleNodes : function() {
+		return [{
+          "label": "Home",
+          "children": [
+            {
+              "label": "Documents",
+              "children": [
+                {
+                  "label": "information.pdf",
+                  "children": []
+                },
+                {
+                  "label": "data.pdf",
+                  "children": []
+                },
+                {
+                  "label": "random.docx",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "label": "Pictures",
+              "children": [
+                {
+                  "label": "wedding.png",
+                  "children": []
+                },
+                {
+                  "label": "house.jpg",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "label": "Movies",
+              "children": [
+                {
+                  "label": "starwars.mp4",
+                  "children": []
+                },
+                {
+                  "label": "superman.mp4",
+                  "children": []
+                },
+                {
+                  "label": "batman.3gp",
+                  "children": []
+                },
+                {
+                  "label": "avengers.mp4",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Hard Drive",
+          "children": []
+        },
+        {
+          "label": "Apps",
+          "children": [
+            {
+            "label": "LoginHelper.app",
+            "children": []
+            },
+            {
+              "label": "Office.app",
+              "children": []
+            },
+            {
+              "label": "Chrome.app",
+              "children": []
+            }
+          ]
+        }];
+	}
+})
+```
+
+**Style**
 ```css
-.THIS .blue {
-    text-align: center;
-    color: #EEF1F6;
-    background-color: #00396B;
-    border: 1px solid #0C8EFF;
-    border-radius: 5%;
-}
-
-.THIS .slds-text-heading--large {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
 .THIS .slds-text-heading--medium {
-    margin-top: 10px;
+    margin-top: 30px;
     margin-bottom: 10px;
-}
-
-.THIS .border {
-    border: 1px solid black;
-    margin-bottom: 20px;
-}
-
-.THIS .height-300 {
-    height: 300px;
 }
 ```

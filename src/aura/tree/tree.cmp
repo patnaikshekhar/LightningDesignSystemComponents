@@ -2,13 +2,15 @@
 	
     <aura:handler name="init" value="{! this }" action="{! c.init }" />
     <aura:handler name="change" value="{! v.nodes }" action="{! c.init }" />
+    <aura:handler name="change" value="{! v.expandAll }" action="{! c.toggleAll }" />
     
     <aura:attribute name="label" type="String" default="" description="The tree group header." access="GLOBAL" />
+    <aura:attribute name="expandAll" type="Boolean" default="true" description="The tree group header." access="GLOBAL" />
     <aura:attribute name="nodes" type="Object[]" description="The nodes in object form. Used to auto-generate the nodes." access="GLOBAL" />
     
-    <aura:registerEvent name="onClick" type="c:basicEvent" description="Called when a single node is clicked" access="GLOBAL" />
+    <aura:registerEvent name="onClick" type="c:basicEvent" description="Called when a single node is clicked. The value param of the event contains the full path of the clicked node." access="GLOBAL" />
     
-	<div class="slds-tree_container" role="application">
+	<div class="{! 'slds-tree_container' + ' ' + v.class }" id="{! v.id }" role="application">
         <aura:if isTrue="{! v.label != '' }">
         	<h4 class="slds-text-heading--label" id="treeheading">{! v.label }</h4>
         </aura:if>

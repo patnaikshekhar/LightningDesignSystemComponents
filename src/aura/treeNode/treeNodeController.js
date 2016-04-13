@@ -20,7 +20,8 @@
         event.stopPropagation();
         
         if (event.target) {
-        	if (event.target.nodeName == 'svg' && event.target.nodeName == 'use') {
+            console.log(event.target.nodeName);
+        	if (event.target.nodeName == 'svg' || event.target.nodeName == 'use' || event.target.nodeName == 'BUTTON') {
                 return;
             }    
         }
