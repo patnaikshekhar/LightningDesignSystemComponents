@@ -1,14 +1,23 @@
 <aura:component access="GLOBAL">
+    
+    <aura:handler name="init" value="{! this }" action="{! c.init }" />
+    
+    <aura:attribute name="nodes" type="Object[]" description="Hierarchy of nodes" access="GLOBAL" />
+    
 	<h1 class="slds-text-heading--medium">Manual Tree</h1>
-    <c:tree label="Tree Group Label">
-        <c:treeNode label="Node 1" ariaLevel="1">
-            <c:treeNode label="Node 2" ariaLevel="2" />
-            <c:treeNode label="Node 3" ariaLevel="2" />
-            <c:treeNode label="Node 4" ariaLevel="2">
-                <c:treeNode label="Node 5" ariaLevel="3" />
-                <c:treeNode label="Node 6" ariaLevel="3" />
+    <c:tree label="Tree Group Label" onClick="{! c.handleTreeClick }">
+        <c:treeNode label="Node 1">
+            <c:treeNode label="Node 2" />
+            <c:treeNode label="Node 3" />
+            <c:treeNode label="Node 4">
+                <c:treeNode label="Node 5" />
+                <c:treeNode label="Node 6" />
             </c:treeNode>
         </c:treeNode>
-        <c:treeNode label="Node 7" ariaLevel="1"/>
+        <c:treeNode label="Node 7" />
     </c:tree>
+    
+    <h1 class="slds-text-heading--medium">Auto-Generated Tree</h1>
+    <c:tree label="My Folders" nodes="{! v.nodes }" onClick="{! c.handleTreeClick }" />
+    
 </aura:component>

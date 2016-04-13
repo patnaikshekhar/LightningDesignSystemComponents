@@ -1,0 +1,5 @@
+<aura:documentation>
+	<aura:description>A </aura:description>
+	<aura:example name="Tree" ref="ldsc:exampleTree" label="Tree">
+	</aura:example>
+</aura:documentation>

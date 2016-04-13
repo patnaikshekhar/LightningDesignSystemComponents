@@ -1,14 +1,29 @@
 <aura:component implements="c:HTMLAttributes" access="GLOBAL">
     
-    <aura:attribute name="label" type="String" default="" description="The tree group header." access="GLOBAL" />
-    <aura:attribute name="ariaLevel" type="Integer" default="1" description="The aria level" access="GLOBAL" />
+    <aura:handler name="init" value="{! this }" action="{! c.init }" />
+    <aura:handler name="change" value="{! v.nodes }" action="{! c.init }" />
     
-    <li role="treeitem" aria-level="{! v.ariaLevel }">
+    <aura:attribute name="label" type="String" default="" description="The tree group header." access="GLOBAL" />
+    <aura:attribute name="open" type="Boolean" default="true" description="Is this node open?" access="GLOBAL" />
+    <aura:attribute name="nodes" type="Object[]" description="The nodes in object form. Used to auto-generate the nodes." access="GLOBAL" />
+    
+    <aura:registerEvent name="onClick" type="c:basicEvent" description="Called when a single node is clicked" access="GLOBAL" />
+    
+    <aura:attribute name="ariaLevel" type="Integer" default="1" description="Private - The aria level. Used in styling each level." access="PUBLIC" />
+    
+    <li role="treeitem" aria-level="{! v.ariaLevel }" aria-expanded="true" onclick="{! c.onClick }">
       <div class="slds-tree__item">
-        <c:button iconType="utility" iconName="chevronright" iconSize="x-small" class="slds-m-right--x-small" />
+          <aura:if isTrue="{! v.open }">
+              <c:button iconType="utility" iconName="chevrondown" iconSize="x-small" class="{! 'slds-m-right--x-small ' + (v.body.length == 0 ? 'slds-is-disabled' : '') }" onClick="{! c.toggleOpenState }" />
+          </aura:if>
+          <aura:if isTrue="{! v.open != true }">
+              <c:button iconType="utility" iconName="chevronright" iconSize="x-small" class="{! 'slds-m-right--x-small ' + (v.body.length == 0 ? 'slds-is-disabled' : '') }" onClick="{! c.toggleOpenState }" />
+          </aura:if>
         <a href="#" tabindex="-1" role="presentation" class="slds-truncate">{! v.label }</a></div>
-        <ul class="slds-is-expanded" role="group">
-            {! v.body }
-        </ul>
+        <aura:if isTrue="{! v.open }">
+            <ul class="{! (v.open ? 'slds-is-expanded' : '') }" role="group">
+                {! v.body }
+            </ul>
+        </aura:if>
     </li>
 </aura:component>
