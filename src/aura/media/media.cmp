@@ -1,0 +1,26 @@
+<aura:component implements="c:HTMLAttributes" access="GLOBAL">
+    
+    <aura:attribute name="figure" type="Aura.Component[]" description="Figure facet" access="GLOBAL" />
+    <aura:attribute name="center" type="Boolean" default="true" description="Should the body be centered?" access="GLOBAL" />
+    <aura:attribute name="responsive" type="Boolean" default="true" description="Should it be responsive?" access="GLOBAL" />
+    <aura:attribute name="figureReverse" type="Aura.Component[]" description="Reverse figure facet" access="GLOBAL" />
+    
+    <div class="{! 'slds-media' 
+                	+ ' ' + (v.center ? 'slds-media--center' : '')
+                	+ ' ' + (v.responsive ? 'slds-media--responsive' : '')
+                	+ ' ' + v.class }" id="{! v.id }">
+        <aura:if isTrue="{! v.figure.length > 0 }">
+            <div class="slds-media__figure">
+                {! v.figure }
+            </div>
+        </aura:if>
+        <div class="slds-media__body">
+            {! v.body }
+        </div>
+        <aura:if isTrue="{! v.figureReverse.length > 0 }">
+            <div class="slds-media__figure slds-media__figure--reverse">
+                {! v.figureReverse }
+            </div>
+        </aura:if>
+    </div>
+</aura:component>

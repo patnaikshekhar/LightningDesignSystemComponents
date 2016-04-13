@@ -1,0 +1,13 @@
+.THIS .reduce-width {
+    width: 500px;
+}
+
+.THIS .divider {
+    border-top: 4px solid #16325c;
+    margin-top: 25px;
+    height: 25px;
+}
+
+.THIS .bold {
+    font-weight: bold;
+}

@@ -5,7 +5,7 @@
         <!--<ldsc:ExampleModal />-->
         
         <c:tabs >
-            <c:tab label="Badges">
+            <c:tab label="Badges" active="true">
                 <c:badge onClick="{! c.buttonClick }">Test</c:badge>
     			<c:badge theme="inverse">Test</c:badge>
             </c:tab>
@@ -27,8 +27,13 @@
             <c:tab label="Tiles">
                 <c:ExampleTile />
             </c:tab>
-            <c:tab label="Tree" active="true">
+            <c:tab label="Tree">
                 <c:ExampleTree />
+            </c:tab>
+        </c:tabs>
+        <c:tabs >
+            <c:tab label="Media" active="true">
+                <c:ExampleMedia />
             </c:tab>
         </c:tabs>
         <c:tabs >

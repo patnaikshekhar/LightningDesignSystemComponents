@@ -1,0 +1,23 @@
+<aura:component access="GLOBAL">
+	<c:LightningDesignApplication >
+        <div class="reduce-width">
+            <c:media >
+                <aura:set attribute="figure">
+                    <c:image src="/resource/ldsc__SLDS100/assets/images/avatar3.jpg" size="large" alt="Avatar" />
+                </aura:set>
+                <h1 class="bold">Basic Media Object</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat minus molestias reprehenderit consequuntur sapiente. Modi veritatis totam accusantium numquam assumenda.</p>
+            </c:media>
+            
+            <div class="divider"></div>
+            
+            <c:media >
+                <aura:set attribute="figureReverse">
+                    <c:image src="/resource/ldsc__SLDS100/assets/images/avatar1.jpg" size="large" alt="Avatar" />
+                </aura:set>
+                <h1 class="bold">Reversed Media Object</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat minus molestias reprehenderit consequuntur sapiente. Modi veritatis totam accusantium numquam assumenda.</p>
+            </c:media>
+        </div>
+    </c:LightningDesignApplication>
+</aura:component>

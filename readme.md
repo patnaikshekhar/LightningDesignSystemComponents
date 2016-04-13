@@ -58,6 +58,7 @@ Managed package link goes here (TBD)
   - [Multi-Select](documentation/multiselect.md)
   - [Form](documentation/form.md)
 - [Image](documentation/image.md)
+- [Media](documentation/media.md)
 - [Tile](documentation/tile.md)
 - [Tree](documentation/tree.md)
 

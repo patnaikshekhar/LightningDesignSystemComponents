@@ -1,0 +1,5 @@
+<aura:documentation>
+	<aura:description>When you need text and a figure next to each other, use a media object.</aura:description>
+	<aura:example name="Media" ref="ldsc:exampleMedia" label="Media">
+	</aura:example>
+</aura:documentation>
