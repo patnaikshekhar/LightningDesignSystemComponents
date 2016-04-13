@@ -4,6 +4,10 @@
         <!--<ldsc:ExampleSpinner />-->
         <!--<ldsc:ExampleModal />-->
         
+        <form>
+            <c:button >Test</c:button>
+        </form>
+        
         <c:tabs >
             <c:tab label="Badges" active="true">
                 <c:badge onClick="{! c.buttonClick }">Test</c:badge>

@@ -10,7 +10,8 @@
             id="{! v.id }"
             onclick="{! c.onClick }"
             class="{! 'slds-button ' + (v.theme != null ? 'slds-button--' + v.theme : '') + (v.body.length > 0 ? '' : ' slds-button--icon') + (v.class ? ' ' + v.class : '') }" 
-            disabled="{! v.disabled }">
+            disabled="{! v.disabled }"
+            type="button">
         		<aura:if isTrue="{! v.iconName != '' &amp;&amp; v.iconPosition == 'left' }">
                     <c:icon iconType="{! v.iconType }" 
                                iconName="{! v.iconName }"
