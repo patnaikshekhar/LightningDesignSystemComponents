@@ -4,10 +4,6 @@
         <!--<ldsc:ExampleSpinner />-->
         <!--<ldsc:ExampleModal />-->
         
-        <form>
-            <c:button >Test</c:button>
-        </form>
-        
         <c:tabs >
             <c:tab label="Badges" active="true">
                 <c:badge onClick="{! c.buttonClick }">Test</c:badge>
@@ -36,11 +32,6 @@
             </c:tab>
         </c:tabs>
         <c:tabs >
-            <c:tab label="Media" active="true">
-                <c:ExampleMedia />
-            </c:tab>
-        </c:tabs>
-        <c:tabs >
             <c:tab label="Radio Buttons">
                 <c:ExampleRadioButtons />
             </c:tab>
@@ -58,6 +49,14 @@
             </c:tab>
             <c:tab label="Form">
                 <c:ExampleForm />
+            </c:tab>
+        </c:tabs>
+        <c:tabs >
+            <c:tab label="Media">
+                <c:ExampleMedia />
+            </c:tab>
+            <c:tab label="Popover" active="true">
+                <c:ExamplePopover />
             </c:tab>
         </c:tabs>
     </c:LightningDesignApplication>

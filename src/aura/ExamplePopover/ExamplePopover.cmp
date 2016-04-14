@@ -1,0 +1,31 @@
+<aura:component access="GLOBAL">
+	
+    <c:grid >
+        <c:col >
+        	<c:button id="buttonRight" theme="brand">Right</c:button>
+        </c:col>
+        <c:col >
+        	<c:button id="buttonTop" theme="brand">Top</c:button>
+        </c:col>
+        <c:col >
+        	<c:button id="buttonBottom" theme="brand">Bottom</c:button>
+        </c:col>
+        <c:col >
+            <c:button id="buttonLeft" theme="brand">Left</c:button>
+        </c:col>
+    </c:grid>
+    
+    <c:popover triggerElement="#buttonRight">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi laudantium molestias reprehenderit nostrum quod natus saepe ea corrupti odit minima?</p>
+    </c:popover>
+    <c:popover triggerElement="#buttonTop" position="top" theme="info">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi laudantium molestias reprehenderit nostrum quod natus saepe ea corrupti odit minima?</p>
+    </c:popover>
+    <c:popover triggerElement="#buttonBottom" position="bottom">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi laudantium molestias reprehenderit nostrum quod natus saepe ea corrupti odit minima?</p>
+    </c:popover>
+    <c:popover triggerElement="#buttonLeft" triggerEvent="click" triggerStopElement="body" triggerStopEvent="click" position="left" theme="error">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi laudantium molestias reprehenderit nostrum quod natus saepe ea corrupti odit minima?</p>
+    </c:popover>
+    
+</aura:component>
