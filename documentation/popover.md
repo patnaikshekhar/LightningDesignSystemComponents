@@ -21,34 +21,34 @@ A [popover](http://www.lightningdesignsystem.com/components/popovers/) is a non-
 **Component**
 ```html
 <aura:component access="GLOBAL">
+    <ldsc:lightningDesignApplication>
+        <ldsc:grid>
+            <ldsc:col>
+                <ldsc:button id="buttonRight" theme="brand">Right</ldsc:button>
+            </ldsc:col>
+            <ldsc:col>
+                <ldsc:button id="buttonTop" theme="brand">Top</ldsc:button>
+            </ldsc:col>
+            <ldsc:col>
+                <ldsc:button id="buttonBottom" theme="brand">Bottom</ldsc:button>
+            </ldsc:col>
+            <ldsc:col>
+                <ldsc:button id="buttonLeft" theme="brand">Left</ldsc:button>
+            </ldsc:col>
+        </ldsc:grid>
 
-    <ldsc:grid>
-        <ldsc:col>
-        	<ldsc:button id="buttonRight" theme="brand">Right</ldsc:button>
-        </ldsc:col>
-        <ldsc:col>
-        	<ldsc:button id="buttonTop" theme="brand">Top</ldsc:button>
-        </ldsc:col>
-        <ldsc:col>
-        	<ldsc:button id="buttonBottom" theme="brand">Bottom</ldsc:button>
-        </ldsc:col>
-        <ldsc:col>
-            <ldsc:button id="buttonLeft" theme="brand">Left</ldsc:button>
-        </ldsc:col>
-    </ldsc:grid>
-
-    <ldsc:popover triggerElement="#buttonRight">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi laudantium molestias reprehenderit nostrum quod natus saepe ea corrupti odit minima?</p>
-    </ldsc:popover>
-    <ldsc:popover triggerElement="#buttonTop" position="top" theme="info">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi laudantium molestias reprehenderit nostrum quod natus saepe ea corrupti odit minima?</p>
-    </ldsc:popover>
-    <ldsc:popover triggerElement="#buttonBottom" position="bottom">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi laudantium molestias reprehenderit nostrum quod natus saepe ea corrupti odit minima?</p>
-    </ldsc:popover>
-    <ldsc:popover triggerElement="#buttonLeft" triggerEvent="click" triggerStopElement="body" triggerStopEvent="click" position="left" theme="error">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi laudantium molestias reprehenderit nostrum quod natus saepe ea corrupti odit minima?</p>
-    </ldsc:popover>
-
+        <ldsc:popover triggerElement="#buttonRight">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi laudantium molestias reprehenderit nostrum quod natus saepe ea corrupti odit minima?</p>
+        </ldsc:popover>
+        <ldsc:popover triggerElement="#buttonTop" position="top" theme="info">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi laudantium molestias reprehenderit nostrum quod natus saepe ea corrupti odit minima?</p>
+        </ldsc:popover>
+        <ldsc:popover triggerElement="#buttonBottom" position="bottom">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi laudantium molestias reprehenderit nostrum quod natus saepe ea corrupti odit minima?</p>
+        </ldsc:popover>
+        <ldsc:popover triggerElement="#buttonLeft" triggerEvent="click" triggerStopElement="body" triggerStopEvent="click" position="left" theme="error">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi laudantium molestias reprehenderit nostrum quod natus saepe ea corrupti odit minima?</p>
+        </ldsc:popover>
+    </ldsc:lightningDesignApplication>
 </aura:component>
 ```
