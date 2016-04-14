@@ -61,6 +61,7 @@ Managed package link goes here (TBD)
 - [Media](documentation/media.md)
 - [Tile](documentation/tile.md)
 - [Tree](documentation/tree.md)
+- [Popover](documentation/popover.md)
 
 ## Interfaces
 
