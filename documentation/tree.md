@@ -3,20 +3,20 @@
 A tree component in [LDS](http://www.lightningdesignsystem.com/components/trees/). A ldsc:tree component is used along with an ldsc:treeNode component. Each treeNode represents a single node in a tree. A tree can be created manually by providing an hierarchy of tree nodes in the body or can also be created using the nodes attribute on the tree which represents an Object which is a node hierarchy. A node can be opened (expanded) or closed.
 
 ## Attributes of ldsc:tree
-label (String) - The tree group header.
-expandAll (Boolean) - The tree group header.
-nodes (Object[]) - The nodes in object form. Used to auto-generate the nodes.
+- label (String) - The tree group header.
+- expandAll (Boolean) - The tree group header.
+- nodes (Object[]) - The nodes in object form. Used to auto-generate the nodes.
 
 ## Events of ldsc:tree
-onClick (ldsc:basicEvent) - Called when a single node is clicked. The value param of the event contains the full path of the clicked node.
+- onClick (ldsc:basicEvent) - Called when a single node is clicked. The value param of the event contains the full path of the clicked node.
 
 ## Attributes of ldsc:treeNode
-label (string) - The tree group header.
-open (boolean) - Is this node open?
-nodes (object[]) - The nodes in object form. Used to auto-generate the nodes.
+- label (string) - The tree group header.
+- open (boolean) - Is this node open?
+- nodes (object[]) - The nodes in object form. Used to auto-generate the nodes.
 
 ## Events of ldsc:treeNode
-onClick (ldsc:basicEvent) - Called when a single node is clicked. The value param of the event contains the full path of the clicked node.
+- onClick (ldsc:basicEvent) - Called when a single node is clicked. The value param of the event contains the full path of the clicked node.
 
 ## Example
 
