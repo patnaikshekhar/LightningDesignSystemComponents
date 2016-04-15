@@ -35,7 +35,7 @@ This component shows a modal on the screen. The show attribute is used to decide
     <ldsc:button theme="brand" onClick="{! c.showTaglineModal }">Open Modal with Tagline</ldsc:button>
     <ldsc:button theme="brand" onClick="{! c.showLargeModal }">Open Large Modal</ldsc:button>
 
-  <ldsc:modal header="Agreement" show="{! v.showBasic }">
+    <ldsc:modal header="Agreement" show="{! v.showBasic }">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <aura:set attribute="footer">
