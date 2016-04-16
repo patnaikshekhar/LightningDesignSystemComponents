@@ -1,4 +1,4 @@
-<aura:component >
+<aura:component access="GLOBAL">
 	<c:LightningDesignApplication >
         <c:button onClick="{! c.buttonClick }">Basic Button</c:button>
         <c:button theme="neutral">Neutral Button</c:button>

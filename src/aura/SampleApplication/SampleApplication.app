@@ -1,4 +1,4 @@
-<aura:application >
+<aura:application access="GLOBAL">
 	<c:LightningDesignApplication >
         
         <!--<ldsc:ExampleSpinner />-->

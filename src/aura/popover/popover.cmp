@@ -1,29 +1,25 @@
-<aura:component implements="c:HTMLAttributes" access="GLOBAL">
+<aura:component implements="c:triggerAttributes,c:HTMLAttributes" access="GLOBAL">
     
     <aura:handler name="init" value="{! this }" action="{! c.init }" />
-    
-    <aura:attribute name="triggerElement" required="true" type="String" description="Show popup based on which element?" access="GLOBAL" />
-    <aura:attribute name="triggerEvent" default="mouseover" type="String" description="Show popup based on which event on selected element? Default is mouseover." access="GLOBAL" />
-    <aura:attribute name="triggerStopElement" default="" type="String" description="Hide popup based on which element? Defaults to triggerElement" access="GLOBAL" />
-    <aura:attribute name="triggerStopEvent" default="mouseout" type="String" description="Hide popup based on which event on selected element? Default is mouseout." access="GLOBAL" />
+	<aura:handler name="change" value="{! v.show }" action="{! c.onTrigger }" />
     
     <aura:attribute name="theme" type="String" default="" description="Theme of the popover. Can be either blank, info, error, warning or success. Default is blank." access="GLOBAL" />
-    
     <aura:attribute name="position" type="String" default="right" description="Position of the popup" access="GLOBAL" />
-    <aura:attribute name="show" type="Boolean" default="false" description="Should the popup be shown" access="GLOBAL" />
+    
+    <aura:attribute name="nubbinSize" type="Integer" default="1" description="Used Rarely - Size of nubbin in rems. Set to 1." access="GLOBAL" />
+    <aura:attribute name="popupWidth" type="Integer" default="20" description="Used Rarely - Size of popup in rems. Set to 20." access="GLOBAL" />
     
     <aura:attribute name="nubbinPosition" type="String" description="PRIVATE - Position of the Nubbin - Set programatically" access="PRIVATE" />
-    
-    <aura:if isTrue="{! v.show }">
-        <div class="{! 'slds' +
-                        ' ' + v.class }" style="position: absolute;" id="{! v.id }">
-            <div class="{! 'slds-popover' +
-                        ' ' + 'slds-nubbin--' + v.nubbinPosition +
-                        ' ' + (v.theme != '' ? 'slds-theme--' + v.theme : '') }" role="dialog">
-                <div class="slds-popover__body">
-                    {! v.body }
-                </div>
+
+    <div class="{! 'slds' +
+                ' ' + (v.show ? '' : 'ldsc-hidden') +
+                ' ' + v.class }" id="{! v.id }">
+        <div class="{! 'slds-popover' +
+                    ' ' + 'slds-nubbin--' + v.nubbinPosition +
+                    ' ' + (v.theme != '' ? 'slds-theme--' + v.theme : '') }" role="dialog">
+            <div class="slds-popover__body">
+                {! v.body }
             </div>
         </div>
-    </aura:if>
+    </div>
 </aura:component>

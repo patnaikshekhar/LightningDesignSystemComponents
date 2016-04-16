@@ -1,4 +1,4 @@
-<aura:event type="APPLICATION" description="Event template">
+<aura:event type="COMPONENT" description="Basic Event template" access="GLOBAL">
     <aura:attribute name="domEvent" type="Object" access="GLOBAL" />
     <aura:attribute name="value" type="Object" access="GLOBAL" />
 </aura:event>

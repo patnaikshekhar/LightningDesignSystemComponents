@@ -1,5 +1,5 @@
 <aura:documentation>
-	<aura:description>A popover is a non-modal dialog. </aura:description>
+	<aura:description>A popover is a non-modal dialog. The popover element is attached to a trigger element which displays the popover when the trigger event occurs. The popover is hidden until the eventStop event occurs on the triggerStop element.</aura:description>
 	<aura:example name="Popover" ref="ldsc:examplePopover" label="Popover">
 	</aura:example>
 </aura:documentation>

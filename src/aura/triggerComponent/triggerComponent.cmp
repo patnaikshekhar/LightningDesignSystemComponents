@@ -1,0 +1,9 @@
+<aura:component extensible="true" access="GLOBAL" implements="c:HTMLAttributes">
+	
+    <aura:attribute name="triggerElement" required="true" type="String" description="Show popup based on which element?" access="GLOBAL" />
+    <aura:attribute name="triggerEvent" default="mouseover" type="String" description="Show popup based on which event on selected element? Default is mouseover." access="GLOBAL" />
+    <aura:attribute name="triggerStopElement" default="" type="String" description="Hide popup based on which element? Defaults to triggerElement" access="GLOBAL" />
+    <aura:attribute name="triggerStopEvent" default="mouseout" type="String" description="Hide popup based on which event on selected element? Default is mouseout." access="GLOBAL" />
+    
+    <aura:attribute name="show" type="Boolean" default="false" description="Should the popup be shown" access="GLOBAL" /> 
+</aura:component>

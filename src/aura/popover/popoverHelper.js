@@ -9,15 +9,12 @@
         return pixels;
 	},
     
-    calculatePosition: function(triggerElement, element, position, helper) {
+    calculatePosition: function(triggerElement, element, position, nubbinSize, popupWidth, helper) {
     	var positionTop = 0;
         var positionLeft = 0;
         
-        var nubbinSize = (helper.getDefaultFontSize(element.parentNode) * 1);
-                        
         var rect = triggerElement.getBoundingClientRect();
         var popupHeight = element.offsetHeight;
-        var popupWidth = element.offsetWidth;
         var triggerElementTop = rect.top;
         var triggerElementLeft = rect.left;
         var triggerElementHeight = rect.height;
@@ -55,5 +52,66 @@
         }
         
         component.set('v.nubbinPosition', nubbinPosition);
-    }
+    },
+    
+    init: function(component, helper) {
+        
+        helper.setNubbinPosition(component);
+        
+        // Default triggerStopElement
+        if (component.get('v.triggerStopElement') == '') {
+            component.set('v.triggerStopElement', component.get('v.triggerElement'));
+        }
+    },
+    
+	onTrigger: function(component, helper) {
+        // Remove the component from its current position on the DOM and place it in the main document body.
+        var element = component.getElement();
+        var position = component.get('v.position');
+
+        var selector = component.get('v.triggerElement');
+        var triggerElement = document.querySelector(selector);
+        var remSize = helper.getDefaultFontSize(element.parentNode);
+        
+        if (element) {
+            var nubbinSize = (remSize * parseInt(component.get('v.nubbinSize')));
+        	var popupWidth = (remSize * parseInt(component.get('v.popupWidth')));
+            
+            var newPosition = helper.calculatePosition(triggerElement, element, position, nubbinSize, popupWidth, helper);
+            element.style.position = 'absolute';
+            element.style.top = Math.round(newPosition[0]) + 'px';
+            element.style.left = Math.round(newPosition[1]) + 'px';    
+        }
+    },
+    
+    afterRender: function(component) {
+        
+		// Set event listener based on selector
+        var selector = component.get('v.triggerElement');
+        var stopSelector = component.get('v.triggerStopElement');
+        var event = component.get('v.triggerEvent');
+        var stopEvent = component.get('v.triggerStopEvent');
+        
+        var triggerElement = document.querySelector(selector);
+        var triggerStopElement = document.querySelector(stopSelector);
+        
+        if (triggerElement) {
+            
+            // Attach start trigger
+            triggerElement.addEventListener(event, function(e) {
+                if (!component.get('v.show')) {
+                    e.stopPropagation();
+                    component.set('v.show', true);
+                }
+            });
+            
+            // Attach stop trigger
+            triggerStopElement.addEventListener(stopEvent, function(e) {
+                if (component.get('v.show')) {
+                    e.stopPropagation();
+                    component.set('v.show', false);
+                }
+            });
+        }
+	}
 })
