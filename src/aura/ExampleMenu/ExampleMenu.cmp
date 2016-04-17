@@ -1,0 +1,6 @@
+<aura:component access="GLOBAL">
+    <c:menu />
+    <div>
+        <h1>Basic Menu. Blah blah blah blah</h1>
+    </div>
+</aura:component>

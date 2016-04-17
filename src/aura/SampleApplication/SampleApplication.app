@@ -55,8 +55,11 @@
             <c:tab label="Media">
                 <c:ExampleMedia />
             </c:tab>
-            <c:tab label="Popover" active="true">
+            <c:tab label="Popover">
                 <c:ExamplePopover />
+            </c:tab>
+            <c:tab label="Menu" active="true">
+                <c:ExampleMenu />
             </c:tab>
         </c:tabs>
     </c:LightningDesignApplication>
