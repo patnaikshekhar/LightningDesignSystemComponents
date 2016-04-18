@@ -1,0 +1,7 @@
+<aura:component access="GLOBAL" implements="c:HTMLAttributes">
+	<li class="{! 'slds-dropdown__item ' + v.class }" id="{! v.id }">
+        <a href="#void" role="menuitem">
+            <p class="slds-truncate">{! v.body }</p>
+        </a>
+    </li>	
+</aura:component>

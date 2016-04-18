@@ -1,6 +1,29 @@
 <aura:component access="GLOBAL">
-    <c:menu />
+    <c:menu >
+        <c:menuItem >Menu Item 1</c:menuItem>
+        <c:menuItem >Menu Item 2</c:menuItem>
+        <c:menuItem >Menu Item 3</c:menuItem>
+        <c:menuSeperator />
+        <c:menuItem >Menu Item 4</c:menuItem>
+    </c:menu>
     <div>
-        <h1>Basic Menu. Blah blah blah blah</h1>
+        <h1>Basic Menu</h1>
+    </div>
+    
+    <c:menu >
+        <c:menuHeader label="Sub Menu 1">
+            <c:menuItem >Menu Item 1</c:menuItem>
+            <c:menuItem >Menu Item 2</c:menuItem>
+            <c:menuItem >Menu Item 3</c:menuItem>
+        </c:menuHeader>
+        <c:menuHeader label="Sub Menu 2">
+            <c:menuItem >Menu Item 4</c:menuItem>
+            <c:menuItem >Menu Item 5</c:menuItem>
+            <c:menuSeperator />
+            <c:menuItem >Menu Item 6</c:menuItem>
+        </c:menuHeader>
+    </c:menu>
+    <div>
+        <h1>Menu with Headers</h1>
     </div>
 </aura:component>

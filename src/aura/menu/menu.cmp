@@ -1,34 +1,25 @@
 <aura:component access="GLOBAL" implements="c:HTMLAttributes">
     
-    <aura:attribute name="showMenu" type="Boolean" default="false" description="Should the menu be shown?" access="PRIVATE" />
-    <div class="slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open" aria-expanded="true">
+    <aura:handler name="init" value="{! this }" action="{! c.init }" />
+    
+    <aura:attribute name="show" type="Boolean" default="false" description="Should the menu be shown?" access="GLOBAL" />
+    
+    <aura:attribute name="menuItems" type="Aura.Component[]" description="Private - List of menu items." access="PRIVATE" />
+    <aura:attribute name="sections" type="Aura.Component[]" description="Private - List of subsections" access="PRIVATE" />
+    
+    <div class="{! 'slds-dropdown-trigger slds-dropdown-trigger--click'
+                	+ ' ' + (v.show ? 'slds-is-open' : '')
+                	+ ' ' + v
+                }" aria-expanded="true" id="{! v.id }">
         
         <c:button class="slds-button--icon-border-filled" iconType="utility" iconName="down" onClick="{! c.showMoreClicked }" />
         
-        <aura:if isTrue="{! v.showMenu }">
+        <aura:if isTrue="{! v.show }">
             <div class="slds-dropdown slds-dropdown--left">
                 <ul class="dropdown__list" role="menu">
-                    <li class="slds-dropdown__item">
-                        <a href="#void" role="menuitem">
-                            <p class="slds-truncate">Menu Item One</p>
-                        </a>
-                    </li>
-                    <li class="slds-dropdown__item">
-                        <a href="#void" role="menuitem">
-                            <p class="slds-truncate">Menu Item Two</p>
-                        </a>
-                    </li>
-                    <li class="slds-dropdown__item">
-                        <a href="#void" role="menuitem">
-                            <p class="slds-truncate">Menu Item Three</p>
-                        </a>
-                    </li>
-                    <li class="slds-dropdown__item slds-has-divider--top-space">
-                        <a href="#void" role="menuitem">
-                            <p class="slds-truncate">Menu Item Four</p>
-                        </a>
-                    </li>
+                    {! v.menuItems }
                 </ul>
+				{! v.sections }
             </div>
         </aura:if>
     </div>
