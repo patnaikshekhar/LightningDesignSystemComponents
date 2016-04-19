@@ -15,14 +15,13 @@
         		<aura:if isTrue="{! v.iconName != '' &amp;&amp; v.iconPosition == 'left' }">
                     <c:icon iconType="{! v.iconType }" 
                                iconName="{! v.iconName }"
-                               class="{! 'slds-button__icon slds-button__icon--left slds-icon--' + v.iconSize }">
+                               class="{! (v.iconClass == '' ? 'slds-button__icon slds-button__icon--left slds-icon--' + v.iconSize : v.iconClass) }">
                     </c:icon>
         		</aura:if>{! v.body }
         		<aura:if isTrue="{! v.iconName != '' &amp;&amp; v.iconPosition == 'right' }">
                     <c:icon iconType="{! v.iconType }" 
                                iconName="{! v.iconName }"
-                               iconSize="{! v.iconSize }"
-                               class="slds-button__icon slds-button__icon--right">
+                               class="{! (v.iconClass == '' ? 'slds-button__icon slds-button__icon--right slds-icon--' + v.iconSize : v.iconClass) }">
                     </c:icon>
         		</aura:if></button>
 </aura:component>
