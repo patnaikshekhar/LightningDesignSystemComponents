@@ -3,6 +3,8 @@
     <aura:handler name="init" value="{! this }" action="{! c.init }" />
     
     <aura:attribute name="show" type="Boolean" default="false" description="Should the menu be shown?" access="GLOBAL" />
+    <aura:attribute name="size" type="String" default="" description="Size can be either blank (stretch), small, medium or large. Default is blank" access="GLOBAL" />
+    
     <aura:attribute name="items" type="Object[]" description="The list of items in the menu" access="GLOBAL" />
     
     <!-- Defaults to icon type and name -->
@@ -26,7 +28,9 @@
                      onClick="{! c.showMoreClicked }" />
         
         <aura:if isTrue="{! v.show }">
-            <div class="slds-dropdown slds-dropdown--left">
+            <div class="{! 'slds-dropdown' +
+                           ' ' + 'slds-dropdown--left' +
+                           ' ' + (v.size != '' ? 'slds-dropdown--' + v.size : '') }">
                 <ul class="dropdown__list" role="menu">
                     {! v.menuItems }
                 </ul>

@@ -2,9 +2,17 @@
     
     <aura:attribute name="label" type="String" default="" description="Label of the menu item." access="GLOBAL" />
     
+    <aura:attribute name="leftIconType" type="String" default="" access="GLOBAL" description="Left icon type. Can be either action, custom, doctype, standard or utility" />
+    <aura:attribute name="leftIconName" type="String" default="" access="GLOBAL" description="Left icon name. Must be a name of an icon. E.g add" />
+    <aura:attribute name="rightIconType" type="String" default="" access="GLOBAL" description="Right icon type. Can be either action, custom, doctype, standard or utility" />
+    <aura:attribute name="rightIconName" type="String" default="" access="GLOBAL" description="Right icon name. Must be a name of an icon. E.g add" />
+    
 	<li class="{! 'slds-dropdown__item ' + v.class }" id="{! v.id }">
         <a href="#void" role="menuitem">
-            <p class="slds-truncate">{! v.label }</p>
+            <p class="slds-truncate">
+                <aura:if isTrue="{! v.leftIconName != '' }">
+                    <c:icon iconName="{! v.leftIconName }" iconType="{! v.leftIconType }" iconClass="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small" />
+                </aura:if>{! v.label }</p>
         </a>
     </li>	
 </aura:component>

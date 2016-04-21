@@ -15,9 +15,13 @@
             
             if (menuItems.length > 0) {
             	var menuItemsComponents = menuItems.map(function(value) {
-                    return ['c:menuItem', {
-                        label: value
-                    }];
+                    if (value == '--') {
+                    	return ['c:menuSeperator', {}];    
+                    } else {
+                        return ['c:menuItem', {
+                            label: value
+                        }];
+                    }
                 });
 
                 $A.createComponents(menuItemsComponents, function(components, status, err) {

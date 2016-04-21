@@ -1,0 +1,5 @@
+<aura:documentation>
+	<aura:description>A Menu offers a list of actions or functions that a user can access.</aura:description>
+	<aura:example name="Menu" ref="ldsc:exampleMenu" label="Menu">
+	</aura:example>
+</aura:documentation>

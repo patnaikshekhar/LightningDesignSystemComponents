@@ -7,10 +7,10 @@
         <c:menuItem label="Menu Item 4" />
     </c:menu>
     <div>
-        <h1>Basic Menu</h1>
+        <h1>Simple Menu</h1>
     </div>
     
-    <c:menu >
+    <c:menu size="large">
         <c:menuHeader label="Sub Menu 1">
             <c:menuItem label="Menu Item 1" />
             <c:menuItem label="Menu Item 2" />
@@ -24,11 +24,28 @@
         </c:menuHeader>
     </c:menu>
     <div>
-        <h1>Menu with Headers</h1>
+        <h1>Menu with Size and Headers</h1>
     </div>
     
-    <c:menu items="Menu Item One,Menu Item Two,Menu Item Three" />
+    <c:menu items="File,Save,Save As,--,Exit" />
     <div>
         <h1>Generated Menu</h1>
+    </div>
+    
+    <c:menu >
+        <c:menuItem label="Menu Item 1" leftIconType="utility" leftIconName="check" />
+        <c:menuItem label="Menu Item 2" />
+        <c:menuItem label="Menu Item 3" />
+    </c:menu>
+    <div>
+        <h1>Menu with Icons</h1>
+    </div>
+    
+    <div>
+        <h1>Menu with Positioning</h1>
+    </div>
+    
+    <div>
+        <h1>Menu with Event</h1>
     </div>
 </aura:component>
