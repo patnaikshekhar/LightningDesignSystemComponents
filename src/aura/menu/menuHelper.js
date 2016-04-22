@@ -4,7 +4,9 @@
         var helper = this;
         
         helper.createMenuItems(component, function() {
-        	helper.transformComponentsInBody(component);    
+        	helper.transformComponentsInBody(component); 
+            helper.addOnClickListeners(component, component.get('v.menuItems'));
+            helper.addOnClickListeners(component, component.get('v.sections'));
         });
 	},
     
@@ -70,5 +72,11 @@
         component.set('v.sections', body.filter(function(c) {
             return (c.getName() == 'ldsc$menuHeader' || c.getName() == 'c$menuHeader');
         }));
+    },
+    
+    addOnClickListeners: function(component, items) {
+        items.forEach(function(item) {
+           item.addHandler('onClick', component, 'c.onClick'); 
+        });
     }
 })

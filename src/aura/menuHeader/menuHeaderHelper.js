@@ -1,6 +1,11 @@
 ({
 	setup : function(component) {
-		var body = component.get('v.body');
+        this.transformComponentsInBody(component);
+        this.addOnClickListeners(component);
+	},
+    
+    transformComponentsInBody: function(component) {
+        var body = component.get('v.body');
         
         // Filter out the sections
         var filteredMenuItems = body.filter(function(c) {
@@ -23,5 +28,12 @@
         }, []);
         
         component.set('v.menuItems', menuItems);
-	}
+    },
+    
+    addOnClickListeners: function(component) {
+        var menuItems = component.get('v.menuItems');
+        menuItems.forEach(function(item) {
+           item.addHandler('onClick', component, 'c.onClick'); 
+        });
+    }
 })

@@ -4,6 +4,8 @@
     
     <aura:attribute name="label" type="String" default="" description="Label of the Menu Sub Header" access="GLOBAL" />
     
+    <aura:registerEvent name="onClick" type="c:basicEvent" description="Called when a menu item is clicked." access="GLOBAL" />
+    
     <aura:attribute name="menuItems" type="Aura.Component[]" description="Private - List of menu items." access="PRIVATE" />
     
     <div class="{! 'slds-dropdown__header ' + v.class }" id="{! v.id }">

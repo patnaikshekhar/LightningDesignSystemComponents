@@ -1,4 +1,7 @@
 <aura:component access="GLOBAL">
+    
+    <aura:attribute name="menuItem" type="String" default="" description="The name of the menu item which is selected" access="GLOBAL" />
+    
     <c:menu >
         <c:menuItem label="Menu Item 1" />
         <c:menuItem label="Menu Item 2" />
@@ -45,7 +48,17 @@
         <h1>Menu with Positioning</h1>
     </div>
     
+    <c:menu onClick="{! c.menuItemClicked }">
+        <c:menuItem label="Menu Item 1" />
+        <c:menuItem label="Menu Item 2" />
+        <c:menuItem label="Menu Item 3" />
+        <c:menuSeperator />
+        <c:menuItem label="Menu Item 4" />
+    </c:menu>
     <div>
         <h1>Menu with Event</h1>
+        <aura:if isTrue="{! v.menuItem != ''}">
+        	<p>{! v.menuItem } was clicked</p>
+        </aura:if>
     </div>
 </aura:component>

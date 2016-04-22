@@ -7,7 +7,9 @@
     <aura:attribute name="rightIconType" type="String" default="" access="GLOBAL" description="Right icon type. Can be either action, custom, doctype, standard or utility" />
     <aura:attribute name="rightIconName" type="String" default="" access="GLOBAL" description="Right icon name. Must be a name of an icon. E.g add" />
     
-	<li class="{! 'slds-dropdown__item ' + v.class }" id="{! v.id }">
+    <aura:registerEvent name="onClick" type="c:basicEvent" description="Called when a menu item is clicked." access="GLOBAL" />
+    
+	<li class="{! 'slds-dropdown__item ' + v.class }" id="{! v.id }" onclick="{! c.onClick }">
         <a href="#void" role="menuitem">
             <p class="slds-truncate">
                 <aura:if isTrue="{! v.leftIconName != '' }">
