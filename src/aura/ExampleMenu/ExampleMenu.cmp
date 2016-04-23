@@ -36,12 +36,21 @@
     </div>
     
     <c:menu >
-        <c:menuItem label="Menu Item 1" leftIconType="utility" leftIconName="check" />
-        <c:menuItem label="Menu Item 2" />
-        <c:menuItem label="Menu Item 3" />
+        <c:menuItem label="Table View" rightIconType="utility" rightIconName="table" />
+        <c:menuItem label="Kanban Board" rightIconType="utility" rightIconName="kanban" />
+        <c:menuItem label="List View" rightIconType="utility" rightIconName="side_list" />
     </c:menu>
     <div>
-        <h1>Menu with Icons</h1>
+        <h1>Menu with Icons on Right</h1>
+    </div>
+    
+    <c:menu >
+        <c:menuItem label="Menu Item One" leftIconType="utility" leftIconName="check" />
+        <c:menuItem label="Menu Item Two" />
+        <c:menuItem label="Menu Item Three" />
+    </c:menu>
+    <div>
+        <h1>Menu with Icons on Left</h1>
     </div>
     
     <div>
