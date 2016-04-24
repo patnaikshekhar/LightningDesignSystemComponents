@@ -4,13 +4,18 @@
     
     <aura:attribute name="show" type="Boolean" default="false" description="Should the menu be shown?" access="GLOBAL" />
     <aura:attribute name="size" type="String" default="" description="Size can be either blank (stretch), small, medium or large. Default is blank" access="GLOBAL" />
+    <aura:attribute name="positionHorizontal" type="String" default="left" description="Can be left, blank or right. Default is left" access="GLOBAL" />
+    <aura:attribute name="positionVertical" type="String" default="top" description="Can be blank, top or bottom. Default is blank" access="GLOBAL" />
+    <aura:attribute name="nubbin" type="Boolean" default="false" description="Should a nubbin be shown" access="GLOBAL" />
     
     <aura:attribute name="items" type="Object[]" description="The list of items in the menu" access="GLOBAL" />
     
     <!-- Defaults to icon type and name -->
     <aura:attribute name="iconType" type="String" default="utility" access="GLOBAL" description="Can be either action, custom, doctype, standard or utility" />
     <aura:attribute name="iconName" type="String" default="down" access="GLOBAL" description="Must be a name of an icon. E.g add" />
-	
+	<aura:attribute name="iconClass" type="String" default="" access="GLOBAL" description="Class to be added to the icon." />
+    <aura:attribute name="buttonClass" type="String" default="slds-button--icon-border-filled" access="GLOBAL" description="Class to be added to the button." />
+                    
     <aura:registerEvent name="onClick" type="c:basicEvent" description="Called when a menu item is clicked." access="GLOBAL" />
     
     <aura:attribute name="menuItems" type="Aura.Component[]" description="Private - List of menu items." access="PRIVATE" />
@@ -23,7 +28,7 @@
          id="{! v.id }"
          aria-expanded="true">
         
-        <c:button class="slds-button--icon-border-filled" 
+        <c:button class="{! v.buttonClass }" 
                      iconType="{! v.iconType }" iconName="{! v.iconName }" 
                      iconSize="{! v.iconSize }"
                      iconClass="{! (v.iconClass == '' ? 'slds-button__icon' : v.iconClass) }" 
@@ -31,7 +36,9 @@
         
         <aura:if isTrue="{! v.show }">
             <div class="{! 'slds-dropdown' +
-                           ' ' + 'slds-dropdown--left' +
+                           ' ' + (v.positionHorizontal != '' ? 'slds-dropdown--' + v.positionHorizontal : '') +
+                           ' ' + (v.positionVertical != '' ? 'slds-dropdown--' + v.positionVertical : '') +
+                           ' ' + (v.nubbin ? 'slds-nubbin--' + v.positionVertical + '-' + v.positionHorizontal : '') +
                            ' ' + (v.size != '' ? 'slds-dropdown--' + v.size : '') }">
                 <ul class="dropdown__list" role="menu">
                     {! v.menuItems }

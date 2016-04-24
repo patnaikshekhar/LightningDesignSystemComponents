@@ -2,6 +2,7 @@
     
     <aura:attribute name="label" type="String" default="" description="Label of the menu item." access="GLOBAL" />
     
+    <aura:attribute name="leftIconSelected" type="Boolean" default="false" access="GLOBAL" description="Is the left icon selected? The left icon is usually used to indicate selected or not selected." />
     <aura:attribute name="leftIconType" type="String" default="" access="GLOBAL" description="Left icon type. Can be either action, custom, doctype, standard or utility" />
     <aura:attribute name="leftIconName" type="String" default="" access="GLOBAL" description="Left icon name. Must be a name of an icon. E.g add" />
     <aura:attribute name="rightIconType" type="String" default="" access="GLOBAL" description="Right icon type. Can be either action, custom, doctype, standard or utility" />
@@ -10,7 +11,7 @@
     <aura:registerEvent name="onClick" type="c:basicEvent" description="Called when a menu item is clicked." access="GLOBAL" />
     
 	<li class="{! 'slds-dropdown__item' + 
-               		' ' + (v.leftIconName != '' ? 'slds-is-selected' : '') +
+               		' ' + (v.leftIconSelected ? 'slds-is-selected' : '') +
                		' ' + v.class }" id="{! v.id }" onclick="{! c.onClick }">
         <a href="#void" role="menuitem">
             <p class="slds-truncate">

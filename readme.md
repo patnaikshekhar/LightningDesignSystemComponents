@@ -62,6 +62,7 @@ Installation is via a [managed package](https://login.salesforce.com/packaging/i
 - [Tile](documentation/tile.md)
 - [Tree](documentation/tree.md)
 - [Popover](documentation/popover.md)
+- [Menu](documentation/menu.md)
 
 ## Interfaces
 

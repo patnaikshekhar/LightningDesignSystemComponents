@@ -18,7 +18,7 @@
             if (menuItems.length > 0) {
             	var menuItemsComponents = menuItems.map(function(value) {
                     if (value == '--') {
-                    	return ['c:menuSeperator', {}];    
+                    	return ['c:menuSeparator', {}];    
                     } else {
                         return ['c:menuItem', {
                             label: value
@@ -50,11 +50,11 @@
         // Filter out the sections
         var filteredMenuItems = body.filter(function(c) {
             return (c.getName() == 'ldsc$menuItem' || c.getName() == 'c$menuItem'
-                    || c.getName() == 'ldsc$menuSeperator' || c.getName() == 'c$menuSeperator');
+                    || c.getName() == 'ldsc$menuSeparator' || c.getName() == 'c$menuSeparator');
         });
         
         var menuItems = filteredMenuItems.reduceRight(function(acc, next) {
-            if (next.getName() == 'ldsc$menuSeperator' || next.getName() == 'c$menuSeperator') {
+            if (next.getName() == 'ldsc$menuSeparator' || next.getName() == 'c$menuSeparator') {
                 if (acc.length > 0) {
                 	var previous = acc[0];
                 	previous.set('v.class', 'slds-has-divider--top-space');
