@@ -1,0 +1,45 @@
+<aura:component access="GLOBAL" implements="c:HTMLAttributes,c:IconAttributes">
+    
+    <aura:attribute name="title" type="String" default="" description="Title of the header" access="GLOBAL"/>
+    <aura:attribute name="subTitleTop" type="String" default="" description="Sub-Title of the header before the header." access="GLOBAL"/>
+    <aura:attribute name="subTitleBottom" type="String" default="" description="Sub-Title of the header after the header." access="GLOBAL"/>
+    
+    <aura:attribute name="iconType" default="standard" type="String" access="GLOBAL" description="Can be either action, custom, doctype, standard or utility" />
+    <aura:attribute name="iconSize" default="large" type="String" access="GLOBAL" description="Size of the icon. Can be small, large, x-small or blank for default" />
+    <aura:attribute name="iconContainer" default="true" type="Boolean" access="GLOBAL" description="Should this icon have a container" />
+    
+    <aura:attribute name="buttonsFacet" type="Aura.Component[]" description="The buttons facet next to the header" access="GLOBAL" />
+    <aura:attribute name="actionsFacet" type="Aura.Component[]" description="The actions facet on the right hand side of the header" access="GLOBAL" />
+    
+    <div class="{! 'slds-page-header ' + v.class }" id="{! v.id }" role="banner">
+        <div class="slds-grid">
+            <div class="slds-col slds-has-flexi-truncate">
+                <c:media >
+                    <aura:set attribute="figure">
+                        <aura:if isTrue="{! v.iconName != '' }">
+                            <c:icon iconName="{! v.iconName }" iconType="{! v.iconType }" iconSize="{! v.iconSize }" iconContainer="{! v.iconContainer }" />
+                        </aura:if>
+                    </aura:set>
+                    <aura:if isTrue="{! v.subTitleTop != '' }">
+                        <p class="slds-text-heading--label">{! v.subTitleTop }</p>
+                    </aura:if>
+                    <div class="slds-grid">
+                        <aura:if isTrue="{! v.title != '' }">
+                            <p class="slds-page-header__title slds-truncate slds-m-right--small slds-align-middle" title="{! v.title }">{! v.title }</p>
+                        </aura:if>
+                        <div class="slds-col slds-shrink-none">
+                            {! v.buttonsFacet }
+                        </div>
+                    </div>
+                    <aura:if isTrue="{! v.subTitleBottom != '' }">
+                        <p class="slds-text-body--small slds-page-header__info">{! v.subTitleBottom }</p>
+                    </aura:if>
+                </c:media>
+            </div>
+            <div class="slds-col slds-no-flex slds-align-bottom">
+                {! v.actionsFacet }
+            </div>
+        </div>
+        {! v.body }
+    </div>
+</aura:component>

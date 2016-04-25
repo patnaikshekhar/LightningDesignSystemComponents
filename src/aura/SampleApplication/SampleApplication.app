@@ -58,8 +58,11 @@
             <c:tab label="Popover">
                 <c:ExamplePopover />
             </c:tab>
-            <c:tab label="Menu" active="true">
+            <c:tab label="Menu">
                 <c:ExampleMenu />
+            </c:tab>
+            <c:tab label="Header" active="true">
+                <c:ExamplePageHeader />
             </c:tab>
         </c:tabs>
     </c:LightningDesignApplication>

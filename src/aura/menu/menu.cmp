@@ -23,7 +23,7 @@
     
     <div class="{! 'slds-dropdown-trigger slds-dropdown-trigger--click'
                 	+ ' ' + (v.show ? 'slds-is-open' : '')
-                	+ ' ' + v
+                	+ ' ' + v.class
                 }"
          id="{! v.id }"
          aria-expanded="true">
