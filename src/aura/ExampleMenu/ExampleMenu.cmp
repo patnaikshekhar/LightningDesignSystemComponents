@@ -2,111 +2,113 @@
     
     <aura:attribute name="menuItem" type="String" default="" description="The name of the menu item which is selected" access="GLOBAL" />
     
-    <c:grid >
-        <c:col size="2" />
-        <c:col size="2">
-            <c:menu >
-                <c:menuItem label="Menu Item 1" />
-                <c:menuItem label="Menu Item 2" />
-                <c:menuItem label="Menu Item 3" />
-                <c:menuSeparator />
-                <c:menuItem label="Menu Item 4" />
-            </c:menu>
-            <div>
-                <h1>Simple Menu</h1>
-            </div>
-        </c:col>
-        
-        <c:col size="2">
-            <c:menu size="large">
-                <c:menuHeader label="Sub Menu 1">
+    <c:LightningDesignApplication >
+        <c:grid >
+            <c:col size="2" />
+            <c:col size="2">
+                <c:menu >
                     <c:menuItem label="Menu Item 1" />
                     <c:menuItem label="Menu Item 2" />
                     <c:menuItem label="Menu Item 3" />
-                </c:menuHeader>
-                <c:menuHeader label="Sub Menu 2">
-                    <c:menuItem label="Menu Item 4" />
-                    <c:menuItem label="Menu Item 5" />
                     <c:menuSeparator />
-                    <c:menuItem label="Menu Item 6" />
-                </c:menuHeader>
-            </c:menu>
-            <div>
-                <h1>Menu with Size and Headers</h1>
-            </div>
-        </c:col>
-        
-        <c:col size="2">    
-            <c:menu items="File,Save,Save As,--,Exit" />
-            <div>
-                <h1>Generated Menu</h1>
-            </div>
-        </c:col>
-        
-        <c:col size="2">   
-            <c:menu >
-                <c:menuItem label="Table View" rightIconType="utility" rightIconName="table" />
-                <c:menuItem label="Kanban Board" rightIconType="utility" rightIconName="kanban" />
-                <c:menuItem label="List View" rightIconType="utility" rightIconName="side_list" />
-            </c:menu>
-            <div>
-                <h1>Menu with Icons on Right</h1>
-            </div>
-        </c:col>
-        
-        <c:col size="2"> 
-            <c:menu >
-                <c:menuItem label="Menu Item One" leftIconType="utility" leftIconName="check" />
-                <c:menuItem label="Menu Item Two" leftIconType="utility" leftIconName="check" leftIconSelected="true" />
-                <c:menuItem label="Menu Item Three" leftIconType="utility" leftIconName="check" />
-            </c:menu>
-            <div>
-                <h1>Menu with Icons on Left</h1>
-            </div>
-        </c:col>
-        
-        <c:col size="2" />
-        
-        <c:col size="2">
-            <c:menu positionVertical="bottom" positionHorizontal="right">
-                <c:menuItem label="Menu Item 1" />
-                <c:menuItem label="Menu Item 2" />
-                <c:menuItem label="Menu Item 3" />
-                <c:menuSeparator />
-                <c:menuItem label="Menu Item 4" />
-            </c:menu>
-            <div>
-                <h1>Menu with Positioning</h1>
-            </div>
-        </c:col>
-        
-        <c:col size="2">
-            <c:menu nubbin="true" iconType="utility" iconName="settings" buttonClass="slds-button slds-button--icon-container">
-                <c:menuItem label="Menu Item 1" />
-                <c:menuItem label="Menu Item 2" />
-                <c:menuItem label="Menu Item 3" />
-                <c:menuSeparator />
-                <c:menuItem label="Menu Item 4" />
-            </c:menu>
-            <div>
-                <h1>Menu with Different Icon and Nubbin</h1>
-            </div>
-        </c:col>
-        
-        <c:col size="2">  
-            <c:menu onClick="{! c.menuItemClicked }">
-                <c:menuItem label="Menu Item 1" />
-                <c:menuItem label="Menu Item 2" />
-                <c:menuItem label="Menu Item 3" />
-                <c:menuSeparator />
-                <c:menuItem label="Menu Item 4" />
-            </c:menu>
-            <div>
-                <h1>Menu with Event</h1>
-                <aura:if isTrue="{! v.menuItem != ''}">
-                    <p>{! v.menuItem } was clicked</p>
-                </aura:if>
-            </div>
-        </c:col>
-    </c:grid>
+                    <c:menuItem label="Menu Item 4" />
+                </c:menu>
+                <div>
+                    <h1>Simple Menu</h1>
+                </div>
+            </c:col>
+            
+            <c:col size="2">
+                <c:menu size="large">
+                    <c:menuHeader label="Sub Menu 1">
+                        <c:menuItem label="Menu Item 1" />
+                        <c:menuItem label="Menu Item 2" />
+                        <c:menuItem label="Menu Item 3" />
+                    </c:menuHeader>
+                    <c:menuHeader label="Sub Menu 2">
+                        <c:menuItem label="Menu Item 4" />
+                        <c:menuItem label="Menu Item 5" />
+                        <c:menuSeparator />
+                        <c:menuItem label="Menu Item 6" />
+                    </c:menuHeader>
+                </c:menu>
+                <div>
+                    <h1>Menu with Size and Headers</h1>
+                </div>
+            </c:col>
+            
+            <c:col size="2">    
+                <c:menu items="File,Save,Save As,--,Exit" />
+                <div>
+                    <h1>Generated Menu</h1>
+                </div>
+            </c:col>
+            
+            <c:col size="2">   
+                <c:menu >
+                    <c:menuItem label="Table View" rightIconType="utility" rightIconName="table" />
+                    <c:menuItem label="Kanban Board" rightIconType="utility" rightIconName="kanban" />
+                    <c:menuItem label="List View" rightIconType="utility" rightIconName="side_list" />
+                </c:menu>
+                <div>
+                    <h1>Menu with Icons on Right</h1>
+                </div>
+            </c:col>
+            
+            <c:col size="2"> 
+                <c:menu >
+                    <c:menuItem label="Menu Item One" leftIconType="utility" leftIconName="check" />
+                    <c:menuItem label="Menu Item Two" leftIconType="utility" leftIconName="check" leftIconSelected="true" />
+                    <c:menuItem label="Menu Item Three" leftIconType="utility" leftIconName="check" />
+                </c:menu>
+                <div>
+                    <h1>Menu with Icons on Left</h1>
+                </div>
+            </c:col>
+            
+            <c:col size="2" />
+            
+            <c:col size="2">
+                <c:menu positionVertical="bottom" positionHorizontal="right">
+                    <c:menuItem label="Menu Item 1" />
+                    <c:menuItem label="Menu Item 2" />
+                    <c:menuItem label="Menu Item 3" />
+                    <c:menuSeparator />
+                    <c:menuItem label="Menu Item 4" />
+                </c:menu>
+                <div>
+                    <h1>Menu with Positioning</h1>
+                </div>
+            </c:col>
+            
+            <c:col size="2">
+                <c:menu nubbin="true" iconType="utility" iconName="settings" buttonClass="slds-button slds-button--icon-container">
+                    <c:menuItem label="Menu Item 1" />
+                    <c:menuItem label="Menu Item 2" />
+                    <c:menuItem label="Menu Item 3" />
+                    <c:menuSeparator />
+                    <c:menuItem label="Menu Item 4" />
+                </c:menu>
+                <div>
+                    <h1>Menu with Different Icon and Nubbin</h1>
+                </div>
+            </c:col>
+            
+            <c:col size="2">  
+                <c:menu onClick="{! c.menuItemClicked }">
+                    <c:menuItem label="Menu Item 1" />
+                    <c:menuItem label="Menu Item 2" />
+                    <c:menuItem label="Menu Item 3" />
+                    <c:menuSeparator />
+                    <c:menuItem label="Menu Item 4" />
+                </c:menu>
+                <div>
+                    <h1>Menu with Event</h1>
+                    <aura:if isTrue="{! v.menuItem != ''}">
+                        <p>{! v.menuItem } was clicked</p>
+                    </aura:if>
+                </div>
+            </c:col>
+        </c:grid>
+    </c:LightningDesignApplication>
 </aura:component>

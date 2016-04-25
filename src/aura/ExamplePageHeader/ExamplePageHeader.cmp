@@ -1,33 +1,35 @@
 <aura:component access="GLOBAL">
-    <c:pageHeader title="Rohde Corp - 80,000 Widgets" subTitleBottom="Mark Jaeckal • Unlimited Customer • 11/13/15" iconName="opportunity" />
-    <c:pageHeader title="Record Title" subTitleTop="Record Type" iconName="user">
-        <aura:set attribute="buttonsFacet">
-            <c:button iconType="utility" iconName="add" theme="neutral">Follow</c:button>
-        </aura:set>
-        <aura:set attribute="actionsFacet">
-            <c:buttonGroup >
-                <c:button theme="neutral">Edit</c:button>
-                <c:button theme="neutral">Delete</c:button>
-                <c:button theme="neutral">Clone</c:button>
-            </c:buttonGroup>
-        </aura:set>
-        <ul class="slds-grid slds-page-header__detail-row">
-            <li class="slds-col--padded slds-size--1-of-4">
-                <p class="slds-text-heading--label slds-truncate" title="Field 1">Field 1</p>
-                <p class="slds-text-body--regular slds-truncate" title="Some Value for Field 1">Some Value for Field 1</p>
-            </li>
-            <li class="slds-col--padded slds-size--1-of-4">
-                <p class="slds-text-heading--label slds-truncate" title="Field 1">Field 2</p>
-                <p class="slds-text-body--regular slds-truncate" title="Some Value for Field 2">Some Value for Field 2</p>
-            </li>
-            <li class="slds-col--padded slds-size--1-of-4">
-                <p class="slds-text-heading--label slds-truncate" title="Field 1">Field 3</p>
-                <p class="slds-text-body--regular slds-truncate" title="Some Value for Field 3">Some Value for Field 3</p>
-            </li>
-            <li class="slds-col--padded slds-size--1-of-4">
-                <p class="slds-text-heading--label slds-truncate" title="Field 1">Field 4</p>
-                <p class="slds-text-body--regular slds-truncate" title="Some Value for Field 4">Some Value for Field 4</p>
-            </li>
-        </ul>
-    </c:pageHeader>
+    <c:LightningDesignApplication >
+        <c:pageHeader title="Rohde Corp - 80,000 Widgets" subTitleBottom="Mark Jaeckal • Unlimited Customer • 11/13/15" iconName="opportunity" />
+        <c:pageHeader title="Record Title" subTitleTop="Record Type" iconName="user">
+            <aura:set attribute="buttonsFacet">
+                <c:button iconType="utility" iconName="add" theme="neutral">Follow</c:button>
+            </aura:set>
+            <aura:set attribute="actionsFacet">
+                <c:buttonGroup >
+                    <c:button theme="neutral">Edit</c:button>
+                    <c:button theme="neutral">Delete</c:button>
+                    <c:button theme="neutral">Clone</c:button>
+                </c:buttonGroup>
+            </aura:set>
+            <ul class="slds-grid slds-page-header__detail-row">
+                <li class="slds-col--padded slds-size--1-of-4">
+                    <p class="slds-text-heading--label slds-truncate" title="Field 1">Field 1</p>
+                    <p class="slds-text-body--regular slds-truncate" title="Some Value for Field 1">Some Value for Field 1</p>
+                </li>
+                <li class="slds-col--padded slds-size--1-of-4">
+                    <p class="slds-text-heading--label slds-truncate" title="Field 1">Field 2</p>
+                    <p class="slds-text-body--regular slds-truncate" title="Some Value for Field 2">Some Value for Field 2</p>
+                </li>
+                <li class="slds-col--padded slds-size--1-of-4">
+                    <p class="slds-text-heading--label slds-truncate" title="Field 1">Field 3</p>
+                    <p class="slds-text-body--regular slds-truncate" title="Some Value for Field 3">Some Value for Field 3</p>
+                </li>
+                <li class="slds-col--padded slds-size--1-of-4">
+                    <p class="slds-text-heading--label slds-truncate" title="Field 1">Field 4</p>
+                    <p class="slds-text-body--regular slds-truncate" title="Some Value for Field 4">Some Value for Field 4</p>
+                </li>
+            </ul>
+        </c:pageHeader>
+    </c:LightningDesignApplication>
 </aura:component>
