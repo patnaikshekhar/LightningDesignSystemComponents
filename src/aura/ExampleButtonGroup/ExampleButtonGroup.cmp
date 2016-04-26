@@ -1,4 +1,4 @@
-<aura:component >
+<aura:component access="GLOBAL">
     <c:LightningDesignApplication >
 		<c:buttonGroup >
             <c:button theme="neutral">Action 1</c:button>

@@ -35,7 +35,7 @@
             <c:tab label="Radio Buttons">
                 <c:ExampleRadioButtons />
             </c:tab>
-            <c:tab label="Checkbox" active="true">
+            <c:tab label="Checkbox">
                 <c:ExampleCheckbox />
             </c:tab>
             <c:tab label="Checkboxes">
@@ -49,6 +49,9 @@
             </c:tab>
             <c:tab label="Form">
                 <c:ExampleForm />
+            </c:tab>
+            <c:tab label="Lookup" active="true">
+                <c:ExampleLookup />
             </c:tab>
         </c:tabs>
         <c:tabs >

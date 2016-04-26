@@ -1,4 +1,4 @@
-<aura:component >
+<aura:component access="GLOBAL">
 	<c:LightningDesignApplication >
         <c:pill label="Basic Pill" onRemove="{! c.removePill }" />
         <c:pill label="Pill with icon" iconType="standard" iconName="account" onRemove="{! c.removePill }" />

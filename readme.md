@@ -30,7 +30,7 @@ to create a pill. You instead would just write
 ## Installation
 
 (Alpha Release Only)
-Installation is via a [managed package](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t58000000A3x8).
+Installation is via a [managed package](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t58000000A4Hr).
 
 ## Components
 

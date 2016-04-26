@@ -1,4 +1,4 @@
-<aura:component >
+<aura:component access="GLOBAL">
     
     <aura:attribute access="PRIVATE" name="currentValueOfEvent" type="Boolean" default="false" description="Used to track current value of the checked event" />
     

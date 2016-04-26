@@ -1,4 +1,4 @@
-<aura:component >
+<aura:component access="GLOBAL">
     <c:LightningDesignApplication >
 		<c:spinner size="large" theme="brand"/>
     </c:LightningDesignApplication>

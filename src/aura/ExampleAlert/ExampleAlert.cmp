@@ -1,4 +1,4 @@
-<aura:component >
+<aura:component access="GLOBAL">
 	<c:LightningDesignApplication >
         <c:alert onClose="{! c.alertClosed }" onClick="{! c.alertClicked }">
             Basic Alert

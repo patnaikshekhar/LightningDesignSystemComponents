@@ -1,4 +1,4 @@
-<aura:component >
+<aura:component access="GLOBAL">
     
     <aura:attribute name="selectedOption" type="String" default="Option 2" description="The Selected option." access="GLOBAL"/>
     

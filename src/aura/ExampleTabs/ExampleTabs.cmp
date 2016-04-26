@@ -1,4 +1,4 @@
-<aura:component >
+<aura:component access="GLOBAL">
     <c:LightningDesignApplication >
     	<c:tabs >
             <c:tab label="Tab 1" active="true">

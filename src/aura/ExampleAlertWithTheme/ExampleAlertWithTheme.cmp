@@ -1,4 +1,4 @@
-<aura:component >
+<aura:component access="GLOBAL">
     <c:LightningDesignApplication >
         <c:alert theme="offline">
             <c:icon class="slds-icon icon-text-email slds-icon--small slds-m-right--x-small" iconType="utility" iconName="offline">

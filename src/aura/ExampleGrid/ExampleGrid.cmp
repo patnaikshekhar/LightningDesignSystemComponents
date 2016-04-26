@@ -1,4 +1,4 @@
-<aura:component >
+<aura:component access="GLOBAL">
 	<c:LightningDesignApplication >
         <h1 class="slds-text-heading--large">Automatic Sizing</h1>
         

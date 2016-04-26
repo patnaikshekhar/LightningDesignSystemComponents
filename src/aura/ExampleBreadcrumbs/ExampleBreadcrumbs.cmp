@@ -1,4 +1,4 @@
-<aura:component >
+<aura:component access="GLOBAL">
     <c:LightningDesignApplication >
     	<c:breadcrumbs crumbs="Account,Contact" onClick="{! c.crumbClicked }" />
     </c:LightningDesignApplication>

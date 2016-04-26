@@ -1,0 +1,25 @@
+<aura:component access="GLOBAL" implements="c:HTMLAttributes">
+    
+    <aura:handler name="init" value="{! this }" action="{! c.setup }" />
+    
+    <aura:attribute name="label" type="String" default="" description="Label for the Lookup" access="GLOBAL" />
+    <aura:attribute name="items" type="Object[]" description="The items to show in the lookup" access="GLOBAL" />
+    
+    <aura:attribute name="defaultIconName" type="String" default="" description="Name of the icon to show in the left side when it is not provided on the items object." access="GLOBAL" />
+    <aura:attribute name="defaultIconType" type="String" default="" description="Type of the icon to show in the left side when it is not provided on the items object." access="GLOBAL" />
+    
+    <aura:attribute name="lookupItems" type="Object" description="Private - Lookup Items to show" access="PRIVATE" />
+    
+	<div class="slds-lookup" data-select="multi" data-scope="single" data-typeahead="true">
+    	<c:input label="{! v.label }" />
+        <aura:if isTrue="{! v.lookupItems.length > 0 }">
+            <div class="slds-lookup__menu" role="listbox">
+                <ul class="slds-lookup__list" role="presentation">
+                    <aura:iteration items="{! v.lookupItems }" var="item">
+                        <c:lookupItem label="{! item.label }" iconName="{! item.iconName }" iconType="{! item.iconType }" />
+                    </aura:iteration>
+                </ul>
+            </div>
+        </aura:if>
+    </div>
+</aura:component>
