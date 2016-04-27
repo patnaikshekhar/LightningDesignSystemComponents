@@ -1,4 +1,5 @@
 <aura:interface description="A basic template with HTML Attributes">
 	<aura:attribute name="class" type="String" default="" description="The class of the component" access="GLOBAL" />
     <aura:attribute name="id" type="String" default="" description="The id of the component" access="GLOBAL"/>
+    <aura:attribute name="data" type="Object" default="" description="The data associated to the component" access="GLOBAL"/>
 </aura:interface>

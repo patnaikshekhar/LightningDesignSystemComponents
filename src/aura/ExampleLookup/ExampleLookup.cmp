@@ -1,3 +1,32 @@
 <aura:component access="GLOBAL">
-    <c:lookup label="Accounts" items="One,Two,Three"/>
+    
+    <aura:handler name="init" value="{! this }" action="{! c.init }" />
+    <aura:attribute name="listOfObjects" type="Object[]" description="A sample list of objects." access="PRIVATE"/> 
+    <aura:attribute name="listOfNumbers" type="Object[]" description="A sample list of numbers." access="PRIVATE"/> 
+    <aura:attribute name="selectedNumber" type="Object" description="The number that was selected." access="PRIVATE"/> 
+    
+    <c:LightningDesignApplication >
+        <c:grid class="height-250">
+            <c:col size="1" />
+            <c:col size="2">
+                <c:lookup label="Numbers" items="One,Two,Three"/>
+            </c:col>
+            <c:col size="1" />
+            <c:col size="3">
+                <c:lookup label="Accounts" items="Account 1,Account 2,Account 3" defaultIconType="standard" defaultIconName="account" />
+            </c:col>
+            <c:col size="1" />
+            <c:col size="3">
+                <c:lookup label="Objects" items="{! v.listOfObjects }" />
+            </c:col>
+            <c:col size="1" />
+        </c:grid>
+        <c:grid class="height-250">
+            <c:col size="1" />
+            <c:col size="2">
+                <c:lookup label="Numbers" items="{! v.listOfNumbers }" defaultIconType="standard" defaultIconName="opportunity" onChange="{! c.numbersChanged }" onSelect="{! c.numberSelected }" selected="{! v.selectedNumber }" onRemove="{! c.resetSelectedNumber }"/>
+            </c:col>
+            <c:col size="1" />
+        </c:grid>
+    </c:LightningDesignApplication>
 </aura:component>

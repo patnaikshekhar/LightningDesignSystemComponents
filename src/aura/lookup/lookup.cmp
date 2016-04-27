@@ -1,22 +1,44 @@
 <aura:component access="GLOBAL" implements="c:HTMLAttributes">
     
     <aura:handler name="init" value="{! this }" action="{! c.setup }" />
+    <aura:handler name="change" value="{! v.items }" action="{! c.setup }" />
+    <aura:handler name="change" value="{! v.selected }" action="{! c.selectedChanged }" />
     
     <aura:attribute name="label" type="String" default="" description="Label for the Lookup" access="GLOBAL" />
     <aura:attribute name="items" type="Object[]" description="The items to show in the lookup" access="GLOBAL" />
+    <aura:attribute name="selected" type="Object" description="The items which have been selected" access="GLOBAL" />
     
     <aura:attribute name="defaultIconName" type="String" default="" description="Name of the icon to show in the left side when it is not provided on the items object." access="GLOBAL" />
     <aura:attribute name="defaultIconType" type="String" default="" description="Type of the icon to show in the left side when it is not provided on the items object." access="GLOBAL" />
+    <aura:attribute name="defaultIconSize" type="String" default="small" description="Type of the icon to show in the left side when it is not provided on the items object." access="GLOBAL" />
+    
+    <aura:registerEvent name="onChange" type="c:basicEvent" description="Fired when the input (search) is changed." access="GLOBAL" />
+    <aura:registerEvent name="onSelect" type="c:basicEvent" description="Fired when an item is selected in the list." access="GLOBAL" />
+    <aura:registerEvent name="onRemove" type="c:basicEvent" description="Fired when an item is removed from the list." access="GLOBAL" />
     
     <aura:attribute name="lookupItems" type="Object" description="Private - Lookup Items to show" access="PRIVATE" />
+    <aura:attribute name="selectedPill" type="Object" description="Private - The selected pill" access="PRIVATE" />
+    <aura:attribute name="selectedPills" type="Object[]" description="Private - The selected pills" access="PRIVATE" />
     
-	<div class="slds-lookup" data-select="multi" data-scope="single" data-typeahead="true">
-    	<c:input label="{! v.label }" />
+	<div class="{! 'slds-lookup ' + v.class }" id="{! v.id }" data-select="{! v.selectedPill != null ? 'single' : 'multi' }" data-scope="single" data-typeahead="true">
+        <aura:if isTrue="{! v.selectedPill == null }">
+    		<c:input label="{! v.label }" onChange="{! c.onChange }" iconType="utility" iconName="search" iconPosition="right" />
+        </aura:if>
+        <aura:if isTrue="{! v.selectedPill != null }">
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="lookup">{! v.label }</label>
+                <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--right">
+                    <div class="slds-pill_container slds-show">
+                        <c:pill label="{! v.selectedPill.label }" iconName="{! v.selectedPill.iconName }" iconType="{! v.selectedPill.iconType }" iconSize="{! v.selectedPill.iconSize }" onRemove="{! c.triggerOnRemove }" />
+                    </div>
+                </div>
+            </div>
+        </aura:if>
         <aura:if isTrue="{! v.lookupItems.length > 0 }">
             <div class="slds-lookup__menu" role="listbox">
                 <ul class="slds-lookup__list" role="presentation">
                     <aura:iteration items="{! v.lookupItems }" var="item">
-                        <c:lookupItem label="{! item.label }" iconName="{! item.iconName }" iconType="{! item.iconType }" />
+                        <c:lookupItem label="{! item.label }" iconName="{! item.iconName }" iconType="{! item.iconType }" iconSize="{! item.iconSize }" data="{! item.data }" onClick="{! c.triggerSelectItem }" />
                     </aura:iteration>
                 </ul>
             </div>

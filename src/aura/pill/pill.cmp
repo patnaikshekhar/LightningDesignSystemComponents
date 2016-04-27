@@ -12,7 +12,11 @@
             </span>
         </aura:if>
         <aura:if isTrue="{! v.iconName != '' }">
-        	<c:icon class="{! 'slds-icon slds-pill__icon ' + (v.iconType == 'standard' ? ' slds-icon-' + v.iconType + '-' + v.iconName : '')}" iconType="{! v.iconType }" iconName="{! v.iconName }" iconSize="{! v.iconSize }" iconContainer="{! v.iconContainer }" iconContainerClass="{! v.iconContainerClass }"/>
+        	<c:icon class="{! 
+                              'slds-icon slds-pill__icon' 
+                              + ' ' + (v.iconType == 'standard' || v.iconType == 'action' ? ' slds-icon-' + v.iconType + '-' + v.iconName : '')
+                              + ' ' + (v.iconSize != '' ? 'slds-icon--' + v.iconSize : '')
+                              }" iconType="{! v.iconType }" iconName="{! v.iconName }" iconSize="{! v.iconSize }" iconContainer="{! v.iconContainer }" iconContainerClass="{! v.iconContainerClass }"/>
         </aura:if>
         <span class="slds-pill__label">{! v.label }</span>
         <c:button class="slds-button--icon-bare slds-pill__remove" onClick="{! c.onRemove }">

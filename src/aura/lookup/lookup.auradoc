@@ -1,0 +1,5 @@
+<aura:documentation>
+	<aura:description>Lookup is an advanced inline search form.</aura:description>
+	<aura:example name="Lookup" ref="ldsc:exampleLookup" label="Lookup">
+	</aura:example>
+</aura:documentation>

@@ -12,9 +12,17 @@
         } else {
             className = 'slds-icon ' + 'slds-icon--' + component.get('v.iconSize');
             
+            className += ' slds-icon-' + iconType + '-' + iconName.replace(/_/g, "-");
+                
+            // If type is action then add round class
+            if (iconType === 'action') {
+                className += ' slds-icon_container--circle';
+            }
+            
             if (iconType == 'utility') {
                 className += ' slds-icon-text-default';
             }
+            
         }        
         
         var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
