@@ -18,7 +18,7 @@
     
     <aura:attribute name="lookupItems" type="Object" description="Private - Lookup Items to show" access="PRIVATE" />
     <aura:attribute name="selectedPill" type="Object" description="Private - The selected pill" access="PRIVATE" />
-    <aura:attribute name="selectedPills" type="Object[]" description="Private - The selected pills" access="PRIVATE" />
+    <aura:attribute name="selectedPills" type="Aura.Component[]" description="Private - The selected pills. Used for multi-select." access="PRIVATE" />
     
 	<div class="{! 'slds-lookup ' + v.class }" id="{! v.id }" data-select="{! v.selectedPill != null ? 'single' : 'multi' }" data-scope="single" data-typeahead="true">
         <aura:if isTrue="{! v.selectedPill == null }">
@@ -32,6 +32,11 @@
                         <c:pill label="{! v.selectedPill.label }" iconName="{! v.selectedPill.iconName }" iconType="{! v.selectedPill.iconType }" iconSize="{! v.selectedPill.iconSize }" onRemove="{! c.triggerOnRemove }" />
                     </div>
                 </div>
+            </div>
+        </aura:if>
+        <aura:if isTrue="{! v.selectedPills.length > 0 }">
+            <div class="slds-pill_container">
+                {! v.selectedPills }
             </div>
         </aura:if>
         <aura:if isTrue="{! v.lookupItems.length > 0 }">

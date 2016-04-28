@@ -40,6 +40,33 @@
                 iconName: defaultIconName,
                 iconSize: defaultIconSize
             });    
+        } else if (Array.isArray(selected)) {
+            // Multiple items selected in the form of an object with a label and a item
+            var pills = selected.map(function(node) {
+                return ['c:pill', {
+                    label: (typeof node === 'string' ? node : node.label),
+                    iconName: (typeof node === 'string' ? defaultIconName : node.iconName),
+                    iconType: (typeof node === 'string' ? defaultIconType : node.iconType),
+                    iconSize: (typeof node === 'string' ? defaultIconSize : node.iconSize),
+                }];
+            });
+            
+            if (pills.length > 0) {
+                $A.createComponents(pills, function(components, status, err) {
+                    if (status === "SUCCESS") {
+                        components.forEach(function(c) {
+                            c.addHandler('onRemove', component, 'c.triggerOnRemove');
+                        });
+                        
+                        component.set('v.selectedPills', components);
+                    } else {
+                        console.error('Error creating pills', err);
+                    }
+                });
+            } else {
+                component.set('v.selectedPills', []);
+            }
+            
         } else if (typeof selected === 'object') {
             // Single item selected in the form of an object with a label and a item
             
@@ -49,20 +76,6 @@
                 component.set('v.selectedPill', undefined);
             }
                 
-        } else {
-            // Multiple items selected in the form of an object with a label and a item
-            component.set('v.selectedPills', selected.map(function(s) {
-                if (typeof s === 'string') {
-                    return {
-                        label: s,
-                        iconType: defaultIconType,
-                        iconName: defaultIconName,
-                        iconSize: defaultIconSize
-                    };  
-                } else if (typeof s === 'object') {
-                    return s;
-                }
-            }));
         }
     }
 })
