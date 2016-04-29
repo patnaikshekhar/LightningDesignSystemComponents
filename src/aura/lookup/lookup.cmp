@@ -5,16 +5,17 @@
     <aura:handler name="change" value="{! v.selected }" action="{! c.selectedChanged }" />
     
     <aura:attribute name="label" type="String" default="" description="Label for the Lookup" access="GLOBAL" />
-    <aura:attribute name="items" type="Object[]" description="The items to show in the lookup" access="GLOBAL" />
-    <aura:attribute name="selected" type="Object" description="The items which have been selected" access="GLOBAL" />
+    <aura:attribute name="searchString" type="String" default="" description="The search string displayed in the input box." access="GLOBAL" />
+    <aura:attribute name="items" type="Object[]" description="The items to show in the lookup. This can either be a list of strings or a list of objects, each containing a label, iconName, iconType and iconSize." access="GLOBAL" />
+    <aura:attribute name="selected" type="Object" description="The items which have been selected. This can either be a single string or a single object for a single select lookup or it could be a list of strings or objects for a multi-select lookup." access="GLOBAL" />
     
     <aura:attribute name="defaultIconName" type="String" default="" description="Name of the icon to show in the left side when it is not provided on the items object." access="GLOBAL" />
     <aura:attribute name="defaultIconType" type="String" default="" description="Type of the icon to show in the left side when it is not provided on the items object." access="GLOBAL" />
-    <aura:attribute name="defaultIconSize" type="String" default="small" description="Type of the icon to show in the left side when it is not provided on the items object." access="GLOBAL" />
+    <aura:attribute name="defaultIconSize" type="String" default="small" description="Size of the icon to show in the left side when it is not provided on the items object." access="GLOBAL" />
     
-    <aura:registerEvent name="onChange" type="c:basicEvent" description="Fired when the input (search) is changed." access="GLOBAL" />
-    <aura:registerEvent name="onSelect" type="c:basicEvent" description="Fired when an item is selected in the list." access="GLOBAL" />
-    <aura:registerEvent name="onRemove" type="c:basicEvent" description="Fired when an item is removed from the list." access="GLOBAL" />
+    <aura:registerEvent name="onChange" type="c:basicEvent" description="Fired when the input (search) is changed. React to this event by filtering the items attribute component. The value attribute contains the latest search string." access="GLOBAL" />
+    <aura:registerEvent name="onSelect" type="c:basicEvent" description="Fired when an item is removed from the list. This is called when the close icon is clicked on the pill. Use this to reset the values in the lookup." access="GLOBAL" />
+    <aura:registerEvent name="onRemove" type="c:basicEvent" description="Fired when an item is selected in the list. Use this event to add an element to the lookup." access="GLOBAL" />
     
     <aura:attribute name="lookupItems" type="Object" description="Private - Lookup Items to show" access="PRIVATE" />
     <aura:attribute name="selectedPill" type="Object" description="Private - The selected pill" access="PRIVATE" />
@@ -22,7 +23,7 @@
     
 	<div class="{! 'slds-lookup ' + v.class }" id="{! v.id }" data-select="{! v.selectedPill != null ? 'single' : 'multi' }" data-scope="single" data-typeahead="true">
         <aura:if isTrue="{! v.selectedPill == null }">
-    		<c:input label="{! v.label }" onChange="{! c.onChange }" iconType="utility" iconName="search" iconPosition="right" />
+    		<c:input label="{! v.label }" value="{! v.searchString }" onChange="{! c.onChange }" iconType="utility" iconName="search" iconPosition="right" />
         </aura:if>
         <aura:if isTrue="{! v.selectedPill != null }">
             <div class="slds-form-element">

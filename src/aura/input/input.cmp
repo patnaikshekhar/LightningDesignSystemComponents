@@ -1,5 +1,7 @@
 <aura:component implements="c:HTMLAttributes,c:IconAttributes" access="GLOBAL">
     
+    <aura:handler name="change" value="{! v.value }" action="{! c.valueChanged }" />
+    
     <aura:attribute name="label" type="String" default="" description="Label of the input control" access="GLOBAL" />
     <aura:attribute name="placeholder" type="String" default="" description="Placeholder text of the input control" access="GLOBAL" />
     <aura:attribute name="value" type="String" default="" description="Value of the input control" access="GLOBAL" />

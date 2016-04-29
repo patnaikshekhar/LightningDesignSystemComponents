@@ -56,6 +56,7 @@ Installation is via a [managed package](https://login.salesforce.com/packaging/i
   - [Checkboxes](documentation/checkboxes.md)
   - [Select](documentation/select.md)
   - [Multi-Select](documentation/multiselect.md)
+  - [Lookup](documentation/lookup.md)
   - [Form](documentation/form.md)
 - [Image](documentation/image.md)
 - [Media](documentation/media.md)

@@ -7,9 +7,10 @@
 
     <aura:attribute name="listOfSuperHeroes" type="Object[]" description="A sample list of numbers." access="PRIVATE"/> 
     <aura:attribute name="selectedHeroes" type="Object[]" description="The number that was selected." access="PRIVATE"/> 
+    <aura:attribute name="herosSearchString" type="String" description="The heroes search string" access="PRIVATE"/> 
     
     <c:LightningDesignApplication >
-        <c:grid class="height-250">
+        <c:grid class="height-320">
             <c:col size="1" />
             <c:col size="2">
                 <c:lookup label="Numbers" items="One,Two,Three"/>
@@ -24,14 +25,14 @@
             </c:col>
             <c:col size="1" />
         </c:grid>
-        <c:grid class="height-250">
+        <c:grid class="height-320">
             <c:col size="1" />
             <c:col size="2">
                 <c:lookup label="Numbers" items="{! v.listOfNumbers }" defaultIconType="standard" defaultIconName="opportunity" onChange="{! c.numbersChanged }" onSelect="{! c.numberSelected }" selected="{! v.selectedNumber }" onRemove="{! c.resetSelectedNumber }"/>
             </c:col>
             <c:col size="1" />
             <c:col size="2">
-                <c:lookup label="Heroes" items="{! v.listOfSuperHeroes }" onChange="{! c.heroesFilterChanged }" onSelect="{! c.heroSelected }" selected="{! v.selectedHeroes }" onRemove="{! c.removeHero }"/>
+                <c:lookup label="Heroes" items="{! v.listOfSuperHeroes }" searchString="{! v.herosSearchString }" onChange="{! c.heroesFilterChanged }" onSelect="{! c.heroSelected }" selected="{! v.selectedHeroes }" onRemove="{! c.removeHero }"/>
             </c:col>
             <c:col size="1" />
         </c:grid>

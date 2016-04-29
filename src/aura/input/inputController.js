@@ -9,5 +9,9 @@
     
     onLostFocus : function(component, event, helper) {
         component.getEvent('onLostFocus').fire({domEvent: event, value: event.target.value });
-	}
+	},
+    
+    valueChanged: function(component, event, helper) {
+        console.log('Value changed', component.get('v.value'));
+    }
 })
