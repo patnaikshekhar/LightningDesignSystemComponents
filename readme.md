@@ -1,10 +1,10 @@
 # Lightning Components for Lightning Design System
 
-## Under Development - Alpha to be released April 30th 2016
+An open source library of [lightning components](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/) for the [Lightning Design System](http://www.lightningdesignsystem.com/). The purpose of this project is to create easy to use generic components that can be used to accelerate the development of a lightning application.
 
-An open source library of [lightning components](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/) for the [Lightning Design System](http://www.lightningdesignsystem.com/). The purpose of this project is to create easy to use generic components that can be used in a lightning application. Since the Lightning Design System is still in-flux this is going to be a changing set of components. Pull requests, features and issues are most welcome.
+**These components are meant to be used programatically using the developer console and are not meant to be using directly in Lightning App Builder or Community Builder.**
 
-This helps make your lightning application a little more concise and semantic. So instead of writing
+These components help make your lightning application a little more concise and semantic as compared to using the Lightning Design System by itself. So instead of writing
 
 ```html
 <a href="#void" class="slds-pill">
@@ -27,10 +27,11 @@ to create a pill. You instead would just write
   <ldsc:pill label="Pill with icon" iconType="standard" iconName="account" onRemove="{! c.removePill }" />
 ```
 
-## Installation
+Since the Lightning Design System is still in-flux this is going to be a changing set of components. Pull requests, features and issues are most welcome.
 
-(Alpha Release Only)
-Installation is via a [managed package](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t58000000A4Hr).
+## Installation (Alpha 1)
+
+Installation is via a [managed package](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t58000000AANu).
 
 ## Components
 
@@ -78,3 +79,15 @@ Documentation for each of the components can be accessed at the following link (
 https://BASE_URL/auradocs/reference.app
 
 Where BASE_URL is the url of your instance. Once you reach the standard aura documentation page you can navigate to the ldsc namespace to check the documentation for each of the components.
+
+## Releases
+
+- **Alpha 2** : Planned (29/05/2016) - Scope
+  - Improved documentation - Kitchen Sink and Tutorial Video
+  - Ready for Beta release to app exchange
+  - Additional Components Data Table, Cards??
+  - Upgrade to Summer '16 ??
+
+- **Alpha 1** : Completed (30/04/2016)
+  - Base Release
+  - Basic components from Spring '16 Release
