@@ -1,0 +1,3 @@
+<aura:component access="GLOBAL">
+	<h1>Lightning Design Application Page</h1>
+</aura:component>
