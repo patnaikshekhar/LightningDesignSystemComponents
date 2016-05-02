@@ -1,0 +1,14 @@
+<aura:component access="GLOBAL">
+    
+    <aura:registerEvent name="onNav" type="c:basicEvent" description="Called when navigated" access="GLOBAL" />
+    
+	<c:tree onClick="{! c.selectNode }">
+        <c:treeNode label="Introduction" />
+        <c:treeNode label="Installation" />
+        <c:treeNode label="Components">
+            <c:treeNode label="Lightning Design Application" />
+            <c:treeNode label="Grid" />
+            <c:treeNode label="Column" />
+        </c:treeNode>
+    </c:tree>
+</aura:component>

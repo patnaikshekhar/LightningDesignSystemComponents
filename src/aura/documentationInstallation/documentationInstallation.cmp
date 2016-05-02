@@ -1,0 +1,3 @@
+<aura:component access="GLOBAL">
+	<h1>Installation Page</h1>
+</aura:component>

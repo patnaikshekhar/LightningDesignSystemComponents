@@ -1,0 +1,3 @@
+<aura:component access="GLOBAL">
+	<h1>Introduction Page</h1>
+</aura:component>
