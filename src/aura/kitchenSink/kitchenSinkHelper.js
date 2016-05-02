@@ -1,7 +1,7 @@
 ({
     navigateToSection: function(component, helper, value) {
       	var nodes = helper.nodes();
-        
+
         if (value in nodes) {
             component.set('v.sectionName', nodes[value].sectionName);
             component.set('v.sectionIconName', nodes[value].sectionIconName);
@@ -9,12 +9,12 @@
             //console.log('Creating', 'ldsc:' + nodes[value].section);
             $A.createComponent('ldsc:' + nodes[value].section, {}, function(c, status, err) {
                 if (status === 'SUCCESS' && component.isValid()) {
-                    component.set('v.section', [c]);    
+                    component.set('v.section', [c]);
                 }
             });
-        }  
+        }
     },
-    	
+
 	nodes: function() {
         return {
             'Introduction': {
