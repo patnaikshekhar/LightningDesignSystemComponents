@@ -6,7 +6,7 @@
 
         // Set the name param on all the elements of body
         var newBody = body.map(function(child) {
-            if (child.getName() == 'ldsc$radioButton' || child.getName() == 'c$radioButton') {
+            if (child.isInstanceOf('c:radioButton') || child.isInstanceOf('c:radioButton')) {
                 
                 // Inherit the name from the parent component
             	child.set('v.name', name);

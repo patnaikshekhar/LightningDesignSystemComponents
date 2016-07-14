@@ -27,6 +27,9 @@
             <c:tab label="Tiles">
                 <c:ExampleTile />
             </c:tab>
+            <c:tab label="Alert">
+                <c:ExampleAlert />
+            </c:tab>
             <c:tab label="Tree">
                 <c:ExampleTree />
             </c:tab>

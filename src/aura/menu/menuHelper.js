@@ -49,12 +49,12 @@
         
         // Filter out the sections
         var filteredMenuItems = body.filter(function(c) {
-            return (c.getName() == 'ldsc$menuItem' || c.getName() == 'c$menuItem'
-                    || c.getName() == 'ldsc$menuSeparator' || c.getName() == 'c$menuSeparator');
+            return (c.isInstanceOf('c:menuItem') || c.isInstanceOf('c:menuItem')
+                    || c.isInstanceOf('c:menuSeparator') || c.isInstanceOf('c:menuSeparator'));
         });
         
         var menuItems = filteredMenuItems.reduceRight(function(acc, next) {
-            if (next.getName() == 'ldsc$menuSeparator' || next.getName() == 'c$menuSeparator') {
+            if (next.isInstanceOf('c:menuSeparator') || next.isInstanceOf('c:menuSeparator')) {
                 if (acc.length > 0) {
                 	var previous = acc[0];
                 	previous.set('v.class', 'slds-has-divider--top-space');
@@ -70,7 +70,7 @@
         component.set('v.menuItems', menuItems);
                       
         component.set('v.sections', body.filter(function(c) {
-            return (c.getName() == 'ldsc$menuHeader' || c.getName() == 'c$menuHeader');
+            return (c.isInstanceOf('c:menuHeader') || c.isInstanceOf('c:menuHeader'));
         }));
     },
     

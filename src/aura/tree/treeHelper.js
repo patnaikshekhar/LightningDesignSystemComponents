@@ -34,7 +34,7 @@
         }
         
         body.forEach(function(child) {
-            if (child.getName() == 'ldsc$treeNode' || child.getName() == 'c$treeNode') {
+            if (child.isInstanceOf('c:treeNode') || child.isInstanceOf('c:treeNode')) {
                 helper.setLevel(component, child, helper, level + 1);
             }
         });
@@ -43,7 +43,7 @@
     toggleAll: function(state, component, helper) {
         var body = component.get('v.body');
         body.forEach(function(child) {
-            if (child.getName() == 'ldsc$treeNode' || child.getName() == 'c$treeNode') {
+            if (child.isInstanceOf('c:treeNode') || child.isInstanceOf('c:treeNode')) {
             	child.set('v.open', state);
                 helper.toggleAll(state, child, helper);
             }

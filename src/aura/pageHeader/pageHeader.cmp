@@ -16,27 +16,25 @@
             <div class="slds-col slds-has-flexi-truncate">
                 <c:media >
                     <aura:set attribute="figure">
-                        <aura:if isTrue="{! v.iconName != '' }">
-                            <c:icon iconName="{! v.iconName }" iconType="{! v.iconType }" iconSize="{! v.iconSize }" iconContainer="{! v.iconContainer }" />
-                        </aura:if>
+                        <c:icon iconName="{! v.iconName }" iconType="{! v.iconType }" iconSize="{! v.iconSize }" iconContainer="{! v.iconContainer }" />
                     </aura:set>
                     <span>
-                    <aura:if isTrue="{! v.subTitleTop != '' }">
-                        <p class="slds-text-heading--label">{! v.subTitleTop }</p>
-                    </aura:if>
+                        <aura:renderIf isTrue="{! v.subTitleTop != '' }">
+                            <p class="slds-text-heading--label">{! v.subTitleTop }</p>
+                        </aura:renderIf>
                     </span>
                     <div class="slds-grid">
-                        <aura:if isTrue="{! v.title != '' }">
+                        <aura:renderIf isTrue="{! v.title != '' }">
                             <p class="slds-page-header__title slds-truncate slds-m-right--small slds-align-middle" title="{! v.title }">{! v.title }</p>
-                        </aura:if>
+                        </aura:renderIf>
                         <div class="slds-col slds-shrink-none">
                             {! v.buttonsFacet }
                         </div>
                     </div>
                     <span>
-                    <aura:if isTrue="{! v.subTitleBottom != '' }">
-                        <p class="slds-text-body--small slds-page-header__info">{! v.subTitleBottom }</p>
-                    </aura:if>
+                        <aura:renderIf isTrue="{! v.subTitleBottom != '' }">
+                            <p class="slds-text-body--small slds-page-header__info">{! v.subTitleBottom }</p>
+                        </aura:renderIf>
                     </span>
                 </c:media>
             </div>

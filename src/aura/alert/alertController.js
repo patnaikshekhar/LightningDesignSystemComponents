@@ -4,7 +4,7 @@
 	},
     
 	onClose : function(component, event, helper) {
-        component.set('v.show', false);
+        //component.set('v.show', false);
         component.getEvent('onClose').fire({ domEvent: event });
 	}
 })

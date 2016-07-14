@@ -1,6 +1,9 @@
 <aura:component access="GLOBAL">
+    
+    <aura:attribute name="showAlert" type="Boolean" description="Should the alert be shown." access="Private" default="true" />
+    
 	<c:LightningDesignApplication >
-        <c:alert onClose="{! c.alertClosed }" onClick="{! c.alertClicked }">
+        <c:alert onClose="{! c.alertClosed }" onClick="{! c.alertClicked }" show="{! v.showAlert }">
             Basic Alert
         </c:alert>
     </c:LightningDesignApplication>

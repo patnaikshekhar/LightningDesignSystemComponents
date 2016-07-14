@@ -1,6 +1,6 @@
 ({
 	render: function(component, helper) {
-		
+		//console.log('Rendering icon');
 		var BASE_URL = '/resource/ldsc__SLDS100/assets';        
         var id = component.get("v.id");
         var iconType = component.get("v.iconType");

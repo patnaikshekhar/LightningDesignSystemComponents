@@ -14,9 +14,9 @@
                 <c:kitchenSinkNav onNav="{! c.navigate }" />
             </c:col>
             <c:col size="9">
+                <c:pageHeader title="{! v.sectionName }" iconName="{! v.sectionIconName }" iconType="{! v.sectionIconType }"/>
                 {! v.sectionName }
                 {! v.section }
-            	<c:pageHeader title="{! v.sectionName }" iconName="{! v.sectionIconName }" iconType="{! v.sectionIconType }"/>
             </c:col>
         </c:grid>
     </c:LightningDesignApplication>
