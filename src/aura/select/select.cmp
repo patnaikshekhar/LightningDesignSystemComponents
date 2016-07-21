@@ -1,4 +1,4 @@
-<aura:component implements="c:HTMLAttributes">
+<aura:component implements="c:HTMLAttributes" access="Global">
     
     <aura:attribute name="label" type="String" default="" description="Label for the select option" access="GLOBAL" />
     <aura:attribute name="options" type="String[]" description="The list of options" access="GLOBAL" />
@@ -8,7 +8,7 @@
     <aura:attribute name="disabled" type="Boolean" default="false" description="Is this field required?" access="GLOBAL" />
     <aura:attribute name="error" type="String" default="" description="Error to be displayed" access="GLOBAL" />
     
-    <aura:registerEvent name="onChange" type="c:basicEvent" description="Called when select option is changed. The value parameter contains the changed attribute." />
+    <aura:registerEvent name="onChange" type="c:basicEvent" description="Called when select option is changed. The value parameter contains the changed attribute." access="GLOBAL"/>
     
     <div class="{! 'slds-form-element' +
                 	' ' + ( v.required ? 'is-required': '') +
@@ -25,7 +25,7 @@
             <div class="slds-select_container">
                 <select id="{! v.id }" class="slds-select" disabled="{! v.disabled }" onchange="{! c.onChange }">
                     <aura:iteration items="{! v.options }" var="option">
-                    	<option selected="{! v.value == option }">{! option }</option>
+                    	<option selected="{! v.value == option }" value="{! option }">{! option }</option>
                     </aura:iteration>
                 </select>
             </div>

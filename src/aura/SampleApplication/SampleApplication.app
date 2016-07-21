@@ -2,7 +2,6 @@
 	<c:LightningDesignApplication >
         
         <!--<ldsc:ExampleSpinner />-->
-        <!--<ldsc:ExampleModal />-->
         
         <c:tabs >
             <c:tab label="Badges" active="true">
@@ -32,6 +31,9 @@
             </c:tab>
             <c:tab label="Tree">
                 <c:ExampleTree />
+            </c:tab>
+            <c:tab label="Modal">
+                <c:ExampleModal />
             </c:tab>
         </c:tabs>
         <c:tabs >
